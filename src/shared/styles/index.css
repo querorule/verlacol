@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+/* Animación para scroll infinito de logos */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Animación scroll de derecha a izquierda (pills primera fila) */
+@keyframes scroll-rtl {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-rtl {
+  animation: scroll-rtl 25s linear infinite;
+}
+
+.animate-scroll-rtl:hover {
+  animation-play-state: paused;
+}
+
+/* Animación scroll de izquierda a derecha (pills segunda fila) */
+@keyframes scroll-ltr {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll-ltr {
+  animation: scroll-ltr 25s linear infinite;
+}
+
+.animate-scroll-ltr:hover {
+  animation-play-state: paused;
+}
+
+/* Animación para partículas/estrellas */
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.5);
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+/* Animación de fade-in para elementos al scroll */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Efecto outline para texto TEAM de fondo */
+.text-team-outline {
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.08);
+}
+
+/* Mask fade sutil para logos sin gradientes oscuros visibles */
+.mask-fade {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 0%,
+    black 0%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 0%,
+    black 100%,
+    transparent
+  );
+}
+
+/* Animación de gradiente para stats */
+@keyframes gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+/* Animación pulse lenta para efectos de fondo */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.25;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
