@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, ArrowLeft, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowLeft, Send, MessageCircle, Clock, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/layout/Navbar';
 
@@ -13,136 +13,200 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Gradiente de fondo */}
-      <div className="fixed inset-0 bg-linear-to-b from-black via-purple-950/10 to-black pointer-events-none" />
-      
-      {/* Partículas de fondo */}
+      {/* Efectos de fondo modernos */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        {[...Array(30)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-white rounded-full animate-twinkle"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              opacity: Math.random() * 0.3 + 0.1,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${Math.random() * 3 + 2}s`,
-            }}
-          />
-        ))}
+        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] rounded-full blur-[150px]" style={{ backgroundColor: '#4A5CFF15' }}></div>
+        <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] rounded-full blur-[150px]" style={{ backgroundColor: '#7A8FFF15' }}></div>
+        <div className="absolute bottom-0 left-1/2 w-[500px] h-[500px] rounded-full blur-[120px]" style={{ backgroundColor: '#5B6FFF15' }}></div>
       </div>
       
       <Navbar />
       
       <div className="pt-32 pb-20 px-6 relative z-10">
         <div className="container mx-auto max-w-5xl">
+          {/* Botón volver moderno */}
           <Link
             to="/"
-            className="inline-flex items-center text-[#1E2BBF] hover:text-[#FFFFFF] mb-12 transition-colors duration-700 group"
+            className="group inline-flex items-center gap-2 px-5 py-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-xl transition-all duration-300 backdrop-blur-sm mb-12"
           >
-            <ArrowLeft size={20} className="mr-2 group-hover:-translate-x-1 transition-transform" />
-            Volver al Inicio
+            <div className="relative">
+              <ArrowLeft className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" strokeWidth={2} />
+              <div className="absolute inset-0 bg-[#4A5CFF]/30 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            <span className="text-sm font-medium text-gray-400 group-hover:text-white transition-colors">
+              Volver
+            </span>
           </Link>
 
-          <h1 className="text-6xl md:text-7xl font-bold mb-6 text-center leading-tight">
-            <span className="text-6xl md:text-8xl font-black text-transparent bg-clip-text animate-gradient inline-block" style={{ backgroundImage: 'linear-gradient(to right, #1E2BBF, #2E3FE6, #4A5CFF, #FFFFFF, #4A5CFF, #2E3FE6, #1E2BBF)', backgroundSize: '200% 100%' }}>
-              Contáctanos
-            </span>
-            {/* Efecto de brillo/glow */}
-            <div className="absolute inset-0 blur-2xl opacity-30" style={{ background: 'radial-gradient(circle, #4A5CFF 0%, transparent 70%)' }}></div>
-          </h1>
-          
-          <p className="text-xl text-gray-400 text-center mb-16 max-w-2xl mx-auto">
-            Estamos aquí para ayudarte. Envíanos un mensaje y te responderemos pronto.
-          </p>
+          {/* Header moderno */}
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center gap-2 px-6 py-2 bg-white/5 border border-white/10 rounded-full mb-8">
+              <MessageCircle className="w-4 h-4 text-[#4A5CFF]" />
+              <span className="text-sm font-semibold text-gray-300 uppercase tracking-wider">
+                Estamos para ayudarte
+              </span>
+            </div>
 
-          <div className="bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12 backdrop-blur-sm hover:border-white/20 transition-all duration-300">
-            {/* Contact Info */}
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <div className="text-center group">
-                <div className="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600/30 group-hover:scale-110 transition-all duration-300">
-                  <Mail size={28} className="text-blue-400 group-hover:text-blue-300" />
+            <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
+              <span 
+                className="text-transparent bg-clip-text animate-gradient inline-block"
+                style={{ 
+                  backgroundImage: 'linear-gradient(to right, #4A5CFF, #FFFFFF, #7A8FFF, #FFFFFF, #4A5CFF)',
+                  backgroundSize: '200% 100%'
+                }}
+              >
+                Contáctanos
+              </span>
+            </h1>
+            
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Nuestro equipo está listo para resolver todas tus dudas sobre{' '}
+              <span className="text-white font-semibold">Internet y TV IP</span>
+            </p>
+          </div>
+
+          {/* Cards de contacto modernas */}
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
+            <div className="relative rounded-2xl p-8 text-center group hover:scale-105 transition-all duration-300" style={{ background: 'linear-gradient(135deg, rgba(74, 92, 255, 0.08), rgba(122, 143, 255, 0.04))' }}>
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" style={{ background: 'linear-gradient(135deg, rgba(74, 92, 255, 0.15), rgba(122, 143, 255, 0.08))' }}></div>
+              <div className="relative z-10">
+                <div className="w-16 h-16 mx-auto rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform" style={{ background: 'linear-gradient(135deg, #4A5CFF, #7A8FFF)', boxShadow: '0 8px 24px rgba(74, 92, 255, 0.3)' }}>
+                  <Mail size={28} className="text-white" strokeWidth={2.5} />
                 </div>
-                <h3 className="text-lg font-semibold mb-2 group-hover:text-blue-400 transition-colors">Email</h3>
-                <a href="mailto:contacto@verlacol.com" className="text-gray-400 hover:text-white transition-colors">
-                  contacto@verlacol.com
+                <h3 className="text-xl font-black mb-2 text-white">Email</h3>
+                <a href="mailto:info@verla.com" className="text-gray-300 hover:text-white transition-colors font-medium">
+                  info@verla.com
                 </a>
-              </div>
-
-              <div className="text-center group">
-                <div className="w-16 h-16 bg-green-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-600/30 group-hover:scale-110 transition-all duration-300">
-                  <Phone size={28} className="text-green-400 group-hover:text-green-300" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2 group-hover:text-green-400 transition-colors">Teléfono</h3>
-                <a href="tel:+573115761963" className="text-gray-400 hover:text-white transition-colors">
-                  +57 311-576-1963
-                </a>
-              </div>
-
-              <div className="text-center group">
-                <div className="w-16 h-16 bg-purple-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-600/30 group-hover:scale-110 transition-all duration-300">
-                  <MapPin size={28} className="text-purple-400 group-hover:text-pink-400" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2 group-hover:text-purple-400 transition-colors">Ubicación</h3>
-                <p className="text-gray-400">Bogotá, Colombia</p>
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="border-t border-white/10 pt-12">
-              <h2 className="text-2xl font-bold mb-8 text-center">Envíanos un mensaje</h2>
+            <div className="relative rounded-2xl p-8 text-center group hover:scale-105 transition-all duration-300" style={{ background: 'linear-gradient(135deg, rgba(74, 92, 255, 0.08), rgba(122, 143, 255, 0.04))' }}>
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" style={{ background: 'linear-gradient(135deg, rgba(74, 92, 255, 0.15), rgba(122, 143, 255, 0.08))' }}></div>
+              <div className="relative z-10">
+                <div className="w-16 h-16 mx-auto rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform" style={{ background: 'linear-gradient(135deg, #5B6FFF, #7A8FFF)', boxShadow: '0 8px 24px rgba(91, 111, 255, 0.3)' }}>
+                  <Phone size={28} className="text-white" strokeWidth={2.5} />
+                </div>
+                <h3 className="text-xl font-black mb-2 text-white">Teléfono</h3>
+                <a href="tel:+573001234567" className="text-gray-300 hover:text-white transition-colors font-medium">
+                  +57 300-123-4567
+                </a>
+              </div>
+            </div>
+
+            <div className="relative rounded-2xl p-8 text-center group hover:scale-105 transition-all duration-300" style={{ background: 'linear-gradient(135deg, rgba(74, 92, 255, 0.08), rgba(122, 143, 255, 0.04))' }}>
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" style={{ background: 'linear-gradient(135deg, rgba(74, 92, 255, 0.15), rgba(122, 143, 255, 0.08))' }}></div>
+              <div className="relative z-10">
+                <div className="w-16 h-16 mx-auto rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform" style={{ background: 'linear-gradient(135deg, #7A8FFF, #4A5CFF)', boxShadow: '0 8px 24px rgba(122, 143, 255, 0.3)' }}>
+                  <MapPin size={28} className="text-white" strokeWidth={2.5} />
+                </div>
+                <h3 className="text-xl font-black mb-2 text-white">Ubicación</h3>
+                <p className="text-gray-300 font-medium">Bogotá, Colombia</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Formulario de contacto moderno */}
+          <div className="relative rounded-3xl p-12 overflow-hidden">
+            {/* Fondo con gradiente */}
+            <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(74, 92, 255, 0.1), rgba(122, 143, 255, 0.05))' }}></div>
+            {/* Border glow */}
+            <div className="absolute inset-0 rounded-3xl" style={{ padding: '1px', background: 'linear-gradient(135deg, rgba(74, 92, 255, 0.3), rgba(122, 143, 255, 0.2))', WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)', WebkitMaskComposite: 'xor', maskComposite: 'exclude' }}></div>
+            
+            <div className="relative z-10">
+              <h2 className="text-3xl font-black mb-2 text-center">
+                Envíanos un{' '}
+                <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(to right, #4A5CFF, #FFFFFF, #7A8FFF)' }}>
+                  Mensaje
+                </span>
+              </h2>
+              <p className="text-center text-gray-400 mb-10">Responderemos en menos de 24 horas</p>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl mx-auto">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                    Nombre
+                  <label htmlFor="name" className="block text-sm font-bold text-white mb-2">
+                    Nombre Completo
                   </label>
                   <input
                     type="text"
                     id="name"
                     required
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
-                    placeholder="Tu nombre"
+                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#4A5CFF] focus:bg-white/10 transition-all"
+                    placeholder="Juan Pérez"
                   />
                 </div>
 
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    required
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
-                    placeholder="tu@email.com"
-                  />
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-bold text-white mb-2">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      required
+                      className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#4A5CFF] focus:bg-white/10 transition-all"
+                      placeholder="tu@email.com"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-bold text-white mb-2">
+                      Teléfono
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#4A5CFF] focus:bg-white/10 transition-all"
+                      placeholder="+57 300 123 4567"
+                    />
+                  </div>
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                    Mensaje
+                  <label htmlFor="message" className="block text-sm font-bold text-white mb-2">
+                    ¿En qué podemos ayudarte?
                   </label>
                   <textarea
                     id="message"
-                    rows={5}
+                    rows={6}
                     required
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all resize-none"
-                    placeholder="Tu mensaje..."
+                    className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#4A5CFF] focus:bg-white/10 transition-all resize-none"
+                    placeholder="Cuéntanos sobre tu consulta, plan de interés, dirección para cobertura..."
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 shadow-2xl hover:shadow-[0_0_25px_-5px] hover:shadow-[#4A5CFF]/70"
+                  className="group w-full inline-flex items-center justify-center gap-3 text-white px-8 py-5 rounded-xl text-lg font-bold transition-all duration-300 hover:scale-105"
                   style={{
-                    background: 'linear-gradient(135deg, #1E2BBF 0%, #2E3FE6 50%, #4A5CFF 100%)',
+                    background: 'linear-gradient(135deg, #4A5CFF, #7A8FFF)',
+                    boxShadow: '0 10px 40px rgba(74, 92, 255, 0.4)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.boxShadow = '0 15px 50px rgba(74, 92, 255, 0.5)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.boxShadow = '0 10px 40px rgba(74, 92, 255, 0.4)';
                   }}
                 >
                   Enviar Mensaje
-                  <Send size={20} className="group-hover:translate-x-1 transition-transform" />
+                  <Send size={20} className="group-hover:translate-x-1 transition-transform" strokeWidth={2.5} />
                 </button>
+                
+                {/* Features adicionales */}
+                <div className="grid md:grid-cols-3 gap-4 pt-8 border-t border-white/10">
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-[#4A5CFF] shrink-0" strokeWidth={2.5} />
+                    <span className="text-sm text-gray-300">Respuesta en 24h</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-[#4A5CFF] shrink-0" strokeWidth={2.5} />
+                    <span className="text-sm text-gray-300">Soporte personalizado</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Clock className="w-5 h-5 text-[#4A5CFF] shrink-0" strokeWidth={2.5} />
+                    <span className="text-sm text-gray-300">Horario 24/7</span>
+                  </div>
+                </div>
               </form>
             </div>
           </div>
