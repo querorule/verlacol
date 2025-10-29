@@ -99,8 +99,27 @@ npm run build        # Build de producción
 npm run preview      # Preview del build
 npm run lint         # Ejecutar ESLint
 npm run type-check   # Verificar tipos TypeScript
+npm test             # Ejecutar tests
 npm run all          # Ejecutar type-check + lint + build
 ```
+
+## 🧪 CI/CD y Protección de Ramas
+
+La rama `developer` funciona como entorno de pre-producción. Se valida que todas las funcionalidades pasen checks antes de integrarse a `main`.
+
+- CI en `.github/workflows/ci.yml` ejecuta: `type-check`, `lint`, `build` y `tests` en `push` y `pull_request` a `developer` y `main`.
+- Políticas deseadas para `developer` (configurables en GitHub → Settings → Branches):
+  - Requerir revisión de código antes de merge (≥1 aprobación).
+  - Exigir que los status checks de CI pasen antes del merge.
+  - Permitir solo merge commits (no fast-forward y no squash).
+
+## 🔀 Proceso de Merge developer → main
+
+1. Crear Pull Request desde `developer` hacia `main`.
+2. Verificar que el workflow `CI` pasa: `npm run type-check`, `npm run lint`, `npm run build`, `npm test`.
+3. Obtener al menos una aprobación de revisión de código.
+4. Realizar el merge usando `Merge commit`.
+5. Desplegar desde `main` según el pipeline definido.
 
 ## 📁 Estructura del Proyecto
 
