@@ -9,6 +9,7 @@ import { LoadingFallback } from '../ui/components/common';
 const Home = lazy(() => import('../ui/pages/home'));
 const About = lazy(() => import('../ui/pages/about'));
 const Contact = lazy(() => import('../ui/pages/contact'));
+const Pricing = lazy(() => import('../ui/pages/pricing'));
 
 // Legal Pages
 const ProteccionUsuarios = lazy(() => import('../ui/pages/legal/proteccion-usuarios'));
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
   {
     path: ROUTES.CONTACT,
     element: withSuspense(Contact),
+  },
+  {
+    path: ROUTES.PRICING,
+    element: withSuspense(Pricing),
   },
   // Legal Routes
   {

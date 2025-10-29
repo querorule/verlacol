@@ -11,35 +11,43 @@ export default function Navbar() {
   const [isLegalOpen, setIsLegalOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
-      <div className="container mx-auto px-6 py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-xl border-b border-white/5">
+      <div className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="text-white font-bold text-xl tracking-wider hover:text-purple-400 transition-colors">
-            VERLACOL
+          {/* Logo moderno */}
+          <Link to="/" className="group flex items-center gap-2">
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #4A5CFF, #7A8FFF)' }}>
+              <span className="text-white font-black text-sm">V</span>
+            </div>
+            <span className="text-white font-bold text-lg tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-[#4A5CFF] group-hover:to-[#7A8FFF]" style={{ transition: 'all 400ms ease' }}>
+              Verla
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-white transition-colors text-sm">
+          <div className="hidden md:flex items-center gap-1">
+            <Link to="/" className="group relative px-4 py-2 text-sm text-gray-400 hover:text-white rounded-lg hover:bg-white/5" style={{ transition: 'all 300ms cubic-bezier(0.4, 0, 0.2, 1)' }}>
               Inicio
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-[#4A5CFF] to-[#7A8FFF] group-hover:w-8 transition-all duration-300 rounded-full"></div>
             </Link>
-            <Link to="/about" className="text-gray-300 hover:text-white transition-colors text-sm">
+            <Link to="/about" className="group relative px-4 py-2 text-sm text-gray-400 hover:text-white rounded-lg hover:bg-white/5" style={{ transition: 'all 300ms cubic-bezier(0.4, 0, 0.2, 1)' }}>
               Nosotros
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-[#4A5CFF] to-[#7A8FFF] group-hover:w-8 transition-all duration-300 rounded-full"></div>
             </Link>
-            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors text-sm">
-              Contacto
+            <Link to="/precios" className="group relative px-4 py-2 text-sm text-gray-400 hover:text-white rounded-lg hover:bg-white/5" style={{ transition: 'all 300ms cubic-bezier(0.4, 0, 0.2, 1)' }}>
+              Precios
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-[#4A5CFF] to-[#7A8FFF] group-hover:w-8 transition-all duration-300 rounded-full"></div>
             </Link>
             {/* Modern Legal Mega Menu */}
             <div className="relative group">
               <button 
-                className="flex items-center text-gray-300 hover:text-white transition-all duration-300 text-sm group/navitem relative"
+                className="group/navitem flex items-center gap-1.5 px-4 py-2 text-sm text-gray-400 hover:text-white rounded-lg hover:bg-white/5" style={{ transition: 'all 300ms cubic-bezier(0.4, 0, 0.2, 1)' }}
               >
                 <span className="relative">
-                  Legal y Regulatorio
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-linear-to-r from-[#7A8FFF] to-[#4A5CFF] transition-all duration-300 group-hover/navitem:w-full"></span>
+                  Legal
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-[#4A5CFF] to-[#7A8FFF] group-hover/navitem:w-8 transition-all duration-300 rounded-full"></div>
                 </span>
-                <ChevronDown className="ml-1.5 h-3.5 w-3.5 transition-transform duration-200 group-hover:rotate-180" />
+                <ChevronDown className="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" />
               </button>
               
               {/* Mega Menu Dropdown - Diseño Moderno Mejorado */}
@@ -201,66 +209,96 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* CTA Button moderno */}
+          <div className="hidden md:block ml-2">
             <Link
               to="/contact"
-              className="bg-linear-to-r from-[#5B6FFF] to-[#4A5CFF] text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:from-[#7A8FFF] hover:to-[#4A5CFF] transition-all duration-300 shadow-lg shadow-[#5B6FFF]/50"
+              className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white overflow-hidden"
+              style={{ 
+                background: 'linear-gradient(135deg, #4A5CFF, #7A8FFF)',
+                boxShadow: '0 4px 15px rgba(74, 92, 255, 0.3)',
+                transition: 'all 400ms cubic-bezier(0.4, 0, 0.2, 1)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 8px 25px rgba(74, 92, 255, 0.4)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0px)';
+                e.currentTarget.style.boxShadow = '0 4px 15px rgba(74, 92, 255, 0.3)';
+              }}
             >
-              Comenzar
+              <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <span className="relative">Contactar</span>
+              <svg className="relative w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button moderno */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-white p-2"
+            className="md:hidden p-2 rounded-lg hover:bg-white/5" style={{ transition: 'all 300ms ease' }}
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? 
+              <X size={22} className="text-white" /> : 
+              <Menu size={22} className="text-white" />
+            }
           </button>
         </div>
 
         {/* Mobile Menu Moderno */}
         <div className={`md:hidden overflow-hidden transition-all duration-500 ease-out ${isMenuOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
-          <div className="mt-6 pb-6 space-y-3">
+          <div className="mt-6 pb-6 space-y-2">
             {/* Enlaces principales */}
             <Link
               to="/"
               onClick={() => setIsMenuOpen(false)}
-              className="flex items-center gap-3 px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-all duration-300 group"
+              className="group flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-white rounded-xl" style={{ background: 'transparent', transition: 'all 300ms cubic-bezier(0.4, 0, 0.2, 1)' }}
+              onMouseEnter={(e) => e.currentTarget.style.background = 'linear-gradient(135deg, #4A5CFF10, transparent)'}
+              onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}
             >
-              <div className="w-8 h-8 bg-purple-500/10 rounded-lg flex items-center justify-center group-hover:bg-purple-500/20 transition-colors">
-                <svg className="w-4 h-4 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                </svg>
-              </div>
-              <span className="font-medium">Inicio</span>
+              <div className="w-2 h-2 rounded-full bg-[#4A5CFF] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <span className="text-sm font-medium">Inicio</span>
             </Link>
 
             <Link
               to="/about"
               onClick={() => setIsMenuOpen(false)}
-              className="flex items-center gap-3 px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-all duration-300 group"
+              className="group flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-white rounded-xl" style={{ background: 'transparent', transition: 'all 300ms cubic-bezier(0.4, 0, 0.2, 1)' }}
+              onMouseEnter={(e) => e.currentTarget.style.background = 'linear-gradient(135deg, #4A5CFF10, transparent)'}
+              onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}
             >
-              <div className="w-8 h-8 bg-purple-500/10 rounded-lg flex items-center justify-center group-hover:bg-purple-500/20 transition-colors">
-                <svg className="w-4 h-4 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
-              </div>
-              <span className="font-medium">Nosotros</span>
+              <div className="w-2 h-2 rounded-full bg-[#4A5CFF] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <span className="text-sm font-medium">Nosotros</span>
             </Link>
 
             <Link
+              to="/precios"
+              onClick={() => setIsMenuOpen(false)}
+              className="group flex items-center gap-3 px-4 py-3 text-gray-400 hover:text-white rounded-xl" style={{ background: 'transparent', transition: 'all 300ms cubic-bezier(0.4, 0, 0.2, 1)' }}
+              onMouseEnter={(e) => e.currentTarget.style.background = 'linear-gradient(135deg, #4A5CFF10, transparent)'}
+              onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}
+            >
+              <div className="w-2 h-2 rounded-full bg-[#4A5CFF] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <span className="text-sm font-medium">Precios</span>
+            </Link>
+
+            
+            {/* Botón CTA en móvil */}
+            <Link
               to="/contact"
               onClick={() => setIsMenuOpen(false)}
-              className="flex items-center gap-3 px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-all duration-300 group"
+              className="group flex items-center justify-center gap-2 px-4 py-3.5 text-white rounded-xl mt-2 font-medium text-sm" 
+              style={{ background: 'linear-gradient(135deg, #4A5CFF, #7A8FFF)', transition: 'all 300ms cubic-bezier(0.4, 0, 0.2, 1)' }}
+              onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
+              onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
-              <div className="w-8 h-8 bg-blue-500/10 rounded-lg flex items-center justify-center group-hover:bg-blue-500/20 transition-colors">
-                <svg className="w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <span className="font-medium">Contacto</span>
+              <span>Contactar</span>
+              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
             </Link>
 
             {/* Legal y Regulatorio - Expandible */}

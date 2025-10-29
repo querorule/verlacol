@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Scroll suave en toda la aplicación */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Animación para scroll infinito de logos */
 @keyframes scroll {
   0% {

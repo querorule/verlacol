@@ -5,6 +5,7 @@ export const ROUTES = {
   HOME: '/',
   ABOUT: '/about',
   CONTACT: '/contact',
+  PRICING: '/precios',
   
   // Legal Routes
   LEGAL: {
