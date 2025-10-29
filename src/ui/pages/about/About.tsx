@@ -62,12 +62,9 @@ export default function About() {
               </div>
             </div>
             <p className="text-xl text-gray-300 text-center leading-relaxed mb-6">
-              VerlaCol es un proyecto desarrollado con las tecnologías más modernas
-              para crear aplicaciones web rápidas, escalables y mantenibles.
-            </p>
-            <p className="text-lg text-gray-400 text-center leading-relaxed">
-              Utilizamos React, TypeScript, TailwindCSS y siguiendo principios de arquitectura hexagonal,
-              DDD, SOLID y Clean Code para garantizar código de máxima calidad.
+              Verla es una empresa de telecomunicaciones que representa el concepto de  "tecnología y entretenimiento. Ofrece servicios de televisión IP y servicios de conexión de internet por medio de 
+              fibra óptica, brindando una experiencia moderna, estable y accesible para todos los hogares de Colombia. Su propósito es conectar a las personas con el contenido y el mundo digital, desde 
+              una visión innovadora y cercana al usuario latinoamericano.
             </p>
           </div>
 
@@ -80,8 +77,8 @@ export default function About() {
               </div>
               <h3 className="text-2xl font-bold mb-4 group-hover:text-blue-400 transition-colors">Misión</h3>
               <p className="text-gray-400 leading-relaxed">
-                Crear soluciones web innovadoras siguiendo las mejores prácticas
-                y principios de desarrollo de software moderno.
+                Brindar experiencias de entretenimiento y conectividad innovadoras a través de servicios de televisión IP e internet por fibra óptica, ofreciendo calidad, estabilidad y cercanía al usuario. 
+                Verla busca conectar hogares con el mundo digital, integrando tecnología y contenido en una sola plataforma accesible y confiable.
               </p>
             </div>
 
@@ -91,11 +88,29 @@ export default function About() {
                   <Heart size={28} className="text-red-400" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-red-400 transition-colors">Valores</h3>
-              <p className="text-gray-400 leading-relaxed">
-                Calidad, innovación y código limpio son los pilares
-                que guían nuestro desarrollo día a día.
-              </p>
+              <h3 className="text-2xl font-bold mb-4 group-hover:text-red-400 transition-colors">Nuestros Valores</h3>
+              <ul className="space-y-3 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                <li className="flex items-start hover:!text-white group/item">
+                  <span className="text-red-400 mr-2 group-hover/item:text-red-300 transition-colors duration-300">•</span>
+                  <span className="text-gray-400 group-hover/item:text-white transition-colors duration-300"><strong className="text-gray-300 group-hover/item:text-white">Innovación Continua:</strong> Buscamos constantemente nuevas formas de mejorar la experiencia digital de nuestros usuarios.</span>
+                </li>
+                <li className="flex items-start hover:!text-white group/item">
+                  <span className="text-red-400 mr-2 group-hover/item:text-red-300 transition-colors duration-300">•</span>
+                  <span className="text-gray-400 group-hover/item:text-white transition-colors duration-300"><strong className="text-gray-300 group-hover/item:text-white">Conectividad Humana:</strong> Creemos que la tecnología debe unir a las personas y mejorar sus vidas.</span>
+                </li>
+                <li className="flex items-start hover:!text-white group/item">
+                  <span className="text-red-400 mr-2 group-hover/item:text-red-300 transition-colors duration-300">•</span>
+                  <span className="text-gray-400 group-hover/item:text-white transition-colors duration-300"><strong className="text-gray-300 group-hover/item:text-white">Calidad de Servicio:</strong> Comprometidos con la excelencia en cada conexión que ofrecemos.</span>
+                </li>
+                <li className="flex items-start hover:!text-white group/item">
+                  <span className="text-red-400 mr-2 group-hover/item:text-red-300 transition-colors duration-300">•</span>
+                  <span className="text-gray-400 group-hover/item:text-white transition-colors duration-300"><strong className="text-gray-300 group-hover/item:text-white">Accesibilidad:</strong> Tecnología de vanguardia al alcance de todos los hogares.</span>
+                </li>
+                <li className="flex items-start hover:!text-white group/item">
+                  <span className="text-red-400 mr-2 group-hover/item:text-red-300 transition-colors duration-300">•</span>
+                  <span className="text-gray-400 group-hover/item:text-white transition-colors duration-300"><strong className="text-gray-300 group-hover/item:text-white">Compromiso Social:</strong> Conectamos comunidades y llevamos oportunidades a cada rincón de Colombia.</span>
+                </li>
+              </ul>
             </div>
 
             <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 hover:-translate-y-2 transition-all duration-300 group">
@@ -106,8 +121,8 @@ export default function About() {
               </div>
               <h3 className="text-2xl font-bold mb-4 group-hover:text-emerald-400 transition-colors">Visión</h3>
               <p className="text-gray-400 leading-relaxed">
-                Ser referentes en desarrollo web moderno, creando experiencias
-                excepcionales para usuarios y equipos.
+                Convertirse en la marca líder de entretenimiento y conectividad en Latinoamérica, reconocida por transformar la manera en que las personas disfrutan, y se conectan, 
+                impulsando una nueva era de experiencias digitales sin límites.
               </p>
             </div>
           </div>
