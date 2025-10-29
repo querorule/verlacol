@@ -75,18 +75,17 @@ export default function CompaniesSection({ companies }: CompaniesSectionProps) {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-6 backdrop-blur-sm">
             <div className="w-2 h-2 bg-[#4A5CFF] rounded-full animate-pulse"></div>
             <span className="text-xs font-semibold text-[#4A5CFF] uppercase tracking-wider">
-              Trusted Worldwide
+              Contenido Premium
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl font-black mb-4">
-            Empresas que{" "}
+            Canales de TV{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-[#7A8FFF] to-[#4A5CFF]">
-              impulsan
-            </span>{" "}
-            el futuro
+              Disponibles
+            </span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Organizaciones innovadoras que eligen nuestra plataforma
+            Disfruta de los mejores canales colombianos en alta definición
           </p>
         </div>
 
@@ -139,7 +138,7 @@ export default function CompaniesSection({ companies }: CompaniesSectionProps) {
                         <div className="absolute inset-0 w-1.5 h-1.5 rounded-full bg-green-400 animate-ping"></div>
                       </div>
                       <span className="text-[11px] font-semibold text-[#4A5CFF] uppercase tracking-wider">
-                        Premium Partner
+                        HD Disponible
                       </span>
                     </div>
                   </div>
@@ -196,7 +195,7 @@ export default function CompaniesSection({ companies }: CompaniesSectionProps) {
                         <div className="absolute inset-0 w-1.5 h-1.5 rounded-full bg-green-400 animate-ping"></div>
                       </div>
                       <span className="text-[11px] font-semibold text-[#4A5CFF] uppercase tracking-wider">
-                        Premium Partner
+                        HD Disponible
                       </span>
                     </div>
                   </div>
@@ -229,10 +228,10 @@ export default function CompaniesSection({ companies }: CompaniesSectionProps) {
                   animation: "hologram 6s ease infinite",
                 }}
               >
-                50+
+                200+
               </div>
               <div className="text-sm font-bold text-[#4A5CFF] uppercase tracking-wider mb-1">
-                Organizaciones
+                Canales HD/4K
               </div>
               <div className="h-1 w-16 mx-auto bg-linear-to-r from-transparent via-[#4A5CFF] to-transparent rounded-full"></div>
             </div>
@@ -252,10 +251,10 @@ export default function CompaniesSection({ companies }: CompaniesSectionProps) {
                   animation: "hologram 6s ease infinite",
                 }}
               >
-                98%
+                100%
               </div>
               <div className="text-sm font-bold text-[#4A5CFF] uppercase tracking-wider mb-1">
-                Satisfacción
+                Streaming IP
               </div>
               <div className="h-1 w-16 mx-auto bg-linear-to-r from-transparent via-[#4A5CFF] to-transparent rounded-full"></div>
             </div>
@@ -275,10 +274,10 @@ export default function CompaniesSection({ companies }: CompaniesSectionProps) {
                   animation: "hologram 6s ease infinite",
                 }}
               >
-                24/7
+                VOD
               </div>
               <div className="text-sm font-bold text-[#4A5CFF] uppercase tracking-wider mb-1">
-                Soporte
+                On-Demand
               </div>
               <div className="h-1 w-16 mx-auto bg-linear-to-r from-transparent via-[#4A5CFF] to-transparent rounded-full"></div>
             </div>
