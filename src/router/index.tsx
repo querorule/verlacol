@@ -10,6 +10,16 @@ const Home = lazy(() => import('../ui/pages/home'));
 const About = lazy(() => import('../ui/pages/about'));
 const Contact = lazy(() => import('../ui/pages/contact'));
 
+// Legal Pages
+const ProteccionUsuarios = lazy(() => import('../ui/pages/legal/proteccion-usuarios'));
+const ProteccionInfantil = lazy(() => import('../ui/pages/legal/proteccion-infantil'));
+const Normatividad = lazy(() => import('../ui/pages/legal/normatividad'));
+const ProteccionDatos = lazy(() => import('../ui/pages/legal/proteccion-datos'));
+const InternetSano = lazy(() => import('../ui/pages/legal/internet-sano'));
+const Filtrado = lazy(() => import('../ui/pages/legal/filtrado'));
+const Seguridad = lazy(() => import('../ui/pages/legal/seguridad'));
+const ComparadorTarifas = lazy(() => import('../ui/pages/legal/comparador-tarifas'));
+
 // Wrapper para aplicar Suspense a las rutas lazy
 const withSuspense = (Component: ComponentType) => (
   <Suspense fallback={<LoadingFallback />}>
@@ -29,5 +39,38 @@ export const router = createBrowserRouter([
   {
     path: ROUTES.CONTACT,
     element: withSuspense(Contact),
+  },
+  // Legal Routes
+  {
+    path: ROUTES.LEGAL.PROTECCION_USUARIOS,
+    element: withSuspense(ProteccionUsuarios),
+  },
+  {
+    path: ROUTES.LEGAL.PROTECCION_INFANTIL,
+    element: withSuspense(ProteccionInfantil),
+  },
+  {
+    path: ROUTES.LEGAL.NORMATIVIDAD,
+    element: withSuspense(Normatividad),
+  },
+  {
+    path: ROUTES.LEGAL.PROTECCION_DATOS,
+    element: withSuspense(ProteccionDatos),
+  },
+  {
+    path: ROUTES.LEGAL.INTERNET_SANO,
+    element: withSuspense(InternetSano),
+  },
+  {
+    path: ROUTES.LEGAL.FILTRADO,
+    element: withSuspense(Filtrado),
+  },
+  {
+    path: ROUTES.LEGAL.SEGURIDAD,
+    element: withSuspense(Seguridad),
+  },
+  {
+    path: ROUTES.LEGAL.COMPARADOR_TARIFAS,
+    element: withSuspense(ComparadorTarifas),
   },
 ]);

@@ -9,7 +9,7 @@ export default function FeaturesSection() {
       {/* Efectos de fondo */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[120px]"></div>
-        <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-pink-600/10 rounded-full blur-[120px]"></div>
+        <div className="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[120px]"></div>
       </div>
 
       <div className="container mx-auto max-w-7xl relative z-10">
@@ -39,8 +39,8 @@ export default function FeaturesSection() {
               {/* Icon Container */}
               <div className="relative mb-6">
                 <div className="absolute inset-0 bg-purple-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                <div className="relative w-20 h-20 bg-linear-to-br from-purple-600/20 to-purple-600/5 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
-                  <Zap size={36} className="text-purple-400 group-hover:text-purple-300" />
+                <div className="relative w-20 h-20 bg-linear-to-br from-purple-600/20 to-pink-600/5 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                  <Zap size={36} className="text-purple-400 group-hover:text-pink-400" />
                 </div>
               </div>
 
@@ -75,24 +75,24 @@ export default function FeaturesSection() {
 
           {/* Feature 2 - Colaboración */}
           <div className="group relative">
-            <div className="absolute inset-0 bg-linear-to-br from-pink-600/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="relative p-8 rounded-3xl border border-white/5 bg-white/2 backdrop-blur-sm hover:border-pink-500/20 transition-all duration-500 h-full">
+            <div className="absolute inset-0 bg-linear-to-br from-purple-600/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="relative p-8 rounded-3xl border border-white/5 bg-white/2 backdrop-blur-sm hover:border-purple-500/20 transition-all duration-500 h-full">
               {/* Icon Container */}
               <div className="relative mb-6">
-                <div className="absolute inset-0 bg-pink-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                <div className="relative w-20 h-20 bg-linear-to-br from-pink-600/20 to-pink-600/5 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
-                  <Users size={36} className="text-pink-400 group-hover:text-pink-300" />
+                <div className="absolute inset-0 bg-purple-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div className="relative w-20 h-20 bg-linear-to-br from-purple-600/20 to-pink-600/5 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                  <Users size={36} className="text-purple-400 group-hover:text-pink-300" />
                 </div>
               </div>
 
               {/* Badge */}
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-pink-500/10 rounded-full mb-4">
-                <div className="w-1.5 h-1.5 bg-pink-400 rounded-full animate-pulse"></div>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-purple-500/10 rounded-full mb-4">
+                <div className="w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse"></div>
                 <span className="text-xs font-semibold text-pink-300 uppercase tracking-wider">Teamwork</span>
               </div>
 
               {/* Content */}
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-pink-400 transition-colors">
+              <h3 className="text-2xl font-bold mb-4 group-hover:text-purple-400 transition-colors">
                 Colaboración fluida
               </h3>
               <p className="text-gray-400 leading-relaxed mb-6 group-hover:text-gray-300 transition-colors">
@@ -102,12 +102,12 @@ export default function FeaturesSection() {
               {/* Stats */}
               <div className="flex items-center gap-4 pt-4 border-white/5">
                 <div>
-                  <div className="text-2xl font-bold text-pink-400">Real-time</div>
+                  <div className="text-2xl font-bold text-purple-400">Real-time</div>
                   <div className="text-xs text-gray-500">Sincronización</div>
                 </div>
                 <div className="h-8 w-px bg-white/10"></div>
                 <div>
-                  <div className="text-2xl font-bold text-pink-400">100%</div>
+                  <div className="text-2xl font-bold text-purple-400">100%</div>
                   <div className="text-xs text-gray-500">Integrado</div>
                 </div>
               </div>

@@ -29,7 +29,7 @@ export default function CompaniesSection({ companies }: CompaniesSectionProps) {
 
           {/* Pink gradient top-right - MÁS INTENSO */}
           <div
-            className="absolute -top-40 -right-40 w-[900px] h-[900px] bg-pink-600/15 rounded-full blur-[100px] animate-pulse-slow"
+            className="absolute -top-40 -right-40 w-[900px] h-[900px] bg-purple-600/15 rounded-full blur-[100px] animate-pulse-slow"
             style={{ animationDelay: "1.5s" }}
           ></div>
 
@@ -48,7 +48,7 @@ export default function CompaniesSection({ companies }: CompaniesSectionProps) {
 
         {/* Líneas decorativas brillantes */}
         <div className="absolute top-1/4 left-0 right-0 h-[2px] bg-linear-to-r from-transparent via-purple-500/40 to-transparent shadow-lg shadow-purple-500/20"></div>
-        <div className="absolute bottom-1/3 left-0 right-0 h-[2px] bg-linear-to-r from-transparent via-pink-500/40 to-transparent shadow-lg shadow-pink-500/20"></div>
+        <div className="absolute bottom-1/3 left-0 right-0 h-[2px] bg-linear-to-r from-transparent via-purple-500/40 to-transparent shadow-lg shadow-purple-500/20"></div>
 
         {/* Dots pattern */}
         <div className="absolute inset-0 opacity-20">
@@ -104,7 +104,7 @@ export default function CompaniesSection({ companies }: CompaniesSectionProps) {
                 className="group relative min-w-[240px]"
               >
                 {/* Outer glow container */}
-                <div className="absolute -inset-px bg-linear-to-r from-purple-600/20 via-pink-600/20 to-purple-600/20 rounded-[24px] opacity-0 group-hover:opacity-100 blur-sm transition-all duration-700"></div>
+                <div className="absolute -inset-px bg-linear-to-r from-purple-600/20 via-purple-600/20 to-pink-600/20 rounded-[24px] opacity-0 group-hover:opacity-100 blur-sm transition-all duration-700"></div>
 
                 {/* Main card */}
                 <div className="relative h-full bg-linear-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl border border-white/20 rounded-[23px] overflow-hidden transition-all duration-700 hover:scale-[1.02] hover:border-white/30 group-hover:shadow-2xl group-hover:shadow-purple-500/30">
@@ -120,15 +120,15 @@ export default function CompaniesSection({ companies }: CompaniesSectionProps) {
                   {/* Content */}
                   <div className="relative p-6">
                     {/* Icon container with 3D effect */}
-                    <div className="relative mb-4 w-14 h-14 rounded-2xl bg-linear-to-br from-purple-500/20 via-pink-500/20 to-purple-500/20 flex items-center justify-center border border-white/20 shadow-lg shadow-purple-500/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                    <div className="relative mb-4 w-14 h-14 rounded-2xl bg-linear-to-br from-purple-500/20 via-purple-500/20 to-pink-500/20 flex items-center justify-center border border-white/20 shadow-lg shadow-purple-500/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
                       {/* Inner glow */}
                       <div className="absolute inset-[2px] rounded-xl bg-linear-to-br from-purple-600/30 to-pink-600/30 blur-md"></div>
                       {/* Icon */}
-                      <div className="relative w-7 h-7 rounded-lg bg-linear-to-br from-purple-400 via-pink-400 to-purple-400 shadow-inner"></div>
+                      <div className="relative w-7 h-7 rounded-lg bg-linear-to-br from-purple-400 via-purple-400 to-pink-400 shadow-inner"></div>
                     </div>
 
                     {/* Company name */}
-                    <h3 className="text-2xl font-black mb-2 bg-clip-text text-transparent bg-linear-to-r from-white via-white to-white/80 group-hover:from-white group-hover:via-purple-200 group-hover:to-pink-200 transition-all duration-500 tracking-tight">
+                    <h3 className="text-2xl font-black mb-2 bg-clip-text text-transparent bg-linear-to-r from-white via-white to-white/80 group-hover:from-white group-hover:via-purple-200 group-hover:to-[#4A5CFF] 200 transition-all duration-500 tracking-tight">
                       {company}
                     </h3>
 
@@ -149,7 +149,7 @@ export default function CompaniesSection({ companies }: CompaniesSectionProps) {
 
                   {/* Corner decoration */}
                   <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-purple-400/30 group-hover:bg-purple-400 transition-colors duration-500"></div>
-                  <div className="absolute bottom-3 left-3 w-1.5 h-1.5 rounded-full bg-pink-400/30 group-hover:bg-pink-400 transition-colors duration-500"></div>
+                  <div className="absolute bottom-3 left-3 w-1.5 h-1.5 rounded-full bg-purple-400/30 group-hover:bg-purple-400 transition-colors duration-500"></div>
                 </div>
               </div>
             ))}
@@ -161,7 +161,7 @@ export default function CompaniesSection({ companies }: CompaniesSectionProps) {
                 className="group relative min-w-[240px]"
               >
                 {/* Outer glow container */}
-                <div className="absolute -inset-px bg-linear-to-r from-purple-600/20 via-pink-600/20 to-purple-600/20 rounded-[24px] opacity-0 group-hover:opacity-100 blur-sm transition-all duration-700"></div>
+                <div className="absolute -inset-px bg-linear-to-r from-purple-600/20 via-purple-600/20 to-pink-600/20 rounded-[24px] opacity-0 group-hover:opacity-100 blur-sm transition-all duration-700"></div>
 
                 {/* Main card */}
                 <div className="relative h-full bg-linear-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl border border-white/20 rounded-[23px] overflow-hidden transition-all duration-700 hover:scale-[1.02] hover:border-white/30 group-hover:shadow-2xl group-hover:shadow-purple-500/30">
@@ -177,15 +177,15 @@ export default function CompaniesSection({ companies }: CompaniesSectionProps) {
                   {/* Content */}
                   <div className="relative p-6">
                     {/* Icon container with 3D effect */}
-                    <div className="relative mb-4 w-14 h-14 rounded-2xl bg-linear-to-br from-purple-500/20 via-pink-500/20 to-purple-500/20 flex items-center justify-center border border-white/20 shadow-lg shadow-purple-500/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                    <div className="relative mb-4 w-14 h-14 rounded-2xl bg-linear-to-br from-purple-500/20 via-purple-500/20 to-pink-500/20 flex items-center justify-center border border-white/20 shadow-lg shadow-purple-500/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
                       {/* Inner glow */}
                       <div className="absolute inset-[2px] rounded-xl bg-linear-to-br from-purple-600/30 to-pink-600/30 blur-md"></div>
                       {/* Icon */}
-                      <div className="relative w-7 h-7 rounded-lg bg-linear-to-br from-purple-400 via-pink-400 to-purple-400 shadow-inner"></div>
+                      <div className="relative w-7 h-7 rounded-lg bg-linear-to-br from-purple-400 via-purple-400 to-pink-400 shadow-inner"></div>
                     </div>
 
                     {/* Company name */}
-                    <h3 className="text-2xl font-black mb-2 bg-clip-text text-transparent bg-linear-to-r from-white via-white to-white/80 group-hover:from-white group-hover:via-purple-200 group-hover:to-pink-200 transition-all duration-500 tracking-tight">
+                    <h3 className="text-2xl font-black mb-2 bg-clip-text text-transparent bg-linear-to-r from-white via-white to-white/80 group-hover:from-white group-hover:via-purple-200 group-hover:to-[#4A5CFF] 200 transition-all duration-500 tracking-tight">
                       {company}
                     </h3>
 
@@ -206,7 +206,7 @@ export default function CompaniesSection({ companies }: CompaniesSectionProps) {
 
                   {/* Corner decoration */}
                   <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-purple-400/30 group-hover:bg-purple-400 transition-colors duration-500"></div>
-                  <div className="absolute bottom-3 left-3 w-1.5 h-1.5 rounded-full bg-pink-400/30 group-hover:bg-pink-400 transition-colors duration-500"></div>
+                  <div className="absolute bottom-3 left-3 w-1.5 h-1.5 rounded-full bg-purple-400/30 group-hover:bg-purple-400 transition-colors duration-500"></div>
                 </div>
               </div>
             ))}

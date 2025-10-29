@@ -1,17 +1,17 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import Navbar from '../../components/layout/Navbar';
-import { 
-  BackgroundEffects, 
-  ChatWidget, 
-  HeroSection, 
+import Navbar from "../../components/layout/Navbar";
+import {
+  BackgroundEffects,
+  ChatWidget,
+  HeroSection,
   CompaniesSection,
   StatsSection,
   ProblemSection,
   FeaturesSection,
-  FooterSection
-} from './components';
-import { companies, categoriesRow1, categoriesRow2 } from './constants/data';
+  FooterSection,
+} from "./components";
+import { companies, categoriesRow1, categoriesRow2 } from "./constants/data";
 
 // Página Home con diseño moderno tipo Superhuman
 // Ubicación: src/ui/pages/home/Home.tsx
@@ -22,12 +22,15 @@ export default function Home() {
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Background effects */}
       <BackgroundEffects />
-      
+
       {/* Chat widget */}
-      <ChatWidget isOpen={isChatOpen} onToggle={() => setIsChatOpen(!isChatOpen)} />
+      <ChatWidget
+        isOpen={isChatOpen}
+        onToggle={() => setIsChatOpen(!isChatOpen)}
+      />
 
       <Navbar />
-      
+
       {/* Hero Section */}
       <HeroSection />
 
@@ -38,7 +41,10 @@ export default function Home() {
       <StatsSection />
 
       {/* Problem Section */}
-      <ProblemSection categoriesRow1={categoriesRow1} categoriesRow2={categoriesRow2} />
+      <ProblemSection
+        categoriesRow1={categoriesRow1}
+        categoriesRow2={categoriesRow2}
+      />
 
       {/* Features Section */}
       <FeaturesSection />

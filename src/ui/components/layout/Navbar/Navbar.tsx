@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown, Shield, FileText, Globe, Filter, Lock, DollarSign, AlertCircle } from 'lucide-react';
+import { Menu, X, ChevronDown, Shield, Globe, Lock, AlertCircle, FileText, Filter, DollarSign } from 'lucide-react';
 import { useState } from 'react';
+import { ROUTES } from '../../../../router/routes.config';
 
 // Navbar moderno con diseño tipo Superhuman
 // Ubicación: src/ui/components/layout/Navbar/Navbar.tsx
@@ -36,155 +37,165 @@ export default function Navbar() {
               >
                 <span className="relative">
                   Legal y Regulatorio
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-linear-to-r from-purple-400 to-pink-500 transition-all duration-300 group-hover/navitem:w-full"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-linear-to-r from-[#2E3FE6] to-[#4A5CFF] transition-all duration-300 group-hover/navitem:w-full"></span>
                 </span>
                 <ChevronDown className="ml-1.5 h-3.5 w-3.5 transition-transform duration-200 group-hover:rotate-180" />
               </button>
               
-              {/* Mega Menu Dropdown */}
-              <div className="absolute left-1/2 -translate-x-1/2 mt-6 w-[580px] opacity-0 translate-y-4 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible transition-all duration-300 z-50">
-                <div className="bg-linear-to-br from-gray-900 via-black to-gray-900 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/10 overflow-hidden">
-                  {/* Header decorativo */}
-                  <div className="relative px-6 py-4 bg-linear-to-r from-purple-600/10 to-pink-600/10 border-b border-white/5">
+              {/* Mega Menu Dropdown - Diseño Moderno Mejorado */}
+              <div className="absolute left-1/2 -translate-x-1/2 mt-6 w-[680px] opacity-0 translate-y-4 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible transition-all duration-300 z-50">
+                <div className="relative bg-linear-to-br from-gray-900/95 via-black/95 to-gray-900/95 backdrop-blur-2xl rounded-3xl shadow-2xl border border-white/10 overflow-hidden">
+                  {/* Efectos de fondo animados */}
+                  <div className="absolute inset-0 bg-linear-to-br from-[#1E2BBF]/5 via-transparent to-[#4A5CFF]/5 pointer-events-none"></div>
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-[#1E2BBF]/10 rounded-full blur-3xl pointer-events-none"></div>
+                  
+                  {/* Header decorativo mejorado */}
+                  <div className="relative px-8 py-5 bg-linear-to-r from-[#1E2BBF]/15 via-[#2E3FE6]/10 to-[#4A5CFF]/15 border-b border-white/10">
                     <div className="flex items-center justify-between">
                       <div>
-                        <h3 className="text-white font-semibold text-sm">Legal y Regulatorio</h3>
-                        <p className="text-xs text-gray-500 mt-0.5">Cumplimiento y normativas</p>
+                        <h3 className="text-white font-bold text-base tracking-tight flex items-center gap-2">
+                          Legal y Regulatorio
+                          <span className="px-2 py-0.5 bg-[#2E3FE6]/20 rounded-full text-[10px] text-[#4A5CFF] font-medium">8</span>
+                        </h3>
+                        <p className="text-xs text-gray-400 mt-1">Toda la información legal y de cumplimiento</p>
                       </div>
-                      <Shield className="w-5 h-5 text-purple-400 opacity-60" />
+                      <div className="w-10 h-10 bg-linear-to-br from-[#1E2BBF]/20 to-[#4A5CFF]/20 rounded-xl flex items-center justify-center">
+                        <Shield className="w-5 h-5 text-[#4A5CFF]" />
+                      </div>
                     </div>
                   </div>
 
-                  {/* Grid de 2 columnas */}
-                  <div className="grid grid-cols-2 gap-2 p-3">
-                    {/* Columna 1 - Protección */}
-                    <div className="space-y-1">
-                      <div className="px-3 py-1.5">
-                        <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Protección</span>
-                      </div>
-                      
+                  {/* Content - Grid de 2 columnas moderno */}
+                  <div className="p-4 grid grid-cols-2 gap-3">
+                    {/* Columna 1 */}
+                    <div className="space-y-2">
                       <Link 
-                        to="/legal/proteccion-usuarios" 
-                        className="group/item flex items-start gap-3 px-3 py-3 rounded-xl hover:bg-white/5 transition-all duration-200"
+                        to={ROUTES.LEGAL.PROTECCION_USUARIOS}
+                        className="group/item relative flex items-start gap-3 px-4 py-3.5 rounded-2xl bg-linear-to-br from-[#2E3FE6]/5 to-transparent hover:from-[#2E3FE6]/15 hover:to-[#4A5CFF]/5 border border-transparent hover:border-[#2E3FE6]/30 transition-all duration-300"
                       >
-                        <div className="mt-0.5 p-2 rounded-lg bg-purple-500/10 group-hover/item:bg-purple-500/20 transition-colors">
-                          <AlertCircle className="w-4 h-4 text-purple-400" />
+                        <div className="p-2.5 rounded-xl bg-linear-to-br from-[#1E2BBF]/20 to-[#4A5CFF]/10 group-hover/item:from-[#2E3FE6]/30 group-hover/item:to-[#4A5CFF]/20 transition-all duration-300 shadow-lg shadow-[#1E2BBF]/10">
+                          <AlertCircle className="w-4 h-4 text-[#4A5CFF] group-hover/item:scale-110 transition-transform" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-sm font-medium text-gray-200 group-hover/item:text-white transition-colors">
+                          <div className="text-sm font-semibold text-gray-200 group-hover/item:text-white transition-colors mb-0.5">
                             Protección Usuarios
                           </div>
-                          <p className="text-xs text-gray-500 mt-0.5 line-clamp-1">Indicadores y métricas</p>
+                          <p className="text-xs text-gray-500 group-hover/item:text-gray-400 transition-colors">Indicadores y métricas</p>
                         </div>
                       </Link>
 
                       <Link 
-                        to="/legal/proteccion-datos" 
-                        className="group/item flex items-start gap-3 px-3 py-3 rounded-xl hover:bg-white/5 transition-all duration-200"
+                        to={ROUTES.LEGAL.NORMATIVIDAD}
+                        className="group/item relative flex items-start gap-3 px-4 py-3.5 rounded-2xl bg-linear-to-br from-[#2E3FE6]/5 to-transparent hover:from-[#2E3FE6]/15 hover:to-[#4A5CFF]/5 border border-transparent hover:border-[#2E3FE6]/30 transition-all duration-300"
                       >
-                        <div className="mt-0.5 p-2 rounded-lg bg-blue-500/10 group-hover/item:bg-blue-500/20 transition-colors">
-                          <Lock className="w-4 h-4 text-blue-400" />
+                        <div className="p-2.5 rounded-xl bg-linear-to-br from-[#1E2BBF]/20 to-[#4A5CFF]/10 group-hover/item:from-[#2E3FE6]/30 group-hover/item:to-[#4A5CFF]/20 transition-all duration-300 shadow-lg shadow-[#1E2BBF]/10">
+                          <FileText className="w-4 h-4 text-[#4A5CFF] group-hover/item:scale-110 transition-transform" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-sm font-medium text-gray-200 group-hover/item:text-white transition-colors">
-                            Datos Personales
-                          </div>
-                          <p className="text-xs text-gray-500 mt-0.5 line-clamp-1">Política de tratamiento</p>
-                        </div>
-                      </Link>
-
-                      <Link 
-                        to="/legal/seguridad" 
-                        className="group/item flex items-start gap-3 px-3 py-3 rounded-xl hover:bg-white/5 transition-all duration-200"
-                      >
-                        <div className="mt-0.5 p-2 rounded-lg bg-green-500/10 group-hover/item:bg-green-500/20 transition-colors">
-                          <Shield className="w-4 h-4 text-green-400" />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="text-sm font-medium text-gray-200 group-hover/item:text-white transition-colors">
-                            Seguridad en la Red
-                          </div>
-                          <p className="text-xs text-gray-500 mt-0.5 line-clamp-1">Protocolos y medidas</p>
-                        </div>
-                      </Link>
-                    </div>
-
-                    {/* Columna 2 - Regulación */}
-                    <div className="space-y-1">
-                      <div className="px-3 py-1.5">
-                        <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Regulación</span>
-                      </div>
-
-                      <Link 
-                        to="/legal/normatividad" 
-                        className="group/item flex items-start gap-3 px-3 py-3 rounded-xl hover:bg-white/5 transition-all duration-200"
-                      >
-                        <div className="mt-0.5 p-2 rounded-lg bg-pink-500/10 group-hover/item:bg-pink-500/20 transition-colors">
-                          <FileText className="w-4 h-4 text-pink-400" />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="text-sm font-medium text-gray-200 group-hover/item:text-white transition-colors">
+                          <div className="text-sm font-semibold text-gray-200 group-hover/item:text-white transition-colors mb-0.5">
                             Normatividad
                           </div>
-                          <p className="text-xs text-gray-500 mt-0.5 line-clamp-1">Marco legal vigente</p>
+                          <p className="text-xs text-gray-500 group-hover/item:text-gray-400 transition-colors">Marco legal vigente</p>
                         </div>
                       </Link>
 
                       <Link 
-                        to="/legal/internet-sano" 
-                        className="group/item flex items-start gap-3 px-3 py-3 rounded-xl hover:bg-white/5 transition-all duration-200"
+                        to={ROUTES.LEGAL.PROTECCION_DATOS}
+                        className="group/item relative flex items-start gap-3 px-4 py-3.5 rounded-2xl bg-linear-to-br from-blue-500/5 to-transparent hover:from-blue-500/15 hover:to-blue-500/5 border border-transparent hover:border-blue-500/30 transition-all duration-300"
                       >
-                        <div className="mt-0.5 p-2 rounded-lg bg-cyan-500/10 group-hover/item:bg-cyan-500/20 transition-colors">
-                          <Globe className="w-4 h-4 text-cyan-400" />
+                        <div className="p-2.5 rounded-xl bg-linear-to-br from-blue-500/20 to-blue-600/10 group-hover/item:from-blue-500/30 group-hover/item:to-blue-600/20 transition-all duration-300 shadow-lg shadow-blue-500/10">
+                          <Lock className="w-4 h-4 text-blue-400 group-hover/item:scale-110 transition-transform" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-sm font-medium text-gray-200 group-hover/item:text-white transition-colors">
+                          <div className="text-sm font-semibold text-gray-200 group-hover/item:text-white transition-colors mb-0.5">
+                            Datos Personales
+                          </div>
+                          <p className="text-xs text-gray-500 group-hover/item:text-gray-400 transition-colors">Política de tratamiento</p>
+                        </div>
+                      </Link>
+
+                      <Link 
+                        to={ROUTES.LEGAL.INTERNET_SANO}
+                        className="group/item relative flex items-start gap-3 px-4 py-3.5 rounded-2xl bg-linear-to-br from-cyan-500/5 to-transparent hover:from-cyan-500/15 hover:to-cyan-500/5 border border-transparent hover:border-cyan-500/30 transition-all duration-300"
+                      >
+                        <div className="p-2.5 rounded-xl bg-linear-to-br from-cyan-500/20 to-cyan-600/10 group-hover/item:from-cyan-500/30 group-hover/item:to-cyan-600/20 transition-all duration-300 shadow-lg shadow-cyan-500/10">
+                          <Globe className="w-4 h-4 text-cyan-400 group-hover/item:scale-110 transition-transform" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-sm font-semibold text-gray-200 group-hover/item:text-white transition-colors mb-0.5">
                             Internet Sano
                           </div>
-                          <p className="text-xs text-gray-500 mt-0.5 line-clamp-1">Uso responsable</p>
+                          <p className="text-xs text-gray-500 group-hover/item:text-gray-400 transition-colors">Uso responsable</p>
+                        </div>
+                      </Link>
+                    </div>
+
+                    {/* Columna 2 */}
+                    <div className="space-y-2">
+                      <Link 
+                        to={ROUTES.LEGAL.FILTRADO}
+                        className="group/item relative flex items-start gap-3 px-4 py-3.5 rounded-2xl bg-linear-to-br from-orange-500/5 to-transparent hover:from-orange-500/15 hover:to-orange-500/5 border border-transparent hover:border-orange-500/30 transition-all duration-300"
+                      >
+                        <div className="p-2.5 rounded-xl bg-linear-to-br from-orange-500/20 to-orange-600/10 group-hover/item:from-orange-500/30 group-hover/item:to-orange-600/20 transition-all duration-300 shadow-lg shadow-orange-500/10">
+                          <Filter className="w-4 h-4 text-orange-400 group-hover/item:scale-110 transition-transform" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-sm font-semibold text-gray-200 group-hover/item:text-white transition-colors mb-0.5">
+                            Mecanismos Filtrado
+                          </div>
+                          <p className="text-xs text-gray-500 group-hover/item:text-gray-400 transition-colors">Control de contenido</p>
                         </div>
                       </Link>
 
                       <Link 
-                        to="/legal/filtrado" 
-                        className="group/item flex items-start gap-3 px-3 py-3 rounded-xl hover:bg-white/5 transition-all duration-200"
+                        to={ROUTES.LEGAL.SEGURIDAD}
+                        className="group/item relative flex items-start gap-3 px-4 py-3.5 rounded-2xl bg-linear-to-br from-green-500/5 to-transparent hover:from-green-500/15 hover:to-green-500/5 border border-transparent hover:border-green-500/30 transition-all duration-300"
                       >
-                        <div className="mt-0.5 p-2 rounded-lg bg-orange-500/10 group-hover/item:bg-orange-500/20 transition-colors">
-                          <Filter className="w-4 h-4 text-orange-400" />
+                        <div className="p-2.5 rounded-xl bg-linear-to-br from-green-500/20 to-green-600/10 group-hover/item:from-green-500/30 group-hover/item:to-green-600/20 transition-all duration-300 shadow-lg shadow-green-500/10">
+                          <Shield className="w-4 h-4 text-green-400 group-hover/item:scale-110 transition-transform" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-sm font-medium text-gray-200 group-hover/item:text-white transition-colors">
-                            Mecanismos de Filtrado
+                          <div className="text-sm font-semibold text-gray-200 group-hover/item:text-white transition-colors mb-0.5">
+                            Seguridad en la Red
                           </div>
-                          <p className="text-xs text-gray-500 mt-0.5 line-clamp-1">Control de contenido</p>
+                          <p className="text-xs text-gray-500 group-hover/item:text-gray-400 transition-colors">Protocolos y medidas</p>
+                        </div>
+                      </Link>
+
+                      <Link 
+                        to={ROUTES.LEGAL.COMPARADOR_TARIFAS}
+                        className="group/item relative flex items-start gap-3 px-4 py-3.5 rounded-2xl bg-linear-to-br from-[#2E3FE6]/5 to-transparent hover:from-[#2E3FE6]/15 hover:to-[#4A5CFF]/5 border border-transparent hover:border-[#2E3FE6]/30 transition-all duration-300"
+                      >
+                        <div className="p-2.5 rounded-xl bg-linear-to-br from-[#1E2BBF]/20 to-[#4A5CFF]/10 group-hover/item:from-[#2E3FE6]/30 group-hover/item:to-[#4A5CFF]/20 transition-all duration-300 shadow-lg shadow-[#1E2BBF]/10">
+                          <DollarSign className="w-4 h-4 text-[#4A5CFF] group-hover/item:scale-110 transition-transform" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-sm font-semibold text-gray-200 group-hover/item:text-white transition-colors mb-0.5">
+                            Comparador Tarifas
+                          </div>
+                          <p className="text-xs text-gray-500 group-hover/item:text-gray-400 transition-colors">Mejores opciones</p>
+                        </div>
+                      </Link>
+
+                      <Link 
+                        to={ROUTES.LEGAL.PROTECCION_INFANTIL}
+                        className="group/item relative flex items-start gap-3 px-4 py-3.5 rounded-2xl bg-linear-to-br from-[#2E3FE6]/5 to-transparent hover:from-[#2E3FE6]/15 hover:to-[#4A5CFF]/5 border border-transparent hover:border-[#2E3FE6]/30 transition-all duration-300"
+                      >
+                        <div className="p-2.5 rounded-xl bg-linear-to-br from-[#1E2BBF]/20 to-[#4A5CFF]/10 group-hover/item:from-[#2E3FE6]/30 group-hover/item:to-[#4A5CFF]/20 transition-all duration-300 shadow-lg shadow-[#1E2BBF]/10">
+                          <Shield className="w-4 h-4 text-[#4A5CFF] group-hover/item:scale-110 transition-transform" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-sm font-semibold text-gray-200 group-hover/item:text-white transition-colors mb-0.5">
+                            Protección Infantil
+                          </div>
+                          <p className="text-xs text-gray-500 group-hover/item:text-gray-400 transition-colors">Seguridad menores</p>
                         </div>
                       </Link>
                     </div>
                   </div>
 
-                  {/* Footer con enlace destacado */}
-                  <div className="px-3 pb-3 pt-1">
-                    <Link 
-                      to="/legal/comparador-tarifas" 
-                      className="group/featured flex items-center justify-between px-4 py-3 rounded-xl bg-linear-to-r from-purple-600/10 to-pink-600/10 border border-purple-500/20 hover:border-purple-500/40 hover:from-purple-600/20 hover:to-pink-600/20 transition-all duration-200"
-                    >
-                      <div className="flex items-center gap-3">
-                        <div className="p-2 rounded-lg bg-purple-500/20">
-                          <DollarSign className="w-4 h-4 text-purple-400" />
-                        </div>
-                        <div>
-                          <div className="text-sm font-semibold text-white">Comparador de Tarifas</div>
-                          <p className="text-xs text-gray-400">Encuentra la mejor opción</p>
-                        </div>
-                      </div>
-                      <svg className="w-4 h-4 text-purple-400 group-hover/featured:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </Link>
-                  </div>
-
-                  {/* Decorative gradient border */}
-                  <div className="h-px bg-linear-to-r from-transparent via-purple-500/50 to-transparent"></div>
+                  {/* Footer con gradiente decorativo */}
+                  <div className="relative h-1 bg-linear-to-r from-transparent via-purple-500/40 to-transparent"></div>
                 </div>
               </div>
             </div>
@@ -194,7 +205,7 @@ export default function Navbar() {
           <div className="hidden md:block">
             <Link
               to="/contact"
-              className="bg-linear-to-r from-purple-600 to-pink-600 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:from-purple-500 hover:to-pink-500 transition-all duration-300 shadow-lg shadow-purple-500/50"
+              className="bg-linear-to-r from-[#1E2BBF] to-[#4A5CFF] text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:from-[#2E3FE6] hover:to-[#4A5CFF] transition-all duration-300 shadow-lg shadow-[#1E2BBF]/50"
             >
               Comenzar
             </Link>
@@ -231,8 +242,8 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(false)}
               className="flex items-center gap-3 px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-all duration-300 group"
             >
-              <div className="w-8 h-8 bg-pink-500/10 rounded-lg flex items-center justify-center group-hover:bg-pink-500/20 transition-colors">
-                <svg className="w-4 h-4 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="w-8 h-8 bg-purple-500/10 rounded-lg flex items-center justify-center group-hover:bg-purple-500/20 transition-colors">
+                <svg className="w-4 h-4 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
               </div>
@@ -268,34 +279,34 @@ export default function Navbar() {
               </button>
 
               {/* Submenú Legal */}
-              <div className={`overflow-hidden transition-all duration-300 ${isLegalOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'}`}>
+              <div className={`overflow-hidden transition-all duration-300 ${isLegalOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
                 <div className="pl-4 space-y-1 py-2">
                   <Link
-                    to="/legal/proteccion-usuarios"
+                    to={ROUTES.LEGAL.PROTECCION_USUARIOS}
                     onClick={() => setIsMenuOpen(false)}
                     className="flex items-center gap-2 px-4 py-2 text-sm text-gray-400 hover:text-purple-400 hover:bg-white/5 rounded-lg transition-all duration-200"
                   >
                     <AlertCircle className="w-3.5 h-3.5" />
-                    <span>Protección Usuarios</span>
+                    <span>Indicadores Protección Usuarios</span>
                   </Link>
                   <Link
-                    to="/legal/normatividad"
+                    to={ROUTES.LEGAL.NORMATIVIDAD}
                     onClick={() => setIsMenuOpen(false)}
-                    className="flex items-center gap-2 px-4 py-2 text-sm text-gray-400 hover:text-pink-400 hover:bg-white/5 rounded-lg transition-all duration-200"
+                    className="flex items-center gap-2 px-4 py-2 text-sm text-gray-400 hover:text-purple-400 hover:bg-white/5 rounded-lg transition-all duration-200"
                   >
                     <FileText className="w-3.5 h-3.5" />
                     <span>Normatividad</span>
                   </Link>
                   <Link
-                    to="/legal/proteccion-datos"
+                    to={ROUTES.LEGAL.PROTECCION_DATOS}
                     onClick={() => setIsMenuOpen(false)}
                     className="flex items-center gap-2 px-4 py-2 text-sm text-gray-400 hover:text-blue-400 hover:bg-white/5 rounded-lg transition-all duration-200"
                   >
                     <Lock className="w-3.5 h-3.5" />
-                    <span>Datos Personales</span>
+                    <span>Política de Datos Personales</span>
                   </Link>
                   <Link
-                    to="/legal/internet-sano"
+                    to={ROUTES.LEGAL.INTERNET_SANO}
                     onClick={() => setIsMenuOpen(false)}
                     className="flex items-center gap-2 px-4 py-2 text-sm text-gray-400 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-all duration-200"
                   >
@@ -303,7 +314,7 @@ export default function Navbar() {
                     <span>Internet Sano</span>
                   </Link>
                   <Link
-                    to="/legal/filtrado"
+                    to={ROUTES.LEGAL.FILTRADO}
                     onClick={() => setIsMenuOpen(false)}
                     className="flex items-center gap-2 px-4 py-2 text-sm text-gray-400 hover:text-orange-400 hover:bg-white/5 rounded-lg transition-all duration-200"
                   >
@@ -311,7 +322,7 @@ export default function Navbar() {
                     <span>Mecanismos de Filtrado</span>
                   </Link>
                   <Link
-                    to="/legal/seguridad"
+                    to={ROUTES.LEGAL.SEGURIDAD}
                     onClick={() => setIsMenuOpen(false)}
                     className="flex items-center gap-2 px-4 py-2 text-sm text-gray-400 hover:text-green-400 hover:bg-white/5 rounded-lg transition-all duration-200"
                   >
@@ -319,12 +330,20 @@ export default function Navbar() {
                     <span>Seguridad en la Red</span>
                   </Link>
                   <Link
-                    to="/legal/comparador-tarifas"
+                    to={ROUTES.LEGAL.COMPARADOR_TARIFAS}
                     onClick={() => setIsMenuOpen(false)}
                     className="flex items-center gap-2 px-4 py-2 text-sm text-gray-400 hover:text-purple-400 hover:bg-white/5 rounded-lg transition-all duration-200"
                   >
                     <DollarSign className="w-3.5 h-3.5" />
                     <span>Comparador de Tarifas</span>
+                  </Link>
+                  <Link
+                    to={ROUTES.LEGAL.PROTECCION_INFANTIL}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="flex items-center gap-2 px-4 py-2 text-sm text-gray-400 hover:text-purple-400 hover:bg-white/5 rounded-lg transition-all duration-200"
+                  >
+                    <Shield className="w-3.5 h-3.5" />
+                    <span>Protección Infantil</span>
                   </Link>
                 </div>
               </div>
@@ -337,7 +356,7 @@ export default function Navbar() {
             <Link
               to="/contact"
               onClick={() => setIsMenuOpen(false)}
-              className="flex items-center justify-center gap-2 bg-linear-to-r from-purple-600 to-pink-600 text-white px-6 py-4 rounded-xl text-sm font-semibold hover:from-purple-500 hover:to-pink-500 transition-all duration-300 shadow-lg shadow-purple-500/30"
+              className="flex items-center justify-center gap-2 bg-linear-to-r from-[#1E2BBF] to-[#4A5CFF] text-white px-6 py-4 rounded-xl text-sm font-semibold hover:from-[#2E3FE6] hover:to-[#4A5CFF] transition-all duration-300 shadow-lg shadow-[#1E2BBF]/30"
             >
               <span>Comenzar</span>
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

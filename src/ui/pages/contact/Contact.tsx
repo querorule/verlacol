@@ -39,7 +39,7 @@ export default function Contact() {
         <div className="container mx-auto max-w-5xl">
           <Link
             to="/"
-            className="inline-flex items-center text-purple-400 hover:text-purple-300 mb-12 transition-colors group"
+            className="inline-flex items-center text-purple-400 hover:text-pink-400 mb-12 transition-colors group"
           >
             <ArrowLeft size={20} className="mr-2 group-hover:-translate-x-1 transition-transform" />
             Volver al Inicio
@@ -78,7 +78,7 @@ export default function Contact() {
 
               <div className="text-center group">
                 <div className="w-16 h-16 bg-purple-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-600/30 group-hover:scale-110 transition-all duration-300">
-                  <MapPin size={28} className="text-purple-400 group-hover:text-purple-300" />
+                  <MapPin size={28} className="text-purple-400 group-hover:text-pink-400" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2 group-hover:text-purple-400 transition-colors">Ubicación</h3>
                 <p className="text-gray-400">San Francisco, CA</p>

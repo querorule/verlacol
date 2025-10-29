@@ -11,7 +11,7 @@ export default function ProblemSection({ categoriesRow1, categoriesRow2 }: Probl
     <section className="py-40 px-6 bg-black relative z-10 overflow-hidden">
       {/* Efectos de fondo */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/3 w-[500px] h-[500px] bg-pink-600/10 rounded-full blur-[100px]"></div>
+        <div className="absolute top-0 left-1/3 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[100px]"></div>
         <div className="absolute bottom-0 right-1/3 w-[500px] h-[500px] bg-purple-600/10 rounded-full blur-[100px]"></div>
       </div>
 
@@ -27,7 +27,7 @@ export default function ProblemSection({ categoriesRow1, categoriesRow2 }: Probl
         {/* Título principal */}
         <h2 className="text-5xl md:text-7xl font-bold mb-8 leading-tight text-center">
           Email is the{' '}
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-pink-500 to-purple-500">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-500 to-pink-500">
             biggest problem
           </span>
           <br />
