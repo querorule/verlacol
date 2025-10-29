@@ -39,14 +39,18 @@ export default function Contact() {
         <div className="container mx-auto max-w-5xl">
           <Link
             to="/"
-            className="inline-flex items-center text-purple-400 hover:text-pink-400 mb-12 transition-colors group"
+            className="inline-flex items-center text-[#1E2BBF] hover:text-[#FFFFFF] mb-12 transition-colors duration-700 group"
           >
             <ArrowLeft size={20} className="mr-2 group-hover:-translate-x-1 transition-transform" />
             Volver al Inicio
           </Link>
 
           <h1 className="text-6xl md:text-7xl font-bold mb-6 text-center leading-tight">
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-pink-400">Contáctanos</span>
+            <span className="text-6xl md:text-8xl font-black text-transparent bg-clip-text animate-gradient inline-block" style={{ backgroundImage: 'linear-gradient(to right, #1E2BBF, #2E3FE6, #4A5CFF, #FFFFFF, #4A5CFF, #2E3FE6, #1E2BBF)', backgroundSize: '200% 100%' }}>
+              Contáctanos
+            </span>
+            {/* Efecto de brillo/glow */}
+            <div className="absolute inset-0 blur-2xl opacity-30" style={{ background: 'radial-gradient(circle, #4A5CFF 0%, transparent 70%)' }}></div>
           </h1>
           
           <p className="text-xl text-gray-400 text-center mb-16 max-w-2xl mx-auto">
@@ -71,8 +75,8 @@ export default function Contact() {
                   <Phone size={28} className="text-green-400 group-hover:text-green-300" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2 group-hover:text-green-400 transition-colors">Teléfono</h3>
-                <a href="tel:+15551234567" className="text-gray-400 hover:text-white transition-colors">
-                  +1 (555) 123-4567
+                <a href="tel:+573115761963" className="text-gray-400 hover:text-white transition-colors">
+                  +57 311-576-1963
                 </a>
               </div>
 
@@ -81,7 +85,7 @@ export default function Contact() {
                   <MapPin size={28} className="text-purple-400 group-hover:text-pink-400" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2 group-hover:text-purple-400 transition-colors">Ubicación</h3>
-                <p className="text-gray-400">San Francisco, CA</p>
+                <p className="text-gray-400">Bogotá, Colombia</p>
               </div>
             </div>
 
@@ -131,10 +135,13 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-linear-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-purple-500 hover:to-pink-500 transition-all duration-300 shadow-2xl shadow-purple-500/50 hover:shadow-purple-500/70"
+                  className="w-full inline-flex items-center justify-center gap-2 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 shadow-2xl hover:shadow-[0_0_25px_-5px] hover:shadow-[#4A5CFF]/70"
+                  style={{
+                    background: 'linear-gradient(135deg, #1E2BBF 0%, #2E3FE6 50%, #4A5CFF 100%)',
+                  }}
                 >
                   Enviar Mensaje
-                  <Send size={20} />
+                  <Send size={20} className="group-hover:translate-x-1 transition-transform" />
                 </button>
               </form>
             </div>
