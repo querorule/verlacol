@@ -1,7 +1,7 @@
 // Data constants for Home page
 // Ubicación: src/ui/pages/home/constants/data.ts
 
-export const companies = ['DEEL', 'COMPASS', 'GREENHOUSE', 'DIEZ', 'OPENAI', 'ALLBIRDS'];
+export const companies = ['RCN', 'Caracol', 'Canal 1', 'City TV', 'Teleantioquia', 'Señal Colombia'];
 
 export const categoriesRow1 = [
   'Security',
