@@ -169,14 +169,14 @@ export default function Home() {
           </div>
 
           <h1 className="text-6xl md:text-7xl lg:text-9xl font-black mb-8 leading-[1.1] tracking-tight">
-            Save{' '}
+            Velocidad que{' '}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 via-pink-400 to-purple-400 animate-gradient inline-block">
-              4 hours
+              conecta
             </span>
             <br />
-            per person
+            tu mundo
             <br />
-            <span className="text-gray-600">every single week</span>
+            <span className="text-gray-600">,sin limites</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
@@ -615,10 +615,9 @@ export default function Home() {
             <div>
               <h4 className="font-bold mb-5 text-white text-sm uppercase tracking-wider">Producto</h4>
               <ul className="space-y-3">
-                <li><a href="#" className="text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Features</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Ventajas</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Precios</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Seguridad</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Roadmap</a></li>
               </ul>
             </div>
 
@@ -627,20 +626,18 @@ export default function Home() {
               <h4 className="font-bold mb-5 text-white text-sm uppercase tracking-wider">Empresa</h4>
               <ul className="space-y-3">
                 <li><Link to="/about" className="text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Nosotros</Link></li>
-                <li><a href="#" className="text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Blog</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Novedades</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Carreras</a></li>
                 <li><Link to="/contact" className="text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Contacto</Link></li>
               </ul>
             </div>
 
-            {/* Resources Column */}
+            {/* Legal Column */}
             <div>
-              <h4 className="font-bold mb-5 text-white text-sm uppercase tracking-wider">Recursos</h4>
+              <h4 className="font-bold mb-5 text-white text-sm uppercase tracking-wider">Legal y Regulatorio</h4>
               <ul className="space-y-3">
-                <li><a href="#" className="text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Documentación</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">API</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Soporte</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Estado</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Protección Infantil</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white hover:translate-x-1 inline-block transition-all duration-300">Protección al Usuario y Normativa</a></li> 
               </ul>
             </div>
           </div>
