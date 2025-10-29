@@ -37,7 +37,7 @@ export default function Navbar() {
               >
                 <span className="relative">
                   Legal y Regulatorio
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-linear-to-r from-[#2E3FE6] to-[#4A5CFF] transition-all duration-300 group-hover/navitem:w-full"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-linear-to-r from-[#7A8FFF] to-[#4A5CFF] transition-all duration-300 group-hover/navitem:w-full"></span>
                 </span>
                 <ChevronDown className="ml-1.5 h-3.5 w-3.5 transition-transform duration-200 group-hover:rotate-180" />
               </button>
@@ -46,20 +46,20 @@ export default function Navbar() {
               <div className="absolute left-1/2 -translate-x-1/2 mt-6 w-[680px] opacity-0 translate-y-4 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible transition-all duration-300 z-50">
                 <div className="relative bg-linear-to-br from-gray-900/95 via-black/95 to-gray-900/95 backdrop-blur-2xl rounded-3xl shadow-2xl border border-white/10 overflow-hidden">
                   {/* Efectos de fondo animados */}
-                  <div className="absolute inset-0 bg-linear-to-br from-[#1E2BBF]/5 via-transparent to-[#4A5CFF]/5 pointer-events-none"></div>
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-[#1E2BBF]/10 rounded-full blur-3xl pointer-events-none"></div>
+                  <div className="absolute inset-0 bg-linear-to-br from-[#5B6FFF]/5 via-transparent to-[#4A5CFF]/5 pointer-events-none"></div>
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-[#5B6FFF]/10 rounded-full blur-3xl pointer-events-none"></div>
                   
                   {/* Header decorativo mejorado */}
-                  <div className="relative px-8 py-5 bg-linear-to-r from-[#1E2BBF]/15 via-[#2E3FE6]/10 to-[#4A5CFF]/15 border-b border-white/10">
+                  <div className="relative px-8 py-5 bg-linear-to-r from-[#5B6FFF]/15 via-[#7A8FFF]/10 to-[#4A5CFF]/15 border-b border-white/10">
                     <div className="flex items-center justify-between">
                       <div>
                         <h3 className="text-white font-bold text-base tracking-tight flex items-center gap-2">
                           Legal y Regulatorio
-                          <span className="px-2 py-0.5 bg-[#2E3FE6]/20 rounded-full text-[10px] text-[#4A5CFF] font-medium">8</span>
+                          <span className="px-2 py-0.5 bg-[#7A8FFF]/20 rounded-full text-[10px] text-[#4A5CFF] font-medium">8</span>
                         </h3>
                         <p className="text-xs text-gray-400 mt-1">Toda la información legal y de cumplimiento</p>
                       </div>
-                      <div className="w-10 h-10 bg-linear-to-br from-[#1E2BBF]/20 to-[#4A5CFF]/20 rounded-xl flex items-center justify-center">
+                      <div className="w-10 h-10 bg-linear-to-br from-[#5B6FFF]/20 to-[#4A5CFF]/20 rounded-xl flex items-center justify-center">
                         <Shield className="w-5 h-5 text-[#4A5CFF]" />
                       </div>
                     </div>
@@ -71,9 +71,9 @@ export default function Navbar() {
                     <div className="space-y-2">
                       <Link 
                         to={ROUTES.LEGAL.PROTECCION_USUARIOS}
-                        className="group/item relative flex items-start gap-3 px-4 py-3.5 rounded-2xl bg-linear-to-br from-[#2E3FE6]/5 to-transparent hover:from-[#2E3FE6]/15 hover:to-[#4A5CFF]/5 border border-transparent hover:border-[#2E3FE6]/30 transition-all duration-300"
+                        className="group/item relative flex items-start gap-3 px-4 py-3.5 rounded-2xl bg-linear-to-br from-[#7A8FFF]/5 to-transparent hover:from-[#7A8FFF]/15 hover:to-[#4A5CFF]/5 border border-transparent hover:border-[#7A8FFF]/30 transition-all duration-300"
                       >
-                        <div className="p-2.5 rounded-xl bg-linear-to-br from-[#1E2BBF]/20 to-[#4A5CFF]/10 group-hover/item:from-[#2E3FE6]/30 group-hover/item:to-[#4A5CFF]/20 transition-all duration-300 shadow-lg shadow-[#1E2BBF]/10">
+                        <div className="p-2.5 rounded-xl bg-linear-to-br from-[#5B6FFF]/20 to-[#4A5CFF]/10 group-hover/item:from-[#7A8FFF]/30 group-hover/item:to-[#4A5CFF]/20 transition-all duration-300 shadow-lg shadow-[#5B6FFF]/10">
                           <AlertCircle className="w-4 h-4 text-[#4A5CFF] group-hover/item:scale-110 transition-transform" />
                         </div>
                         <div className="flex-1 min-w-0">
@@ -86,9 +86,9 @@ export default function Navbar() {
 
                       <Link 
                         to={ROUTES.LEGAL.NORMATIVIDAD}
-                        className="group/item relative flex items-start gap-3 px-4 py-3.5 rounded-2xl bg-linear-to-br from-[#2E3FE6]/5 to-transparent hover:from-[#2E3FE6]/15 hover:to-[#4A5CFF]/5 border border-transparent hover:border-[#2E3FE6]/30 transition-all duration-300"
+                        className="group/item relative flex items-start gap-3 px-4 py-3.5 rounded-2xl bg-linear-to-br from-[#7A8FFF]/5 to-transparent hover:from-[#7A8FFF]/15 hover:to-[#4A5CFF]/5 border border-transparent hover:border-[#7A8FFF]/30 transition-all duration-300"
                       >
-                        <div className="p-2.5 rounded-xl bg-linear-to-br from-[#1E2BBF]/20 to-[#4A5CFF]/10 group-hover/item:from-[#2E3FE6]/30 group-hover/item:to-[#4A5CFF]/20 transition-all duration-300 shadow-lg shadow-[#1E2BBF]/10">
+                        <div className="p-2.5 rounded-xl bg-linear-to-br from-[#5B6FFF]/20 to-[#4A5CFF]/10 group-hover/item:from-[#7A8FFF]/30 group-hover/item:to-[#4A5CFF]/20 transition-all duration-300 shadow-lg shadow-[#5B6FFF]/10">
                           <FileText className="w-4 h-4 text-[#4A5CFF] group-hover/item:scale-110 transition-transform" />
                         </div>
                         <div className="flex-1 min-w-0">
@@ -164,9 +164,9 @@ export default function Navbar() {
 
                       <Link 
                         to={ROUTES.LEGAL.COMPARADOR_TARIFAS}
-                        className="group/item relative flex items-start gap-3 px-4 py-3.5 rounded-2xl bg-linear-to-br from-[#2E3FE6]/5 to-transparent hover:from-[#2E3FE6]/15 hover:to-[#4A5CFF]/5 border border-transparent hover:border-[#2E3FE6]/30 transition-all duration-300"
+                        className="group/item relative flex items-start gap-3 px-4 py-3.5 rounded-2xl bg-linear-to-br from-[#7A8FFF]/5 to-transparent hover:from-[#7A8FFF]/15 hover:to-[#4A5CFF]/5 border border-transparent hover:border-[#7A8FFF]/30 transition-all duration-300"
                       >
-                        <div className="p-2.5 rounded-xl bg-linear-to-br from-[#1E2BBF]/20 to-[#4A5CFF]/10 group-hover/item:from-[#2E3FE6]/30 group-hover/item:to-[#4A5CFF]/20 transition-all duration-300 shadow-lg shadow-[#1E2BBF]/10">
+                        <div className="p-2.5 rounded-xl bg-linear-to-br from-[#5B6FFF]/20 to-[#4A5CFF]/10 group-hover/item:from-[#7A8FFF]/30 group-hover/item:to-[#4A5CFF]/20 transition-all duration-300 shadow-lg shadow-[#5B6FFF]/10">
                           <DollarSign className="w-4 h-4 text-[#4A5CFF] group-hover/item:scale-110 transition-transform" />
                         </div>
                         <div className="flex-1 min-w-0">
@@ -179,9 +179,9 @@ export default function Navbar() {
 
                       <Link 
                         to={ROUTES.LEGAL.PROTECCION_INFANTIL}
-                        className="group/item relative flex items-start gap-3 px-4 py-3.5 rounded-2xl bg-linear-to-br from-[#2E3FE6]/5 to-transparent hover:from-[#2E3FE6]/15 hover:to-[#4A5CFF]/5 border border-transparent hover:border-[#2E3FE6]/30 transition-all duration-300"
+                        className="group/item relative flex items-start gap-3 px-4 py-3.5 rounded-2xl bg-linear-to-br from-[#7A8FFF]/5 to-transparent hover:from-[#7A8FFF]/15 hover:to-[#4A5CFF]/5 border border-transparent hover:border-[#7A8FFF]/30 transition-all duration-300"
                       >
-                        <div className="p-2.5 rounded-xl bg-linear-to-br from-[#1E2BBF]/20 to-[#4A5CFF]/10 group-hover/item:from-[#2E3FE6]/30 group-hover/item:to-[#4A5CFF]/20 transition-all duration-300 shadow-lg shadow-[#1E2BBF]/10">
+                        <div className="p-2.5 rounded-xl bg-linear-to-br from-[#5B6FFF]/20 to-[#4A5CFF]/10 group-hover/item:from-[#7A8FFF]/30 group-hover/item:to-[#4A5CFF]/20 transition-all duration-300 shadow-lg shadow-[#5B6FFF]/10">
                           <Shield className="w-4 h-4 text-[#4A5CFF] group-hover/item:scale-110 transition-transform" />
                         </div>
                         <div className="flex-1 min-w-0">
@@ -205,7 +205,7 @@ export default function Navbar() {
           <div className="hidden md:block">
             <Link
               to="/contact"
-              className="bg-linear-to-r from-[#1E2BBF] to-[#4A5CFF] text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:from-[#2E3FE6] hover:to-[#4A5CFF] transition-all duration-300 shadow-lg shadow-[#1E2BBF]/50"
+              className="bg-linear-to-r from-[#5B6FFF] to-[#4A5CFF] text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:from-[#7A8FFF] hover:to-[#4A5CFF] transition-all duration-300 shadow-lg shadow-[#5B6FFF]/50"
             >
               Comenzar
             </Link>
@@ -356,7 +356,7 @@ export default function Navbar() {
             <Link
               to="/contact"
               onClick={() => setIsMenuOpen(false)}
-              className="flex items-center justify-center gap-2 bg-linear-to-r from-[#1E2BBF] to-[#4A5CFF] text-white px-6 py-4 rounded-xl text-sm font-semibold hover:from-[#2E3FE6] hover:to-[#4A5CFF] transition-all duration-300 shadow-lg shadow-[#1E2BBF]/30"
+              className="flex items-center justify-center gap-2 bg-linear-to-r from-[#5B6FFF] to-[#4A5CFF] text-white px-6 py-4 rounded-xl text-sm font-semibold hover:from-[#7A8FFF] hover:to-[#4A5CFF] transition-all duration-300 shadow-lg shadow-[#5B6FFF]/30"
             >
               <span>Comenzar</span>
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

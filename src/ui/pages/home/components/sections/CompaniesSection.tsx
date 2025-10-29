@@ -47,15 +47,15 @@ export default function CompaniesSection({ companies }: CompaniesSectionProps) {
         </div>
 
         {/* Líneas decorativas brillantes */}
-        <div className="absolute top-1/4 left-0 right-0 h-[2px] bg-linear-to-r from-transparent via-purple-500/40 to-transparent shadow-lg shadow-purple-500/20"></div>
-        <div className="absolute bottom-1/3 left-0 right-0 h-[2px] bg-linear-to-r from-transparent via-purple-500/40 to-transparent shadow-lg shadow-purple-500/20"></div>
+        <div className="absolute top-1/4 left-0 right-0 h-[2px] bg-linear-to-r from-transparent via-[#7A8FFF]/40 to-transparent shadow-lg shadow-[#5B6FFF]/20"></div>
+        <div className="absolute bottom-1/3 left-0 right-0 h-[2px] bg-linear-to-r from-transparent via-[#7A8FFF]/40 to-transparent shadow-lg shadow-[#5B6FFF]/20"></div>
 
         {/* Dots pattern */}
         <div className="absolute inset-0 opacity-20">
           {[...Array(30)].map((_, i) => (
             <div
               key={i}
-              className="absolute w-1 h-1 bg-purple-400 rounded-full animate-twinkle"
+              className="absolute w-1 h-1 bg-[#4A5CFF] rounded-full animate-twinkle"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
@@ -73,14 +73,14 @@ export default function CompaniesSection({ companies }: CompaniesSectionProps) {
         {/* Header moderno */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-6 backdrop-blur-sm">
-            <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
-            <span className="text-xs font-semibold text-purple-300 uppercase tracking-wider">
+            <div className="w-2 h-2 bg-[#4A5CFF] rounded-full animate-pulse"></div>
+            <span className="text-xs font-semibold text-[#4A5CFF] uppercase tracking-wider">
               Trusted Worldwide
             </span>
           </div>
           <h2 className="text-3xl md:text-4xl font-black mb-4">
             Empresas que{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-pink-400">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#7A8FFF] to-[#4A5CFF]">
               impulsan
             </span>{" "}
             el futuro
@@ -104,52 +104,52 @@ export default function CompaniesSection({ companies }: CompaniesSectionProps) {
                 className="group relative min-w-[240px]"
               >
                 {/* Outer glow container */}
-                <div className="absolute -inset-px bg-linear-to-r from-purple-600/20 via-purple-600/20 to-pink-600/20 rounded-[24px] opacity-0 group-hover:opacity-100 blur-sm transition-all duration-700"></div>
+                <div className="absolute -inset-px bg-linear-to-r from-[#5B6FFF]/20 via-[#7A8FFF]/20 to-[#4A5CFF]/20 rounded-[24px] opacity-0 group-hover:opacity-100 blur-sm transition-all duration-700"></div>
 
                 {/* Main card */}
-                <div className="relative h-full bg-linear-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl border border-white/20 rounded-[23px] overflow-hidden transition-all duration-700 hover:scale-[1.02] hover:border-white/30 group-hover:shadow-2xl group-hover:shadow-purple-500/30">
+                <div className="relative h-full bg-linear-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl border border-white/20 rounded-[23px] overflow-hidden transition-all duration-700 hover:scale-[1.02] hover:border-white/30 group-hover:shadow-2xl group-hover:shadow-[#7A8FFF]/30">
                   {/* Animated gradient background */}
-                  <div className="absolute inset-0 bg-linear-to-br from-purple-500/0 via-purple-500/5 to-pink-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                  <div className="absolute inset-0 bg-linear-to-br from-[#5B6FFF]/0 via-[#7A8FFF]/5 to-[#4A5CFF]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
                   {/* Shine effect */}
                   <div className="absolute inset-0 bg-linear-to-br from-white/0 via-white/10 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
 
                   {/* Top gradient bar */}
-                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-purple-400/50 to-transparent"></div>
+                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#4A5CFF]/50 to-transparent"></div>
 
                   {/* Content */}
                   <div className="relative p-6">
                     {/* Icon container with 3D effect */}
-                    <div className="relative mb-4 w-14 h-14 rounded-2xl bg-linear-to-br from-purple-500/20 via-purple-500/20 to-pink-500/20 flex items-center justify-center border border-white/20 shadow-lg shadow-purple-500/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                    <div className="relative mb-4 w-14 h-14 rounded-2xl bg-linear-to-br from-[#5B6FFF]/20 via-[#7A8FFF]/20 to-[#4A5CFF]/20 flex items-center justify-center border border-white/20 shadow-lg shadow-[#5B6FFF]/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
                       {/* Inner glow */}
-                      <div className="absolute inset-[2px] rounded-xl bg-linear-to-br from-purple-600/30 to-pink-600/30 blur-md"></div>
+                      <div className="absolute inset-[2px] rounded-xl bg-linear-to-br from-[#5B6FFF]/30 to-[#4A5CFF]/30 blur-md"></div>
                       {/* Icon */}
-                      <div className="relative w-7 h-7 rounded-lg bg-linear-to-br from-purple-400 via-purple-400 to-pink-400 shadow-inner"></div>
+                      <div className="relative w-7 h-7 rounded-lg bg-linear-to-br from-[#7A8FFF] via-[#4A5CFF] to-[#4A5CFF] shadow-inner"></div>
                     </div>
 
                     {/* Company name */}
-                    <h3 className="text-2xl font-black mb-2 bg-clip-text text-transparent bg-linear-to-r from-white via-white to-white/80 group-hover:from-white group-hover:via-purple-200 group-hover:to-[#4A5CFF] 200 transition-all duration-500 tracking-tight">
+                    <h3 className="text-2xl font-black mb-2 bg-clip-text text-transparent bg-linear-to-r from-white via-white to-white/80 group-hover:from-white group-hover:via-[#4A5CFF] group-hover:to-[#4A5CFF] 200 transition-all duration-500 tracking-tight">
                       {company}
                     </h3>
 
                     {/* Status badge */}
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-linear-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-full group-hover:border-purple-400/40 transition-all duration-300">
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-linear-to-r from-[#7A8FFF]/10 to-[#4A5CFF]/10 border border-[#7A8FFF]/20 rounded-full group-hover:border-[#4A5CFF]/40 transition-all duration-300">
                       <div className="relative">
                         <div className="w-1.5 h-1.5 rounded-full bg-green-400"></div>
                         <div className="absolute inset-0 w-1.5 h-1.5 rounded-full bg-green-400 animate-ping"></div>
                       </div>
-                      <span className="text-[11px] font-semibold text-purple-300 uppercase tracking-wider">
+                      <span className="text-[11px] font-semibold text-[#4A5CFF] uppercase tracking-wider">
                         Premium Partner
                       </span>
                     </div>
                   </div>
 
                   {/* Bottom accent with animated gradient */}
-                  <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-linear-to-r from-transparent via-purple-500/0 to-transparent group-hover:via-purple-500/80 transition-all duration-700"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-linear-to-r from-transparent via-[#7A8FFF]/0 to-transparent group-hover:via-[#7A8FFF]/80 transition-all duration-700"></div>
 
                   {/* Corner decoration */}
-                  <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-purple-400/30 group-hover:bg-purple-400 transition-colors duration-500"></div>
-                  <div className="absolute bottom-3 left-3 w-1.5 h-1.5 rounded-full bg-purple-400/30 group-hover:bg-purple-400 transition-colors duration-500"></div>
+                  <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-[#4A5CFF]/30 group-hover:bg-[#4A5CFF] transition-colors duration-500"></div>
+                  <div className="absolute bottom-3 left-3 w-1.5 h-1.5 rounded-full bg-[#4A5CFF]/30 group-hover:bg-[#4A5CFF] transition-colors duration-500"></div>
                 </div>
               </div>
             ))}
@@ -161,88 +161,126 @@ export default function CompaniesSection({ companies }: CompaniesSectionProps) {
                 className="group relative min-w-[240px]"
               >
                 {/* Outer glow container */}
-                <div className="absolute -inset-px bg-linear-to-r from-purple-600/20 via-purple-600/20 to-pink-600/20 rounded-[24px] opacity-0 group-hover:opacity-100 blur-sm transition-all duration-700"></div>
+                <div className="absolute -inset-px bg-linear-to-r from-[#5B6FFF]/20 via-[#7A8FFF]/20 to-[#4A5CFF]/20 rounded-[24px] opacity-0 group-hover:opacity-100 blur-sm transition-all duration-700"></div>
 
                 {/* Main card */}
-                <div className="relative h-full bg-linear-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl border border-white/20 rounded-[23px] overflow-hidden transition-all duration-700 hover:scale-[1.02] hover:border-white/30 group-hover:shadow-2xl group-hover:shadow-purple-500/30">
+                <div className="relative h-full bg-linear-to-br from-white/10 via-white/5 to-transparent backdrop-blur-xl border border-white/20 rounded-[23px] overflow-hidden transition-all duration-700 hover:scale-[1.02] hover:border-white/30 group-hover:shadow-2xl group-hover:shadow-[#7A8FFF]/30">
                   {/* Animated gradient background */}
-                  <div className="absolute inset-0 bg-linear-to-br from-purple-500/0 via-purple-500/5 to-pink-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                  <div className="absolute inset-0 bg-linear-to-br from-[#5B6FFF]/0 via-[#7A8FFF]/5 to-[#4A5CFF]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
                   {/* Shine effect */}
                   <div className="absolute inset-0 bg-linear-to-br from-white/0 via-white/10 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
 
                   {/* Top gradient bar */}
-                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-purple-400/50 to-transparent"></div>
+                  <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#4A5CFF]/50 to-transparent"></div>
 
                   {/* Content */}
                   <div className="relative p-6">
                     {/* Icon container with 3D effect */}
-                    <div className="relative mb-4 w-14 h-14 rounded-2xl bg-linear-to-br from-purple-500/20 via-purple-500/20 to-pink-500/20 flex items-center justify-center border border-white/20 shadow-lg shadow-purple-500/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                    <div className="relative mb-4 w-14 h-14 rounded-2xl bg-linear-to-br from-[#5B6FFF]/20 via-[#7A8FFF]/20 to-[#4A5CFF]/20 flex items-center justify-center border border-white/20 shadow-lg shadow-[#5B6FFF]/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
                       {/* Inner glow */}
-                      <div className="absolute inset-[2px] rounded-xl bg-linear-to-br from-purple-600/30 to-pink-600/30 blur-md"></div>
+                      <div className="absolute inset-[2px] rounded-xl bg-linear-to-br from-[#5B6FFF]/30 to-[#4A5CFF]/30 blur-md"></div>
                       {/* Icon */}
-                      <div className="relative w-7 h-7 rounded-lg bg-linear-to-br from-purple-400 via-purple-400 to-pink-400 shadow-inner"></div>
+                      <div className="relative w-7 h-7 rounded-lg bg-linear-to-br from-[#7A8FFF] via-[#4A5CFF] to-[#4A5CFF] shadow-inner"></div>
                     </div>
 
                     {/* Company name */}
-                    <h3 className="text-2xl font-black mb-2 bg-clip-text text-transparent bg-linear-to-r from-white via-white to-white/80 group-hover:from-white group-hover:via-purple-200 group-hover:to-[#4A5CFF] 200 transition-all duration-500 tracking-tight">
+                    <h3 className="text-2xl font-black mb-2 bg-clip-text text-transparent bg-linear-to-r from-white via-white to-white/80 group-hover:from-white group-hover:via-[#4A5CFF] group-hover:to-[#4A5CFF] 200 transition-all duration-500 tracking-tight">
                       {company}
                     </h3>
 
                     {/* Status badge */}
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-linear-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-full group-hover:border-purple-400/40 transition-all duration-300">
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-linear-to-r from-[#7A8FFF]/10 to-[#4A5CFF]/10 border border-[#7A8FFF]/20 rounded-full group-hover:border-[#4A5CFF]/40 transition-all duration-300">
                       <div className="relative">
                         <div className="w-1.5 h-1.5 rounded-full bg-green-400"></div>
                         <div className="absolute inset-0 w-1.5 h-1.5 rounded-full bg-green-400 animate-ping"></div>
                       </div>
-                      <span className="text-[11px] font-semibold text-purple-300 uppercase tracking-wider">
+                      <span className="text-[11px] font-semibold text-[#4A5CFF] uppercase tracking-wider">
                         Premium Partner
                       </span>
                     </div>
                   </div>
 
                   {/* Bottom accent with animated gradient */}
-                  <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-linear-to-r from-transparent via-purple-500/0 to-transparent group-hover:via-purple-500/80 transition-all duration-700"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-linear-to-r from-transparent via-[#7A8FFF]/0 to-transparent group-hover:via-[#7A8FFF]/80 transition-all duration-700"></div>
 
                   {/* Corner decoration */}
-                  <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-purple-400/30 group-hover:bg-purple-400 transition-colors duration-500"></div>
-                  <div className="absolute bottom-3 left-3 w-1.5 h-1.5 rounded-full bg-purple-400/30 group-hover:bg-purple-400 transition-colors duration-500"></div>
+                  <div className="absolute top-3 right-3 w-2 h-2 rounded-full bg-[#4A5CFF]/30 group-hover:bg-[#4A5CFF] transition-colors duration-500"></div>
+                  <div className="absolute bottom-3 left-3 w-1.5 h-1.5 rounded-full bg-[#4A5CFF]/30 group-hover:bg-[#4A5CFF] transition-colors duration-500"></div>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Stats modernos */}
-        <div className="mt-20 flex flex-wrap items-center justify-center gap-12">
-          <div className="text-center">
-            <div className="text-4xl font-black text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-pink-400 mb-2">
-              50+
-            </div>
-            <div className="text-xs text-gray-500 uppercase tracking-wider">
-              Organizaciones
+        {/* Stats modernos mejorados */}
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {/* Stat 1 */}
+          <div className="relative group">
+            <div className="absolute inset-0 bg-linear-to-br from-[#4A5CFF]/10 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="relative p-8 rounded-2xl border border-[#5B6FFF]/20 bg-linear-to-br from-[#5B6FFF]/5 to-transparent backdrop-blur-sm hover:border-[#4A5CFF]/40 transition-all duration-300 text-center">
+              {/* Número con gradiente azul claro + blanco */}
+              <div
+                className="text-5xl md:text-6xl font-black mb-3 text-transparent bg-clip-text"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(135deg, #4A5CFF, #FFFFFF, #7A8FFF)",
+                  backgroundSize: "200% 200%",
+                  animation: "hologram 6s ease infinite",
+                }}
+              >
+                50+
+              </div>
+              <div className="text-sm font-bold text-[#4A5CFF] uppercase tracking-wider mb-1">
+                Organizaciones
+              </div>
+              <div className="h-1 w-16 mx-auto bg-linear-to-r from-transparent via-[#4A5CFF] to-transparent rounded-full"></div>
             </div>
           </div>
 
-          <div className="w-px h-12 bg-white/10"></div>
-
-          <div className="text-center">
-            <div className="text-4xl font-black text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-pink-400 mb-2">
-              98%
-            </div>
-            <div className="text-xs text-gray-500 uppercase tracking-wider">
-              Satisfacción
+          {/* Stat 2 */}
+          <div className="relative group">
+            <div className="absolute inset-0 bg-linear-to-br from-[#4A5CFF]/10 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="relative p-8 rounded-2xl border border-[#5B6FFF]/20 bg-linear-to-br from-[#5B6FFF]/5 to-transparent backdrop-blur-sm hover:border-[#4A5CFF]/40 transition-all duration-300 text-center">
+              {/* Número con gradiente azul claro + blanco */}
+              <div
+                className="text-5xl md:text-6xl font-black mb-3 text-transparent bg-clip-text"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(135deg, #7A8FFF, #FFFFFF, #4A5CFF)",
+                  backgroundSize: "200% 200%",
+                  animation: "hologram 6s ease infinite",
+                }}
+              >
+                98%
+              </div>
+              <div className="text-sm font-bold text-[#4A5CFF] uppercase tracking-wider mb-1">
+                Satisfacción
+              </div>
+              <div className="h-1 w-16 mx-auto bg-linear-to-r from-transparent via-[#4A5CFF] to-transparent rounded-full"></div>
             </div>
           </div>
 
-          <div className="w-px h-12 bg-white/10"></div>
-
-          <div className="text-center">
-            <div className="text-4xl font-black text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-pink-400 mb-2">
-              24/7
-            </div>
-            <div className="text-xs text-gray-500 uppercase tracking-wider">
-              Soporte
+          {/* Stat 3 */}
+          <div className="relative group">
+            <div className="absolute inset-0 bg-linear-to-br from-[#4A5CFF]/10 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="relative p-8 rounded-2xl border border-[#5B6FFF]/20 bg-linear-to-br from-[#5B6FFF]/5 to-transparent backdrop-blur-sm hover:border-[#4A5CFF]/40 transition-all duration-300 text-center">
+              {/* Número con gradiente azul claro + blanco */}
+              <div
+                className="text-5xl md:text-6xl font-black mb-3 text-transparent bg-clip-text"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(135deg, #4A5CFF, #FFFFFF, #5B6FFF)",
+                  backgroundSize: "200% 200%",
+                  animation: "hologram 6s ease infinite",
+                }}
+              >
+                24/7
+              </div>
+              <div className="text-sm font-bold text-[#4A5CFF] uppercase tracking-wider mb-1">
+                Soporte
+              </div>
+              <div className="h-1 w-16 mx-auto bg-linear-to-r from-transparent via-[#4A5CFF] to-transparent rounded-full"></div>
             </div>
           </div>
         </div>

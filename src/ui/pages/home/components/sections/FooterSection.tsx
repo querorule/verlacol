@@ -22,31 +22,72 @@ export default function FooterSection() {
     <footer className="relative py-24 px-6 bg-black overflow-hidden">
       {/* Efectos de fondo */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[100px]"></div>
-        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-pink-600/10 rounded-full blur-[100px]"></div>
+        <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] rounded-full blur-[100px]" style={{ backgroundColor: '#5B6FFF15' }}></div>
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full blur-[100px]" style={{ backgroundColor: '#7A8FFF15' }}></div>
       </div>
 
       <div className="container mx-auto max-w-7xl relative z-10">
-        {/* Footer Top - Newsletter */}
-        <div className="mb-16 text-center max-w-2xl mx-auto">
-          <h3 className="text-3xl md:text-4xl font-bold mb-4">
-            Mantente{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-pink-400">
-              actualizado
-            </span>
-          </h3>
-          <p className="text-gray-400 mb-6">
-            Recibe las últimas novedades y tips directamente en tu inbox
-          </p>
-          <div className="flex gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="tu@email.com"
-              className="flex-1 bg-white/5 border border-white/10 rounded-xl px-5 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
-            />
-            <button className="bg-linear-to-r from-purple-600 to-pink-600 px-8 py-3 rounded-xl font-semibold hover:from-purple-500 hover:to-pink-500 transition-all hover:scale-105">
-              Suscribirse
-            </button>
+        {/* Footer Top - Newsletter Moderno */}
+        <div className="relative mb-16">
+          {/* Resplandor de fondo */}
+          <div className="absolute inset-0 blur-3xl opacity-30" style={{ background: 'radial-gradient(ellipse at center, #5B6FFF, transparent)' }}></div>
+          
+          <div className="relative max-w-3xl mx-auto text-center p-8 rounded-3xl bg-linear-to-br from-[#5B6FFF]/5 to-transparent border border-[#5B6FFF]/10 backdrop-blur-sm">
+            {/* Badge superior */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#5B6FFF]/10 border border-[#5B6FFF]/20 rounded-full mb-6">
+              <div className="w-2 h-2 bg-[#4A5CFF] rounded-full animate-pulse"></div>
+              <span className="text-xs font-bold text-[#4A5CFF] uppercase tracking-wider">Newsletter</span>
+            </div>
+            
+            <h3 className="text-3xl md:text-5xl font-black mb-4">
+              Mantente{" "}
+              <span className="relative inline-block">
+                <span className="text-transparent bg-clip-text bg-linear-to-r from-[#5B6FFF] via-[#7A8FFF] to-[#4A5CFF]">
+                  actualizado
+                </span>
+                <div className="absolute -bottom-1 left-0 right-0 h-1 bg-linear-to-r from-transparent via-[#4A5CFF] to-transparent"></div>
+              </span>
+            </h3>
+            
+            <p className="text-lg text-gray-300 mb-8 max-w-xl mx-auto">
+              Recibe las últimas novedades,{" "}
+              <span className="text-white font-semibold">tips exclusivos</span> y
+              <span className="text-white font-semibold"> contenido premium</span> directamente en tu inbox
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
+              <input
+                type="email"
+                placeholder="tu@email.com"
+                className="flex-1 bg-white/5 border border-[#5B6FFF]/20 rounded-xl px-5 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-[#4A5CFF] focus:ring-2 focus:ring-[#4A5CFF]/30 transition-all backdrop-blur-sm"
+              />
+              <button 
+                className="relative group px-8 py-4 rounded-xl font-bold overflow-hidden transition-all hover:scale-105"
+                style={{
+                  background: 'linear-gradient(135deg, #4A5CFF 0%, #FFFFFF 100%)',
+                  boxShadow: '0 10px 40px rgba(74, 92, 255, 0.4)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(135deg, #7A8FFF 0%, #FFFFFF 100%)';
+                  e.currentTarget.style.boxShadow = '0 15px 50px rgba(122, 143, 255, 0.6)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'linear-gradient(135deg, #4A5CFF 0%, #FFFFFF 100%)';
+                  e.currentTarget.style.boxShadow = '0 10px 40px rgba(74, 92, 255, 0.4)';
+                }}
+              >
+                <span className="relative z-10 text-transparent bg-clip-text bg-linear-to-r from-black to-[#5B6FFF]">
+                  Suscribirse
+                </span>
+                {/* Efecto de brillo */}
+                <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+              </button>
+            </div>
+            
+            {/* Indicador de privacidad */}
+            <p className="text-xs text-gray-500 mt-4">
+              🔒 100% privado. Sin spam. Cancela cuando quieras.
+            </p>
           </div>
         </div>
 
@@ -58,11 +99,11 @@ export default function FooterSection() {
           <div className="md:col-span-2">
             <div className="mb-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-linear-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/20">
+                <div className="w-12 h-12 bg-linear-to-br from-[#5B6FFF] to-[#4A5CFF] rounded-xl flex items-center justify-center shadow-lg shadow-[#5B6FFF]/20">
                   <Sparkles className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-black bg-clip-text text-transparent bg-linear-to-r from-purple-400 to-pink-400">
+                  <h3 className="text-2xl font-black bg-clip-text text-transparent bg-linear-to-r from-[#5B6FFF] to-[#4A5CFF]">
                     VERLACOL
                   </h3>
                   <p className="text-xs text-gray-500 font-mono">
@@ -78,20 +119,20 @@ export default function FooterSection() {
 
             {/* Feature badges */}
             <div className="flex flex-wrap gap-2 mb-6">
-              <span className="px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-full text-xs text-purple-300">
+              <span className="px-3 py-1 bg-[#5B6FFF]/10 border border-[#5B6FFF]/20 rounded-full text-xs text-[#4A5CFF]">
                 🚀 Fast
               </span>
-              <span className="px-3 py-1 bg-pink-500/10 border border-pink-500/20 rounded-full text-xs text-pink-300">
+              <span className="px-3 py-1 bg-[#5B6FFF]/10 border border-[#5B6FFF]/20 rounded-full text-xs text-[#4A5CFF]">
                 🔒 Secure
               </span>
-              <span className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-xs text-blue-300">
+              <span className="px-3 py-1 bg-[#5B6FFF]/10 border border-[#5B6FFF]/20 rounded-full text-xs text-[#4A5CFF]">
                 ⚡ Powerful
               </span>
             </div>
             <div className="flex gap-3">
               <a
                 href="#"
-                className="group w-11 h-11 bg-white/5 hover:bg-linear-to-br hover:from-purple-600 hover:to-pink-600 border border-white/10 hover:border-transparent rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/20"
+                className="group w-11 h-11 bg-white/5 hover:bg-linear-to-br hover:from-[#5B6FFF] hover:to-[#4A5CFF] border border-white/10 hover:border-transparent rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#5B6FFF]/20"
               >
                 <svg
                   className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors"
@@ -103,7 +144,7 @@ export default function FooterSection() {
               </a>
               <a
                 href="#"
-                className="group w-11 h-11 bg-white/5 hover:bg-linear-to-br hover:from-purple-600 hover:to-pink-600 border border-white/10 hover:border-transparent rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/20"
+                className="group w-11 h-11 bg-white/5 hover:bg-linear-to-br hover:from-[#5B6FFF] hover:to-[#4A5CFF] border border-white/10 hover:border-transparent rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#5B6FFF]/20"
               >
                 <svg
                   className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors"
@@ -115,7 +156,7 @@ export default function FooterSection() {
               </a>
               <a
                 href="#"
-                className="group w-11 h-11 bg-white/5 hover:bg-linear-to-br hover:from-purple-600 hover:to-pink-600 border border-white/10 hover:border-transparent rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/20"
+                className="group w-11 h-11 bg-white/5 hover:bg-linear-to-br hover:from-[#5B6FFF] hover:to-[#4A5CFF] border border-white/10 hover:border-transparent rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#5B6FFF]/20"
               >
                 <svg
                   className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors"
@@ -127,7 +168,7 @@ export default function FooterSection() {
               </a>
               <a
                 href="#"
-                className="group w-11 h-11 bg-white/5 hover:bg-linear-to-br hover:from-purple-600 hover:to-pink-600 border border-white/10 hover:border-transparent rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/20"
+                className="group w-11 h-11 bg-white/5 hover:bg-linear-to-br hover:from-[#5B6FFF] hover:to-[#4A5CFF] border border-white/10 hover:border-transparent rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#5B6FFF]/20"
               >
                 <svg
                   className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors"

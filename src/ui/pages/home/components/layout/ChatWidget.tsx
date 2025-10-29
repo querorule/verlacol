@@ -25,29 +25,41 @@ export default function ChatWidget({ isOpen, onToggle }: ChatWidgetProps) {
             </div>
           )}
           
-          {/* Círculo principal con gradiente */}
-          <div className="relative w-14 h-14 bg-linear-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center shadow-lg shadow-purple-500/50 hover:shadow-xl hover:shadow-purple-500/70 transition-all duration-300 hover:scale-110">
-            {/* Efecto ping de fondo */}
-            {!isOpen && <div className="absolute inset-0 w-16 h-16 bg-purple-600/30 rounded-full animate-ping" />}
+          {/* Círculo principal con gradiente azul moderno */}
+          <div 
+            className="relative w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 overflow-hidden"
+            style={{
+              background: 'linear-gradient(135deg, #4A5CFF 0%, #FFFFFF 100%)',
+              boxShadow: '0 10px 30px rgba(74, 92, 255, 0.5), 0 0 20px rgba(74, 92, 255, 0.3)'
+            }}
+          >
+            {/* Efecto ping de fondo azul */}
+            {!isOpen && <div className="absolute -inset-2 rounded-full animate-ping" style={{ background: 'rgba(74, 92, 255, 0.4)' }} />}
             
-            {/* Icono de chat o X */}
+            {/* Icono de chat o X con estilo mejorado */}
             {isOpen ? (
-              <svg className="w-6 h-6 text-white relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg className="w-7 h-7 relative z-10" fill="none" viewBox="0 0 24 24" stroke="#5B6FFF" strokeWidth={3}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             ) : (
-              <svg className="w-6 h-6 text-white relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+              <svg className="w-7 h-7 relative z-10" fill="none" viewBox="0 0 24 24" stroke="#5B6FFF" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
               </svg>
             )}
           </div>
 
-          {/* Tooltip en hover */}
+          {/* Tooltip en hover mejorado */}
           {!isOpen && (
-            <div className="absolute bottom-full right-0 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-              <div className="bg-white text-black px-3 py-2 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap">
-                ¿Necesitas ayuda?
-                <div className="absolute top-full right-4 -mt-1 border-4 border-transparent border-t-white" />
+            <div className="absolute bottom-full right-0 mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+              <div 
+                className="px-4 py-2 rounded-xl shadow-2xl text-sm font-bold whitespace-nowrap backdrop-blur-sm"
+                style={{
+                  background: 'linear-gradient(135deg, #4A5CFF, #7A8FFF)',
+                  boxShadow: '0 10px 30px rgba(74, 92, 255, 0.4)'
+                }}
+              >
+                <span className="text-white">¿Necesitas ayuda?</span>
+                <div className="absolute top-full right-4 -mt-1 border-4 border-transparent" style={{ borderTopColor: '#4A5CFF' }} />
               </div>
             </div>
           )}
@@ -60,9 +72,9 @@ export default function ChatWidget({ isOpen, onToggle }: ChatWidgetProps) {
           ? 'opacity-100 translate-y-0 scale-100' 
           : 'opacity-0 translate-y-8 scale-95 pointer-events-none'
       }`}>
-        <div className="w-96 h-[500px] bg-black/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl shadow-purple-500/20 flex flex-col overflow-hidden">
-          {/* Chat Header */}
-          <div className="bg-linear-to-r from-purple-600 to-pink-600 p-4 flex items-center justify-between">
+        <div className="w-96 h-[500px] bg-black/95 backdrop-blur-xl border border-[#5B6FFF]/20 rounded-2xl shadow-2xl flex flex-col overflow-hidden" style={{ boxShadow: '0 20px 60px rgba(74, 92, 255, 0.3)' }}>
+          {/* Chat Header con gradiente azul */}
+          <div className="p-4 flex items-center justify-between" style={{ background: 'linear-gradient(135deg, #5B6FFF, #7A8FFF, #4A5CFF)' }}>
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
                 <Sparkles className="w-5 h-5 text-white" />
@@ -79,8 +91,8 @@ export default function ChatWidget({ isOpen, onToggle }: ChatWidgetProps) {
           <div className="flex-1 p-4 overflow-y-auto space-y-4">
             {/* Mensaje del sistema */}
             <div className="flex gap-3">
-              <div className="w-8 h-8 bg-purple-600/20 rounded-full flex items-center justify-center shrink-0">
-                <Sparkles className="w-4 h-4 text-purple-400" />
+              <div className="w-8 h-8 bg-[#5B6FFF]/20 rounded-full flex items-center justify-center shrink-0">
+                <Sparkles className="w-4 h-4 text-[#4A5CFF]" />
               </div>
               <div className="flex-1">
                 <div className="bg-white/5 border border-white/10 rounded-2xl rounded-tl-none p-3">
@@ -113,9 +125,9 @@ export default function ChatWidget({ isOpen, onToggle }: ChatWidgetProps) {
               <input
                 type="text"
                 placeholder="Escribe tu mensaje..."
-                className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all"
+                className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#4A5CFF] focus:ring-1 focus:ring-[#4A5CFF] transition-all"
               />
-              <button className="bg-linear-to-r from-purple-600 to-pink-600 rounded-xl px-4 py-2 hover:opacity-90 transition-opacity">
+              <button className="rounded-xl px-4 py-2 hover:opacity-90 transition-all hover:scale-105" style={{ background: 'linear-gradient(135deg, #4A5CFF, #FFFFFF)' }}>
                 <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                 </svg>
