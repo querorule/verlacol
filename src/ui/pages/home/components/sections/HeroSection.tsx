@@ -43,30 +43,33 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
           <Link
             to="/contact"
-            className="group relative inline-flex items-center gap-2 text-white px-10 py-5 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 overflow-hidden"
+            className="group relative inline-flex items-center gap-2 text-white px-10 py-5 rounded-full text-lg font-semibold overflow-hidden"
             style={{
               background: 'linear-gradient(135deg, #5B6FFF 0%, #7A8FFF 50%, #4A5CFF 100%)',
-              boxShadow: '0 10px 40px rgba(91, 111, 255, 0.5), 0 0 20px rgba(74, 92, 255, 0.4)'
+              boxShadow: '0 10px 40px rgba(91, 111, 255, 0.5), 0 0 20px rgba(74, 92, 255, 0.4)',
+              transition: 'all 600ms cubic-bezier(0.4, 0, 0.2, 1), transform 400ms cubic-bezier(0.4, 0, 0.2, 1)'
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.background = 'linear-gradient(135deg, #7A8FFF 0%, #4A5CFF 50%, #FFFFFF 100%)';
               e.currentTarget.style.boxShadow = '0 15px 60px rgba(122, 143, 255, 0.7), 0 0 40px rgba(74, 92, 255, 0.6)';
+              e.currentTarget.style.transform = 'scale(1.05)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.background = 'linear-gradient(135deg, #5B6FFF 0%, #7A8FFF 50%, #4A5CFF 100%)';
               e.currentTarget.style.boxShadow = '0 10px 40px rgba(91, 111, 255, 0.5), 0 0 20px rgba(74, 92, 255, 0.4)';
+              e.currentTarget.style.transform = 'scale(1)';
             }}
           >
             {/* Efecto de brillo animado */}
-            <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+            <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
             
             <span className="relative z-10">Comenzar gratis</span>
-            <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform duration-400 ease-out" />
           </Link>
           
-          <button className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white px-10 py-5 rounded-full text-lg font-semibold transition-all duration-300 hover:border-white/20">
+          <button className="group inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white px-10 py-5 rounded-full text-lg font-semibold hover:border-white/20 hover:scale-105" style={{ transition: 'all 500ms cubic-bezier(0.4, 0, 0.2, 1)' }}>
             Ver demo
-            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-400 ease-out" fill="currentColor" viewBox="0 0 24 24">
               <path d="M8 5v14l11-7z"/>
             </svg>
           </button>
