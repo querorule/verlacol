@@ -11,7 +11,6 @@ import {
   FooterSection,
   ProductsSection,
 } from "./components";
-import { categoriesRow1, categoriesRow2 } from "./constants/data";
 
 // Página Home con diseño moderno tipo Superhuman
 // Ubicación: src/ui/pages/home/Home.tsx
@@ -44,10 +43,7 @@ export default function Home() {
       <StatsSection />
 
       {/* Problem Section */}
-      <ProblemSection
-        categoriesRow1={categoriesRow1}
-        categoriesRow2={categoriesRow2}
-      />
+      <ProblemSection />
 
       {/* Features Section */}
       <FeaturesSection />

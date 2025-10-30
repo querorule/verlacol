@@ -1,273 +1,288 @@
-// Problem section with challenge badge and category pills
+import { useState } from "react";
+import { useTheme } from "../../../../../contexts/useTheme";
+import { ArrowRight, X, Phone, Mail, MapPin, Clock } from "lucide-react";
+
+// Solutions section - Simple process showcase
 // Ubicación: src/ui/pages/home/components/ProblemSection.tsx
 
-interface ProblemSectionProps {
-  categoriesRow1: string[];
-  categoriesRow2: string[];
-}
+const steps = [
+  {
+    number: 1,
+    title: "Contáctanos",
+    description: "Comunícate con nosotros para conocer tu necesidad",
+  },
+  {
+    number: 2,
+    title: "Consulta",
+    description: "Revisamos opciones para resolver tus dudas",
+  },
+  {
+    number: 3,
+    title: "Realiza el pedido",
+    description: "Elige el servicio ideal y procede",
+  },
+  {
+    number: 4,
+    title: "Pago",
+    description: "Completa el pago de forma segura en todos los bancos",
+  },
+];
 
-export default function ProblemSection({ categoriesRow1, categoriesRow2 }: ProblemSectionProps) {
+export default function ProblemSection() {
+  const { theme } = useTheme();
+  const isDark = theme === "dark";
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  
   return (
-    <section className="py-40 px-6 bg-black relative z-10 overflow-hidden">
-      {/* Efectos de fondo */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/3 w-[500px] h-[500px] rounded-full blur-[100px]" style={{ backgroundColor: '#5B6FFF15' }}></div>
-        <div className="absolute bottom-0 right-1/3 w-[500px] h-[500px] rounded-full blur-[100px]" style={{ backgroundColor: '#7A8FFF15' }}></div>
-      </div>
+    <>
+    <section
+      className={`py-20 md:py-32 px-6 relative overflow-hidden ${
+        isDark ? "bg-gray-950" : "bg-gray-50"
+      }`}
+    >
+      {/* Decorative circles */}
+      <div className="absolute top-20 right-10 w-12 h-12 rounded-full border-4" style={{ borderColor: 'rgba(91, 111, 255, 0.3)' }} />
+      <div className="absolute top-40 right-32 w-8 h-8 rounded-full" style={{ backgroundColor: 'rgba(122, 143, 255, 0.2)' }} />
+      <div className="absolute bottom-20 right-20 w-10 h-10 rounded-full border-4" style={{ borderColor: 'rgba(74, 92, 255, 0.3)' }} />
 
-      <div className="container mx-auto max-w-5xl relative z-10">
-        {/* Badge superior */}
-        <div className="flex justify-center mb-8">
-          <div className="inline-flex items-center gap-2 px-6 py-2 bg-red-500/10 border border-red-500/20 rounded-full">
-            <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-            <span className="text-sm font-semibold text-red-400 uppercase tracking-wider">El Problema</span>
-          </div>
-        </div>
-
-        {/* Título principal con efecto holográfico fluido */}
-        <div className="relative mb-8 perspective-1000">
-          {/* Resplandor de fondo ondulante */}
-          <div className="absolute inset-0 blur-3xl opacity-40" style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 50%, #5B6FFF, transparent)' }}></div>
-          
-          <h2 className="relative text-5xl md:text-7xl font-black leading-tight text-center">
-            <span className="block mb-3 text-gray-300">Internet lento es el</span>
-            
-            {/* "mayor obstáculo" con efecto holográfico */}
-            <span className="relative inline-block group/holo">
-              {/* Capas holográficas de colores */}
-              <span className="absolute inset-0" style={{ transform: 'translateX(-3px)', opacity: 0.5, filter: 'blur(2px)', color: '#7A8FFF' }}>
-                mayor obstáculo
-              </span>
-              <span className="absolute inset-0" style={{ transform: 'translateX(3px)', opacity: 0.5, filter: 'blur(2px)', color: '#4A5CFF' }}>
-                mayor obstáculo
-              </span>
-              
-              {/* Texto principal con gradiente azul claro + blanco */}
-              <span 
-                className="relative text-transparent bg-clip-text"
-                style={{ 
-                  backgroundImage: 'linear-gradient(45deg, #4A5CFF, #FFFFFF, #7A8FFF, #FFFFFF, #4A5CFF)',
-                  backgroundSize: '400% 400%',
-                  animation: 'hologram 8s ease infinite'
-                }}
-              >
-                mayor obstáculo
-              </span>
-              
-              {/* Línea decorativa inferior con gradiente animado */}
-              <div className="absolute -bottom-3 left-0 right-0 h-1.5 rounded-full overflow-hidden">
-                <div 
-                  className="h-full"
-                  style={{
-                    background: 'linear-gradient(90deg, #4A5CFF, #FFFFFF, #7A8FFF, #FFFFFF, #4A5CFF)',
-                    backgroundSize: '200% 100%',
-                    animation: 'shimmer 3s linear infinite',
-                    boxShadow: '0 0 30px rgba(74, 92, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.5)'
-                  }}
-                ></div>
-              </div>
-            </span>
-            
-            <br />
-            
-            {/* "para tu hogar" con efecto suave */}
-            <span className="relative inline-block mt-4 group/reveal">
-              {/* Sombra suave mejorada */}
-              <span className="absolute inset-0 blur-lg opacity-40" style={{ color: '#7A8FFF' }}>
-                para tu hogar
-              </span>
-              
-              {/* Texto principal con gradiente azul claro + blanco */}
-              <span 
-                className="relative text-transparent bg-clip-text"
-                style={{ 
-                  backgroundImage: 'linear-gradient(to right, #4A5CFF 0%, #FFFFFF 30%, #7A8FFF 50%, #FFFFFF 70%, #4A5CFF 100%)',
-                  backgroundSize: '200% 100%',
-                  animation: 'slide 4s ease-in-out infinite'
-                }}
-              >
-                para tu hogar
-              </span>
-              
-              {/* Puntos de luz flotantes */}
-              <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                {[0, 1, 2, 3].map((i) => (
-                  <div
-                    key={i}
-                    className="absolute w-2 h-2 rounded-full"
-                    style={{
-                      background: 'radial-gradient(circle, #4A5CFF, transparent)',
-                      left: `${15 + i * 25}%`,
-                      top: '50%',
-                      opacity: 0,
-                      animation: `float ${2 + i * 0.5}s ease-in-out infinite`,
-                      animationDelay: `${i * 0.4}s`,
-                      filter: 'blur(2px)'
-                    }}
-                  />
-                ))}
-              </div>
-            </span>
-          </h2>
-          
-          {/* Animaciones CSS */}
-          <style>{`
-            @keyframes hologram {
-              0%, 100% { background-position: 0% 50%; }
-              50% { background-position: 100% 50%; }
-            }
-            
-            @keyframes shimmer {
-              0% { background-position: 0% 0%; }
-              100% { background-position: 200% 0%; }
-            }
-            
-            @keyframes slide {
-              0%, 100% { background-position: 0% 0%; }
-              50% { background-position: 100% 0%; }
-            }
-            
-            @keyframes float {
-              0%, 100% { 
-                opacity: 0;
-                transform: translateY(0) scale(0);
-              }
-              50% { 
-                opacity: 1;
-                transform: translateY(-20px) scale(1);
-              }
-            }
-          `}</style>
-        </div>
-        
-        {/* Descripción principal con diseño moderno */}
-        <div className="max-w-4xl mx-auto mb-16">
-          {/* Primera parte con fondo sutil */}
-          <div className="relative mb-8 p-8 rounded-2xl bg-linear-to-br from-white/3 to-transparent border border-white/5 backdrop-blur-sm group hover:border-white/10 transition-all duration-500">
-            {/* Efecto de brillo en la esquina */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-[#5B6FFF]/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-            
-            <p className="relative text-lg md:text-xl text-gray-300 leading-relaxed text-center">
-              Internet que se cae constantemente. Videos que{' '}
-              <span className="text-white font-medium">se congelan</span>, descargas{' '}
-              <span className="text-white font-medium">interminables</span>.
-              <br className="hidden md:block" />
-              Terminas{' '}
-              <span className="relative inline-block">
-                <span className="text-red-400">perdiendo tiempo valioso</span>
-                <span className="absolute bottom-0 left-0 w-full h-px bg-linear-to-r from-transparent via-red-400/50 to-transparent"></span>
-              </span>
-              , frustrado con tu proveedor actual.
-            </p>
-          </div>
-          
-          {/* Segunda parte con énfasis */}
-          <div className="relative p-6 rounded-2xl bg-linear-to-r from-[#5B6FFF]/8 via-[#7A8FFF]/8 to-[#4A5CFF]/8 border border-[#5B6FFF]/20 backdrop-blur-sm">
-            {/* Línea decorativa superior */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-px bg-linear-to-r from-transparent via-[#4A5CFF] to-transparent"></div>
-            
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed text-center">
-              No debería ser así. La tecnología de conectividad{' '}
-              <span className="relative inline-block group/badge">
-                <span className="relative z-10 text-white font-bold bg-linear-to-r from-[#5B6FFF]/20 to-[#4A5CFF]/20 px-4 py-1.5 rounded-lg border border-[#5B6FFF]/30 shadow-lg shadow-[#5B6FFF]/10">
-                  ha evolucionado
-                </span>
-                {/* Efecto de pulso en hover */}
-                <span className="absolute inset-0 bg-[#5B6FFF]/20 rounded-lg blur-md opacity-0 group-hover/badge:opacity-100 transition-opacity duration-300"></span>
-              </span>
-              .
-              <br className="hidden md:block" />
-              Con{' '}
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-[#5B6FFF] to-[#4A5CFF] font-bold">
-                Verla
-              </span>
-              , tu conexión{' '}
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-[#4A5CFF] to-[#7A8FFF] font-bold">
-                cambia para siempre
-              </span>
-              .
-            </p>
-            
-            {/* Línea decorativa inferior */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-px bg-linear-to-r from-transparent via-[#4A5CFF] to-transparent"></div>
-          </div>
-        </div>
-
-        {/* Stats problemáticas */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16 max-w-4xl mx-auto">
-          <div className="bg-red-500/5 border border-red-500/20 rounded-2xl p-6 text-center hover:bg-red-500/10 transition-all duration-300">
-            <div className="text-5xl font-black text-red-400 mb-2">3hrs</div>
-            <p className="text-gray-400 text-sm">Perdidas en buffering</p>
-          </div>
-          
-          <div className="bg-orange-500/5 border border-orange-500/20 rounded-2xl p-6 text-center hover:bg-orange-500/10 transition-all duration-300">
-            <div className="text-5xl font-black text-orange-400 mb-2">70%</div>
-            <p className="text-gray-400 text-sm">Quejas de lentitud</p>
-          </div>
-          
-          <div className="bg-yellow-500/5 border border-yellow-500/20 rounded-2xl p-6 text-center hover:bg-yellow-500/10 transition-all duration-300">
-            <div className="text-5xl font-black text-yellow-400 mb-2">5+</div>
-            <p className="text-gray-400 text-sm">Caídas semanales</p>
-          </div>
-        </div>
-
-        {/* Categories - Dos filas con scroll infinito en direcciones opuestas */}
-        <div className="mt-16 space-y-6 overflow-hidden">
-          {/* Primera fila - Derecha a Izquierda */}
+      <div className="container mx-auto max-w-7xl relative z-10">
+        {/* Main Content - Two Columns */}
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Illustration */}
           <div className="relative">
-            <div className="absolute left-0 top-0 bottom-0 w-20 bg-linear-to-r from-black to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-20 bg-linear-to-l from-black to-transparent z-10 pointer-events-none" />
-            
-            <div className="flex gap-4 animate-scroll-rtl whitespace-nowrap">
-              {/* Primera copia */}
-              {categoriesRow1.map((category, index) => (
-                <span
-                  key={`${category}-1-${index}`}
-                  className="inline-flex items-center px-8 py-3 bg-white/5 border border-white/10 rounded-full text-sm font-semibold text-gray-300 hover:bg-white/10 hover:border-white/20 hover:text-white transition-all duration-300"
-                >
-                  {category}
-                </span>
-              ))}
-              {/* Segunda copia para loop infinito */}
-              {categoriesRow1.map((category, index) => (
-                <span
-                  key={`${category}-2-${index}`}
-                  className="inline-flex items-center px-8 py-3 bg-white/5 border border-white/10 rounded-full text-sm font-semibold text-gray-300 hover:bg-white/10 hover:border-white/20 hover:text-white transition-all duration-300"
-                >
-                  {category}
-                </span>
-              ))}
+            <div className="relative">
+              {/* Illustration placeholder */}
+              <div
+                className={`relative rounded-3xl overflow-hidden p-8 ${
+                  isDark ? "bg-gray-900" : "bg-white"
+                } shadow-2xl`}
+              >
+                <div className="flex items-center justify-center min-h-[400px]">
+                  {/* Person with laptop illustration */}
+                  <img
+                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=600&fit=crop&q=80"
+                    alt="Persona trabajando con tecnología"
+                    className="w-full h-auto object-cover rounded-2xl"
+                  />
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Segunda fila - Izquierda a Derecha */}
-          <div className="relative">
-            <div className="absolute left-0 top-0 bottom-0 w-20 bg-linear-to-r from-black to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-20 bg-linear-to-l from-black to-transparent z-10 pointer-events-none" />
-            
-            <div className="flex gap-4 animate-scroll-ltr whitespace-nowrap">
-              {/* Primera copia */}
-              {categoriesRow2.map((category, index) => (
-                <span
-                  key={`${category}-1-${index}`}
-                  className="inline-flex items-center px-8 py-3 bg-white/5 border border-white/10 rounded-full text-sm font-semibold text-gray-300 hover:bg-white/10 hover:border-white/20 hover:text-white transition-all duration-300"
-                >
-                  {category}
-                </span>
+          {/* Right Column - Content */}
+          <div className="space-y-8">
+            {/* Title */}
+            <div>
+              <h2
+                className={`text-4xl md:text-5xl font-bold mb-4 ${
+                  isDark ? "text-white" : "text-gray-900"
+                }`}
+              >
+                Soluciones{" "}
+                <span style={{ color: '#5B6FFF' }}>Simples!</span>
+              </h2>
+              <p
+                className={`text-base md:text-lg ${
+                  isDark ? "text-gray-400" : "text-gray-600"
+                }`}
+              >
+                Comprendemos que administrar dos negocios no es tarea fácil.
+                Por eso nos tomamos el tiempo para entender.
+              </p>
+            </div>
+
+            {/* Steps */}
+            <div className="space-y-4">
+              {steps.map((step) => (
+                <div key={step.number} className="flex items-start gap-4">
+                  {/* Number Circle */}
+                  <div className="shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg" style={{ background: 'linear-gradient(135deg, #5B6FFF, #7A8FFF)' }}>
+                    {step.number}
+                  </div>
+                  {/* Content */}
+                  <div className="pt-1">
+                    <h3
+                      className={`font-bold text-lg mb-1 ${
+                        isDark ? "text-white" : "text-gray-900"
+                      }`}
+                    >
+                      {step.title}
+                    </h3>
+                    <p
+                      className={`text-sm ${
+                        isDark ? "text-gray-400" : "text-gray-600"
+                      }`}
+                    >
+                      {step.description}
+                    </p>
+                  </div>
+                </div>
               ))}
-              {/* Segunda copia para loop infinito */}
-              {categoriesRow2.map((category, index) => (
-                <span
-                  key={`${category}-2-${index}`}
-                  className="inline-flex items-center px-8 py-3 bg-white/5 border border-white/10 rounded-full text-sm font-semibold text-gray-300 hover:bg-white/10 hover:border-white/20 hover:text-white transition-all duration-300"
-                >
-                  {category}
-                </span>
-              ))}
+            </div>
+
+            {/* Buttons */}
+            <div className="flex flex-wrap gap-4 pt-4">
+              <button
+                onClick={() => setIsDrawerOpen(true)}
+                className="inline-flex items-center gap-2 px-8 py-3 text-white font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+                style={{ background: 'linear-gradient(135deg, #4A5CFF, #FFFFFF)', backgroundSize: '200% 100%' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundPosition = '100% 0'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundPosition = '0% 0'}
+              >
+                Comenzar
+                <ArrowRight className="w-5 h-5" />
+              </button>
+              <a
+                href="#learn-more"
+                className={`inline-flex items-center gap-2 px-8 py-3 font-semibold rounded-full transition-all duration-300 ${
+                  isDark
+                    ? "border-2 border-gray-700 text-white hover:border-gray-600 hover:bg-gray-900"
+                    : "border-2 hover:bg-blue-50"
+                }`}
+                style={!isDark ? { borderColor: '#5B6FFF', color: '#5B6FFF' } : {}}
+              >
+                Leer más
+              </a>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    {/* Drawer */}
+    {isDrawerOpen && (
+      <>
+        {/* Overlay */}
+        <div 
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 animate-fadeIn"
+          onClick={() => setIsDrawerOpen(false)}
+        />
+        
+        {/* Drawer Panel */}
+        <div className="fixed bottom-0 left-0 right-0 w-full max-h-[85vh] bg-linear-to-t from-black to-gray-900 border-t border-blue-500/30 shadow-2xl shadow-blue-500/20 z-50 animate-slideInUp overflow-y-auto rounded-t-3xl">
+          {/* Handle */}
+          <div className="sticky top-0 flex justify-center pt-3 pb-2 bg-gray-900/95 backdrop-blur-sm">
+            <div className="w-12 h-1.5 rounded-full bg-gray-600"></div>
+          </div>
+          
+          {/* Header */}
+          <div className="sticky top-0 bg-gray-900/95 backdrop-blur-sm border-b border-white/10 px-6 pb-6 flex items-center justify-between z-10">
+            <h2 className="text-2xl font-bold text-white flex items-center gap-3">
+              <span className="w-10 h-10 rounded-xl bg-linear-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                📋
+              </span>
+              Información de Contacto
+            </h2>
+            <button
+              onClick={() => setIsDrawerOpen(false)}
+              className="p-2 rounded-xl bg-white/5 hover:bg-white/10 transition-all"
+            >
+              <X className="w-5 h-5 text-gray-400" />
+            </button>
+          </div>
+
+          {/* Content */}
+          <div className="p-6 space-y-6">
+            {/* Contacto */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-bold text-white">Contáctanos</h3>
+              
+              {/* Teléfono */}
+              <div className="flex items-start gap-4 p-4 rounded-xl bg-blue-500/10 border border-blue-500/20 hover:bg-blue-500/20 transition-all">
+                <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center shrink-0">
+                  <Phone className="w-6 h-6 text-blue-400" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-400 mb-1">Teléfono</p>
+                  <a href="tel:+573001234567" className="text-white font-semibold hover:text-blue-400 transition-all">
+                    +57 300 123 4567
+                  </a>
+                </div>
+              </div>
+
+              {/* Email */}
+              <div className="flex items-start gap-4 p-4 rounded-xl bg-purple-500/10 border border-purple-500/20 hover:bg-purple-500/20 transition-all">
+                <div className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center shrink-0">
+                  <Mail className="w-6 h-6 text-purple-400" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-400 mb-1">Email</p>
+                  <a href="mailto:info@verlapage.com" className="text-white font-semibold hover:text-purple-400 transition-all">
+                    info@verlapage.com
+                  </a>
+                </div>
+              </div>
+
+              {/* Dirección */}
+              <div className="flex items-start gap-4 p-4 rounded-xl bg-green-500/10 border border-green-500/20 hover:bg-green-500/20 transition-all">
+                <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center shrink-0">
+                  <MapPin className="w-6 h-6 text-green-400" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-400 mb-1">Dirección</p>
+                  <p className="text-white font-semibold">
+                    Calle 123 #45-67<br />
+                    Bogotá, Colombia
+                  </p>
+                </div>
+              </div>
+
+              {/* Horario */}
+              <div className="flex items-start gap-4 p-4 rounded-xl bg-orange-500/10 border border-orange-500/20 hover:bg-orange-500/20 transition-all">
+                <div className="w-12 h-12 rounded-xl bg-orange-500/20 flex items-center justify-center shrink-0">
+                  <Clock className="w-6 h-6 text-orange-400" />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-400 mb-1">Horario de Atención</p>
+                  <p className="text-white font-semibold">
+                    Lunes a Viernes: 8:00 AM - 6:00 PM<br />
+                    Sábados: 9:00 AM - 1:00 PM
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Pasos */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-bold text-white">Proceso Simple</h3>
+              {steps.map((step) => (
+                <div key={step.number} className="flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
+                  <div className="w-8 h-8 rounded-full bg-linear-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-sm shrink-0">
+                    {step.number}
+                  </div>
+                  <div>
+                    <h4 className="text-white font-semibold mb-1">{step.title}</h4>
+                    <p className="text-gray-400 text-sm">{step.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <button
+              onClick={() => window.location.href = '#contact'}
+              className="w-full py-4 rounded-xl bg-linear-to-r from-blue-600 to-purple-600 text-white font-bold hover:from-blue-500 hover:to-purple-500 transition-all shadow-lg shadow-blue-500/20"
+            >
+              Iniciar Ahora
+            </button>
+          </div>
+        </div>
+
+        <style>{`
+          @keyframes slideInUp {
+            from {
+              transform: translateY(100%);
+            }
+            to {
+              transform: translateY(0);
+            }
+          }
+          .animate-slideInUp {
+            animation: slideInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          }
+        `}</style>
+      </>
+    )}
+    </>
   );
 }
