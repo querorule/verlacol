@@ -5,39 +5,39 @@ import { useTheme } from "../../../../../contexts/useTheme";
 const products = [
   {
     id: 1,
-    title: "Internet Residencial",
+    title: "Internet por Fibra Óptica",
     description:
-      "Conexión de alta velocidad para tu hogar con soporte 24/7 y sin límite de datos.",
+      "Velocidades ultrarrápidas y conexión estable con nuestra red de fibra óptica de última generación. Ideal para streaming, juegos en línea y teletrabajo.",
     image:
-      "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    link: "#internet-residencial",
+      "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    link: "/services/fiber",
   },
   {
     id: 2,
-    title: "Internet Empresarial",
+    title: "Televisión IP",
     description:
-      "Conexión dedicada para empresas con ancho de banda garantizado y soporte prioritario.",
+      "Más de 200 canales en alta definición, contenido bajo demanda y funciones avanzadas como pausar y retroceder en vivo. Disfruta del mejor entretenimiento en un solo lugar.",
     image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    link: "#internet-empresarial",
+      "https://images.unsplash.com/photo-1593784991095-a205069470b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    link: "/services/tv",
   },
   {
     id: 3,
-    title: "Servicios en la Nube",
+    title: "Internet + TV",
     description:
-      "Soluciones de almacenamiento y procesamiento en la nube para tu negocio.",
+      "El mejor combo de internet de alta velocidad y televisión de calidad. Ahorra con nuestros paquetes combinados diseñados para toda la familia.",
     image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    link: "#servicios-nube",
+      "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    link: "#internet-tv",
   },
   {
     id: 4,
-    title: "Redes Corporativas",
+    title: "Soporte Técnico 24/7",
     description:
-      "Diseño e implementación de redes seguras para empresas de todos los tamaños.",
+      "Asistencia técnica especializada disponible las 24 horas del día, los 7 días de la semana. Tu conexión siempre activa con nuestro soporte dedicado.",
     image:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    link: "#redes-corporativas",
+      "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    link: "#soporte-tecnico",
   },
 ];
 

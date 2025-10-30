@@ -21,6 +21,10 @@ const Filtrado = lazy(() => import('../ui/pages/legal/filtrado'));
 const Seguridad = lazy(() => import('../ui/pages/legal/seguridad'));
 const ComparadorTarifas = lazy(() => import('../ui/pages/legal/comparador-tarifas'));
 
+// Services Pages
+const Fiber = lazy(() => import('../ui/pages/services/fiber'));
+const TV = lazy(() => import('../ui/pages/services/tv'));
+
 // Wrapper para aplicar Suspense a las rutas lazy
 const withSuspense = (Component: ComponentType) => (
   <Suspense fallback={<LoadingFallback />}>
@@ -77,5 +81,14 @@ export const router = createBrowserRouter([
   {
     path: ROUTES.LEGAL.COMPARADOR_TARIFAS,
     element: withSuspense(ComparadorTarifas),
+  },
+  // Services Routes
+  {
+    path: ROUTES.SERVICES.FIBER,
+    element: withSuspense(Fiber),
+  },
+  {
+    path: ROUTES.SERVICES.TV,
+    element: withSuspense(TV),
   },
 ]);
