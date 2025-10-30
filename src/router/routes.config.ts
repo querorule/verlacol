@@ -17,6 +17,12 @@ export const ROUTES = {
     FILTRADO: '/legal/filtrado',
     SEGURIDAD: '/legal/seguridad',
     COMPARADOR_TARIFAS: '/legal/comparador-tarifas',
+  },
+
+  // Services Routes
+  SERVICES: {
+    FIBER: '/services/fiber',
+    TV: '/services/tv',
   }
 } as const;
 
