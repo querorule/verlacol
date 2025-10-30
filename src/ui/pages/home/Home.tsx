@@ -10,6 +10,7 @@ import {
   ProblemSection,
   FeaturesSection,
   FooterSection,
+  ProductsSection,
 } from "./components";
 import { companies, categoriesRow1, categoriesRow2 } from "./constants/data";
 
@@ -30,6 +31,9 @@ export default function Home() {
       />
 
       <Navbar />
+      
+      {/* Products Section */}
+      <ProductsSection />
 
       {/* Hero Section */}
       <HeroSection />

@@ -12,3 +12,4 @@ export { default as StatsSection } from "./sections/StatsSection";
 export { default as ProblemSection } from "./sections/ProblemSection";
 export { default as FeaturesSection } from "./sections/FeaturesSection";
 export { default as FooterSection } from "./sections/FooterSection";
+export { default as ProductsSection } from "./sections/ProductsSection";
