@@ -5,14 +5,13 @@ import {
   BackgroundEffects,
   ChatWidget,
   HeroSection,
-  CompaniesSection,
   StatsSection,
   ProblemSection,
   FeaturesSection,
   FooterSection,
   ProductsSection,
 } from "./components";
-import { companies, categoriesRow1, categoriesRow2 } from "./constants/data";
+import { categoriesRow1, categoriesRow2 } from "./constants/data";
 
 // Página Home con diseño moderno tipo Superhuman
 // Ubicación: src/ui/pages/home/Home.tsx
@@ -31,15 +30,15 @@ export default function Home() {
       />
 
       <Navbar />
-      
-      {/* Products Section */}
-      <ProductsSection />
 
       {/* Hero Section */}
       <HeroSection />
 
+      {/* Products Section */}
+      <ProductsSection />
+
       {/* Companies Section */}
-      <CompaniesSection companies={companies} />
+      {/* <CompaniesSection companies={companies} /> */}
 
       {/* Stats Section */}
       <StatsSection />
