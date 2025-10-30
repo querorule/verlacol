@@ -16,8 +16,8 @@ html {
   --text-tertiary: #666666;
   --border-color: rgba(255, 255, 255, 0.1);
   --border-hover: rgba(255, 255, 255, 0.2);
-  --accent-primary: #4A5CFF;
-  --accent-secondary: #7A8FFF;
+  --accent-primary: #4a5cff;
+  --accent-secondary: #7a8fff;
 }
 
 /* ===== TEMA CLARO ===== */
@@ -30,16 +30,16 @@ html {
   --text-tertiary: #888888;
   --border-color: rgba(0, 0, 0, 0.1);
   --border-hover: rgba(0, 0, 0, 0.2);
-  --accent-primary: #4A5CFF;
-  --accent-secondary: #7A8FFF;
+  --accent-primary: #4a5cff;
+  --accent-secondary: #7a8fff;
 }
 
 /* Aplicar colores de tema globalmente */
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1), 
-              color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Transiciones suaves solo para elementos clave al cambiar tema */
@@ -51,23 +51,33 @@ footer,
 main,
 aside {
   transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1),
-              color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Transiciones para textos y elementos interactivos */
-h1, h2, h3, h4, h5, h6,
-p, span, a, button,
-input, textarea, select {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+button,
+input,
+textarea,
+select {
   transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1),
-              background-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
-              border-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Cards y contenedores */
 div[class*="rounded"],
 div[class*="border"] {
   transition: background-color 400ms cubic-bezier(0.4, 0, 0.2, 1),
-              border-color 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-color 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ===== TEMA CLARO - Estilos Mejorados ===== */
@@ -185,10 +195,21 @@ div[class*="border"] {
 
 /* Hero section en tema claro - fondo mejorado */
 .light section[class*="pt-40"] {
-  background: 
-    radial-gradient(circle at 30% 20%, rgba(74, 92, 255, 0.12) 0%, transparent 50%),
-    radial-gradient(circle at 70% 80%, rgba(122, 143, 255, 0.10) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(91, 111, 255, 0.06) 0%, transparent 60%),
+  background: radial-gradient(
+      circle at 30% 20%,
+      rgba(74, 92, 255, 0.12) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 70% 80%,
+      rgba(122, 143, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(91, 111, 255, 0.06) 0%,
+      transparent 60%
+    ),
     linear-gradient(180deg, #f5f7fa 0%, #ffffff 50%, #f5f7fa 100%);
 }
 
@@ -208,11 +229,14 @@ div[class*="border"] {
 
 /* Patrón de puntos decorativos en HeroSection tema claro - SUAVES Y ANIMADOS */
 .light section[class*="pt-40"]::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background-image: 
-    radial-gradient(circle, rgba(74, 92, 255, 0.25) 2px, transparent 2px),
+  background-image: radial-gradient(
+      circle,
+      rgba(74, 92, 255, 0.25) 2px,
+      transparent 2px
+    ),
     radial-gradient(circle, rgba(91, 111, 255, 0.18) 1.5px, transparent 1.5px);
   background-size: 60px 60px, 120px 120px;
   background-position: 0 0, 30px 30px;
@@ -246,8 +270,16 @@ div[class*="border"] {
 }
 
 /* Gradientes de texto en HeroSection tema claro - más visibles */
-.light section[class*="pt-40"] [class*="text-transparent"][class*="bg-clip-text"] {
-  background-image: linear-gradient(to right, #4A5CFF, #5B6FFF, #7A8FFF, #4A5CFF) !important;
+.light
+  section[class*="pt-40"]
+  [class*="text-transparent"][class*="bg-clip-text"] {
+  background-image: linear-gradient(
+    to right,
+    #4a5cff,
+    #5b6fff,
+    #7a8fff,
+    #4a5cff
+  ) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   filter: brightness(0.9) !important;
@@ -360,7 +392,11 @@ div[class*="border"] {
 .light [class*="from-gray-900"],
 .light [class*="via-black"],
 .light [class*="to-gray-900"] {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(248, 249, 250, 0.98)) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.98),
+    rgba(248, 249, 250, 0.98)
+  ) !important;
   border-color: rgba(74, 92, 255, 0.2) !important;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
 }
@@ -386,7 +422,12 @@ div[class*="border"] {
 
 /* Header del mega menu en tema claro */
 .light [class*="from-gray-900"] [class*="from-[#5B6FFF]"] {
-  background: linear-gradient(to right, rgba(74, 92, 255, 0.08), rgba(122, 143, 255, 0.06), rgba(74, 92, 255, 0.08)) !important;
+  background: linear-gradient(
+    to right,
+    rgba(74, 92, 255, 0.08),
+    rgba(122, 143, 255, 0.06),
+    rgba(74, 92, 255, 0.08)
+  ) !important;
   border-bottom-color: rgba(74, 92, 255, 0.2) !important;
 }
 
@@ -404,14 +445,14 @@ div[class*="border"] {
 /* Botón principal del chat en tema claro */
 .light [class*="fixed"][class*="bottom-"] button[class*="w-16"],
 .light [class*="fixed"][class*="bottom-"] button[class*="w-14"] {
-  background: linear-gradient(135deg, #4A5CFF 0%, #7A8FFF 100%) !important;
-  box-shadow: 0 8px 24px rgba(74, 92, 255, 0.4), 
-              0 4px 12px rgba(74, 92, 255, 0.3) !important;
+  background: linear-gradient(135deg, #4a5cff 0%, #7a8fff 100%) !important;
+  box-shadow: 0 8px 24px rgba(74, 92, 255, 0.4),
+    0 4px 12px rgba(74, 92, 255, 0.3) !important;
 }
 
 .light [class*="fixed"][class*="bottom-"] button:hover {
-  box-shadow: 0 12px 32px rgba(74, 92, 255, 0.5), 
-              0 6px 16px rgba(74, 92, 255, 0.4) !important;
+  box-shadow: 0 12px 32px rgba(74, 92, 255, 0.5),
+    0 6px 16px rgba(74, 92, 255, 0.4) !important;
 }
 
 /* Efecto ping del chat en tema claro */
@@ -421,10 +462,13 @@ div[class*="border"] {
 
 /* Panel del chat en tema claro */
 .light [class*="fixed"][class*="bottom-"] > div[class*="bg-"] {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(248, 249, 252, 0.95)) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.98),
+    rgba(248, 249, 252, 0.95)
+  ) !important;
   border: 1px solid rgba(74, 92, 255, 0.2) !important;
-  box-shadow: 0 20px 60px rgba(74, 92, 255, 0.15), 
-              0 8px 24px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 20px 60px rgba(74, 92, 255, 0.15), 0 8px 24px rgba(0, 0, 0, 0.1) !important;
 }
 
 /* Textos del chat en tema claro */
@@ -457,7 +501,7 @@ div[class*="border"] {
 
 /* Botones del chat en tema claro */
 .light [class*="fixed"][class*="bottom-"] button[class*="bg-"] {
-  background: linear-gradient(135deg, #4A5CFF, #7A8FFF) !important;
+  background: linear-gradient(135deg, #4a5cff, #7a8fff) !important;
   color: #ffffff !important;
 }
 
@@ -495,7 +539,7 @@ div[class*="border"] {
 }
 
 .light [class*="fixed"][class*="bottom-"] [class*="text-[#4A5CFF]"] {
-  color: #4A5CFF !important;
+  color: #4a5cff !important;
 }
 
 /* Botones de respuestas rápidas en tema claro */
@@ -514,32 +558,44 @@ div[class*="border"] {
   scrollbar-color: rgba(74, 92, 255, 0.3) rgba(0, 0, 0, 0.05);
 }
 
-.light [class*="fixed"][class*="bottom-"] [class*="overflow-y-auto"]::-webkit-scrollbar {
+.light
+  [class*="fixed"][class*="bottom-"]
+  [class*="overflow-y-auto"]::-webkit-scrollbar {
   width: 6px;
 }
 
-.light [class*="fixed"][class*="bottom-"] [class*="overflow-y-auto"]::-webkit-scrollbar-track {
+.light
+  [class*="fixed"][class*="bottom-"]
+  [class*="overflow-y-auto"]::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0.05);
   border-radius: 10px;
 }
 
-.light [class*="fixed"][class*="bottom-"] [class*="overflow-y-auto"]::-webkit-scrollbar-thumb {
+.light
+  [class*="fixed"][class*="bottom-"]
+  [class*="overflow-y-auto"]::-webkit-scrollbar-thumb {
   background: rgba(74, 92, 255, 0.3);
   border-radius: 10px;
 }
 
-.light [class*="fixed"][class*="bottom-"] [class*="overflow-y-auto"]::-webkit-scrollbar-thumb:hover {
+.light
+  [class*="fixed"][class*="bottom-"]
+  [class*="overflow-y-auto"]::-webkit-scrollbar-thumb:hover {
   background: rgba(74, 92, 255, 0.5);
 }
 
 /* Iconos SVG del chat en tema claro */
 .light [class*="fixed"][class*="bottom-"] svg {
-  color: #4A5CFF !important;
+  color: #4a5cff !important;
 }
 
 /* Header del chat en tema claro */
 .light [class*="fixed"][class*="bottom-"] > div > div:first-child {
-  background: linear-gradient(135deg, rgba(74, 92, 255, 0.08), rgba(122, 143, 255, 0.06)) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(74, 92, 255, 0.08),
+    rgba(122, 143, 255, 0.06)
+  ) !important;
   border-bottom-color: rgba(74, 92, 255, 0.15) !important;
 }
 
@@ -596,19 +652,27 @@ div[class*="border"] {
 
 /* Companies section cards en tema claro - optimizadas y bonitas */
 .light [class*="min-w-[240px]"] {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 249, 252, 0.9)) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(248, 249, 252, 0.9)
+  ) !important;
   border-color: rgba(74, 92, 255, 0.2) !important;
-  box-shadow: 0 8px 24px rgba(74, 92, 255, 0.12), 
-              0 2px 8px rgba(74, 92, 255, 0.08) !important;
+  box-shadow: 0 8px 24px rgba(74, 92, 255, 0.12),
+    0 2px 8px rgba(74, 92, 255, 0.08) !important;
   will-change: transform;
   transform: translateZ(0);
 }
 
 .light [class*="min-w-[240px]"]:hover {
-  background: linear-gradient(135deg, #ffffff, rgba(74, 92, 255, 0.04)) !important;
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    rgba(74, 92, 255, 0.04)
+  ) !important;
   border-color: rgba(74, 92, 255, 0.35) !important;
-  box-shadow: 0 12px 32px rgba(74, 92, 255, 0.18), 
-              0 4px 12px rgba(74, 92, 255, 0.12) !important;
+  box-shadow: 0 12px 32px rgba(74, 92, 255, 0.18),
+    0 4px 12px rgba(74, 92, 255, 0.12) !important;
 }
 
 /* Optimizar scroll infinito en tema claro */
@@ -623,22 +687,43 @@ div[class*="border"] {
 /* Fondo único y moderno con mesh gradient */
 .light section[class*="py-28"][class*="overflow-hidden"] {
   position: relative;
-  background: 
-    radial-gradient(circle at 20% 30%, rgba(74, 92, 255, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(122, 143, 255, 0.06) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(91, 111, 255, 0.04) 0%, transparent 70%),
-    linear-gradient(135deg, #f8f9fc 0%, #ffffff 25%, #f5f7fa 50%, #ffffff 75%, #f8f9fc 100%) !important;
+  background: radial-gradient(
+      circle at 20% 30%,
+      rgba(74, 92, 255, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(122, 143, 255, 0.06) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(91, 111, 255, 0.04) 0%,
+      transparent 70%
+    ),
+    linear-gradient(
+      135deg,
+      #f8f9fc 0%,
+      #ffffff 25%,
+      #f5f7fa 50%,
+      #ffffff 75%,
+      #f8f9fc 100%
+    ) !important;
   background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%;
   background-attachment: fixed;
 }
 
 /* Patrón de puntos moderno */
 .light section[class*="py-28"][class*="overflow-hidden"]::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background-image: 
-    radial-gradient(circle, rgba(74, 92, 255, 0.15) 1px, transparent 1px);
+  background-image: radial-gradient(
+    circle,
+    rgba(74, 92, 255, 0.15) 1px,
+    transparent 1px
+  );
   background-size: 40px 40px;
   opacity: 0.3;
   pointer-events: none;
@@ -647,24 +732,25 @@ div[class*="border"] {
 
 /* Líneas diagonales sutiles */
 .light section[class*="py-28"][class*="overflow-hidden"]::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background-image: 
-    repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 60px,
-      rgba(74, 92, 255, 0.03) 60px,
-      rgba(74, 92, 255, 0.03) 62px
-    );
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 60px,
+    rgba(74, 92, 255, 0.03) 60px,
+    rgba(74, 92, 255, 0.03) 62px
+  );
   pointer-events: none;
   z-index: 0;
 }
 
 /* Asegurar que el contenido esté sobre el fondo */
 .light section[class*="py-28"][class*="overflow-hidden"] > .container,
-.light section[class*="py-28"][class*="overflow-hidden"] > div[class*="container"] {
+.light
+  section[class*="py-28"][class*="overflow-hidden"]
+  > div[class*="container"] {
   position: relative;
   z-index: 10;
 }
@@ -676,7 +762,8 @@ div[class*="border"] {
 
 /* Orbes luminosos flotantes - solo en tema claro */
 @keyframes float-orb {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) scale(1);
     opacity: 0.4;
   }
@@ -691,7 +778,7 @@ div[class*="border"] {
 }
 
 .light section[class*="py-28"][class*="overflow-hidden"] .container::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 10%;
   right: 15%;
@@ -706,13 +793,17 @@ div[class*="border"] {
 }
 
 .light section[class*="py-28"][class*="overflow-hidden"] .container::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 20%;
   left: 10%;
   width: 250px;
   height: 250px;
-  background: radial-gradient(circle, rgba(122, 143, 255, 0.12), transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(122, 143, 255, 0.12),
+    transparent 70%
+  );
   border-radius: 50%;
   filter: blur(50px);
   animation: float-orb 25s ease-in-out infinite reverse;
@@ -735,8 +826,10 @@ div[class*="border"] {
   }
 }
 
-.light section[class*="py-28"][class*="overflow-hidden"] > div:first-child::before {
-  content: '';
+.light
+  section[class*="py-28"][class*="overflow-hidden"]
+  > div:first-child::before {
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -774,10 +867,12 @@ div[class*="border"] {
 
 /* Líneas decorativas adaptadas */
 .light section[class*="py-28"] [class*="bg-linear-to-r"][class*="h-[2px]"] {
-  background: linear-gradient(to right, 
-    transparent, 
-    rgba(74, 92, 255, 0.3) 50%, 
-    transparent) !important;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(74, 92, 255, 0.3) 50%,
+    transparent
+  ) !important;
   box-shadow: 0 0 10px rgba(74, 92, 255, 0.2) !important;
 }
 
@@ -793,7 +888,12 @@ div[class*="border"] {
 }
 
 .light section[class*="py-28"] [class*="text-transparent"] {
-  background-image: linear-gradient(135deg, #4A5CFF, #7A8FFF, #5B6FFF) !important;
+  background-image: linear-gradient(
+    135deg,
+    #4a5cff,
+    #7a8fff,
+    #5b6fff
+  ) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
 }
@@ -809,7 +909,7 @@ div[class*="border"] {
 }
 
 .light section[class*="py-28"] .text-\[\#4A5CFF\] {
-  color: #4A5CFF !important;
+  color: #4a5cff !important;
 }
 
 /* Status badge - mantener verde visible */
@@ -825,19 +925,32 @@ div[class*="border"] {
 
 /* Stats de CompaniesSection en tema claro */
 .light section[class*="py-28"] [class*="rounded-2xl"] {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 249, 252, 0.8)) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(248, 249, 252, 0.8)
+  ) !important;
   border-color: rgba(74, 92, 255, 0.15) !important;
 }
 
 .light section[class*="py-28"] [class*="rounded-2xl"]:hover {
-  background: linear-gradient(135deg, #ffffff, rgba(74, 92, 255, 0.05)) !important;
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    rgba(74, 92, 255, 0.05)
+  ) !important;
   border-color: rgba(74, 92, 255, 0.3) !important;
 }
 
 /* Números de stats con gradientes bonitos */
 .light section[class*="py-28"] [class*="text-5xl"],
 .light section[class*="py-28"] [class*="text-6xl"] {
-  background-image: linear-gradient(135deg, #4A5CFF 0%, #7A8FFF 50%, #5B6FFF 100%) !important;
+  background-image: linear-gradient(
+    135deg,
+    #4a5cff 0%,
+    #7a8fff 50%,
+    #5b6fff 100%
+  ) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   color: transparent !important;
@@ -845,56 +958,69 @@ div[class*="border"] {
 
 /* Líneas decorativas de stats */
 .light section[class*="py-28"] [class*="bg-linear-to-r"][class*="w-16"] {
-  background: linear-gradient(to right, 
-    transparent, 
-    #4A5CFF 50%, 
-    transparent) !important;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #4a5cff 50%,
+    transparent
+  ) !important;
   box-shadow: 0 0 8px rgba(74, 92, 255, 0.3) !important;
 }
 
 /* Efecto de glow en bottom accent de cards */
 .light section[class*="py-28"] [class*="h-[3px]"] {
-  background: linear-gradient(to right, 
-    transparent 0%, 
-    rgba(74, 92, 255, 0.4) 50%, 
-    transparent 100%) !important;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(74, 92, 255, 0.4) 50%,
+    transparent 100%
+  ) !important;
 }
 
 /* Corner decorations en tema claro */
-.light section[class*="py-28"] [class*="w-2"][class*="h-2"][class*="rounded-full"] {
+.light
+  section[class*="py-28"]
+  [class*="w-2"][class*="h-2"][class*="rounded-full"] {
   background-color: rgba(74, 92, 255, 0.3) !important;
 }
 
 .light section[class*="py-28"] [class*="w-2"][class*="h-2"]:hover,
 .light section[class*="py-28"] [class*="w-1.5"][class*="h-1.5"]:hover {
-  background-color: #4A5CFF !important;
+  background-color: #4a5cff !important;
   box-shadow: 0 0 8px rgba(74, 92, 255, 0.6) !important;
 }
 
 /* Fade gradients en scroll - adaptados */
 .light section[class*="py-28"] [class*="bg-linear-to-r"][class*="from-black"] {
-  background: linear-gradient(to right, 
-    #f5f7fa 0%, 
-    rgba(245, 247, 250, 0.9) 20%, 
-    transparent 40%) !important;
+  background: linear-gradient(
+    to right,
+    #f5f7fa 0%,
+    rgba(245, 247, 250, 0.9) 20%,
+    transparent 40%
+  ) !important;
 }
 
 .light section[class*="py-28"] [class*="bg-linear-to-l"][class*="from-black"] {
-  background: linear-gradient(to left, 
-    #f5f7fa 0%, 
-    rgba(245, 247, 250, 0.9) 20%, 
-    transparent 40%) !important;
+  background: linear-gradient(
+    to left,
+    #f5f7fa 0%,
+    rgba(245, 247, 250, 0.9) 20%,
+    transparent 40%
+  ) !important;
 }
 
 /* Asegurar que los textos del badge superior sean visibles */
-.light section[class*="py-28"] [class*="inline-flex"][class*="rounded-full"] span {
-  color: #4A5CFF !important;
+.light
+  section[class*="py-28"]
+  [class*="inline-flex"][class*="rounded-full"]
+  span {
+  color: #4a5cff !important;
   font-weight: 700 !important;
 }
 
 /* Punto animado del badge */
 .light section[class*="py-28"] [class*="w-2"][class*="bg-[#4A5CFF]"] {
-  background-color: #4A5CFF !important;
+  background-color: #4a5cff !important;
   box-shadow: 0 0 6px rgba(74, 92, 255, 0.6) !important;
 }
 
@@ -1127,7 +1253,12 @@ div[class*="border"] {
 
 /* StatsSection en tema claro - fondo y efectos */
 .light section[class*="py-40"] {
-  background: linear-gradient(180deg, #f5f7fa 0%, #ffffff 50%, #f8f9fc 100%) !important;
+  background: linear-gradient(
+    180deg,
+    #f5f7fa 0%,
+    #ffffff 50%,
+    #f8f9fc 100%
+  ) !important;
 }
 
 /* Efectos de blur en StatsSection tema claro */
@@ -1159,27 +1290,45 @@ div[class*="border"] {
 }
 
 .light section[class*="py-40"] [class*="bg-white/5"] span {
-  color: #4A5CFF !important;
+  color: #4a5cff !important;
 }
 
 /* Cards de stats en tema claro */
 .light section[class*="py-40"] [class*="bg-white/5"][class*="border"] {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 249, 252, 0.85)) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(248, 249, 252, 0.85)
+  ) !important;
   border-color: rgba(74, 92, 255, 0.15) !important;
 }
 
 .light section[class*="py-40"] [class*="bg-white/5"]:hover {
-  background: linear-gradient(135deg, #ffffff, rgba(74, 92, 255, 0.05)) !important;
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    rgba(74, 92, 255, 0.05)
+  ) !important;
   border-color: rgba(74, 92, 255, 0.3) !important;
 }
 
 /* ProblemSection - Fade gradients en tema claro (esquinas blancas) */
 .light [class*="bg-linear-to-r"][class*="from-black"] {
-  background: linear-gradient(to right, #f5f7fa 0%, rgba(245, 247, 250, 0.8) 50%, transparent 100%) !important;
+  background: linear-gradient(
+    to right,
+    #f5f7fa 0%,
+    rgba(245, 247, 250, 0.8) 50%,
+    transparent 100%
+  ) !important;
 }
 
 .light [class*="bg-linear-to-l"][class*="from-black"] {
-  background: linear-gradient(to left, #f5f7fa 0%, rgba(245, 247, 250, 0.8) 50%, transparent 100%) !important;
+  background: linear-gradient(
+    to left,
+    #f5f7fa 0%,
+    rgba(245, 247, 250, 0.8) 50%,
+    transparent 100%
+  ) !important;
 }
 
 /* ProblemSection - Pills/badges en tema claro */
@@ -1228,7 +1377,7 @@ div[class*="border"] {
 }
 
 .light footer a:hover {
-  color: #4A5CFF !important;
+  color: #4a5cff !important;
 }
 
 /* Input de newsletter en footer tema claro */
@@ -1250,7 +1399,7 @@ div[class*="border"] {
 
 /* Botón del footer - ajustar gradiente de fondo */
 .light footer button {
-  background: linear-gradient(135deg, #4A5CFF 0%, #7A8FFF 100%) !important;
+  background: linear-gradient(135deg, #4a5cff 0%, #7a8fff 100%) !important;
   box-shadow: 0 8px 24px rgba(74, 92, 255, 0.3) !important;
 }
 
@@ -1295,7 +1444,8 @@ div[class*="border"] {
 
 /* Animación pulse lenta para efectos de fondo */
 @keyframes pulse-slow {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.15;
     transform: scale(1);
   }
@@ -1345,7 +1495,7 @@ div[class*="border"] {
   animation-play-state: paused;
 }
 
-/* Animación fadeIn para slider */
+/* Animación de fade in */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -1355,6 +1505,161 @@ div[class*="border"] {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Hero Section con imagen de fondo - Estilo Arquitectónico Premium con tarjeta */
+
+/* Contenedor del slider con bordes redondeados */
+section[class*="min-h-screen"] > div[class*="rounded-3xl"] {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.light section[class*="min-h-screen"] > div[class*="rounded-3xl"] {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+/* Overlay oscuro en tema oscuro */
+.dark section[class*="min-h-screen"] [class*="bg-linear-to-r"] {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.7) 40%,
+    rgba(0, 0, 0, 0.4) 70%,
+    transparent 100%
+  ) !important;
+}
+
+/* Overlay claro en tema claro */
+.light section[class*="min-h-screen"] [class*="bg-linear-to-r"] {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.92) 0%,
+    rgba(255, 255, 255, 0.85) 40%,
+    rgba(255, 255, 255, 0.65) 70%,
+    transparent 100%
+  ) !important;
+}
+
+/* Forzar texto blanco en HeroSection (con imágenes de fondo) para ambos temas */
+section[class*="min-h-screen"][class*="overflow-hidden"] h1,
+section[class*="min-h-screen"][class*="overflow-hidden"] p,
+section[class*="min-h-screen"][class*="overflow-hidden"]
+  span[class*="text-white"] {
+  color: #ffffff !important;
+}
+
+/* Tema claro - texto blanco en HeroSection */
+.light section[class*="min-h-screen"][class*="overflow-hidden"] h1,
+.light section[class*="min-h-screen"][class*="overflow-hidden"] p,
+.light
+  section[class*="min-h-screen"][class*="overflow-hidden"]
+  span[class*="text-white"] {
+  color: #ffffff !important;
+}
+
+/* Tema oscuro - texto blanco en HeroSection */
+.dark section[class*="min-h-screen"][class*="overflow-hidden"] h1,
+.dark section[class*="min-h-screen"][class*="overflow-hidden"] p,
+.dark
+  section[class*="min-h-screen"][class*="overflow-hidden"]
+  span[class*="text-white"] {
+  color: #ffffff !important;
+}
+
+/* Wrapper del botón con fondo negro/blanco */
+.dark section div[class*="bg-white"][class*="rounded-3xl"] {
+  background: #000000 !important;
+  background-color: #000000 !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  border-top-color: rgb(75, 85, 99) !important;
+  border-right-color: rgb(75, 85, 99) !important;
+}
+
+.light section div[class*="rounded-3xl"][class*="px-7"] {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-top-color: #000000 !important;
+  border-right-color: #000000 !important;
+}
+
+.light section .self-start > div {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+}
+
+/* Forzar color del wrapper del botón en tema claro */
+.light .button-wrapper-custom {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+}
+
+.dark .button-wrapper-custom {
+  background: #000000 !important;
+  background-color: #000000 !important;
+}
+
+/* Botón CTA - Tema oscuro */
+.dark section a[class*="bg-black/95"] {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #000000 !important;
+  box-shadow: 0 2px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Botón CTA - Tema claro */
+.light section a[class*="bg-white/95"] {
+  background: rgba(0, 0, 0, 0.95) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Glassmorphism para navegación */
+section button[class*="bg-white/5"] {
+  backdrop-filter: blur(12px);
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.light section button[class*="bg-white/5"] {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  border-color: rgba(26, 26, 26, 0.15) !important;
+}
+
+.light section button[class*="bg-white/5"]:hover {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-color: rgba(26, 26, 26, 0.25) !important;
+}
+
+.light section button [class*="text-gray-400"] {
+  color: #1a1a1a !important;
+}
+
+/* Dots de navegación en tema claro */
+.light section button [class*="rounded-full"][style*="background"] {
+  opacity: 0.8;
+}
+
+/* Transición suave de imagen de fondo */
+@keyframes slideImageFade {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animación de entrada para contenido */
+section [class*="animate-fadeIn"] {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Efecto parallax sutil en scroll */
+section[class*="min-h-screen"] {
+  will-change: transform;
 }
 
 .animate-fadeIn {
