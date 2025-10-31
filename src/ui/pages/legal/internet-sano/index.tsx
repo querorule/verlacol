@@ -1,16 +1,12 @@
 import { Globe, Shield, AlertTriangle, FileText, Phone, ExternalLink, CheckCircle, BookCheck } from "lucide-react";
-import Navbar from "../../../components/layout/Navbar/Navbar";
-import FooterSection from "../../home/components/sections/FooterSection";
+import { PageLayout } from "../../../../shared/components";
 
 // Página de Internet Sano
 // Ubicación: src/ui/pages/legal/internet-sano/index.tsx
 
 export default function InternetSanoPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <Navbar />
-
-      <main className="pt-24 pb-16">
+    <PageLayout>
         <div className="container mx-auto px-6 max-w-5xl">
           {/* Header */}
           <div className="mb-16 text-center">
@@ -200,9 +196,6 @@ export default function InternetSanoPage() {
             </section>
           </div>
         </div>
-      </main>
-
-      <FooterSection />
-    </div>
+    </PageLayout>
   );
 }

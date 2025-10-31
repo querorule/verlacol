@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Navbar from "../../components/layout/Navbar";
+import Navbar from "../../components/layout/Navbar/Navbar";
 import {
   BackgroundEffects,
   ChatWidget,
@@ -35,9 +35,6 @@ export default function Home() {
 
       {/* Products Section */}
       <ProductsSection />
-
-      {/* Companies Section */}
-      {/* <CompaniesSection companies={companies} /> */}
 
       {/* Stats Section */}
       <StatsSection />

@@ -1,6 +1,8 @@
 import { Mail, Phone, MapPin, ArrowLeft, Send, MessageCircle, Clock, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Navbar from '../../components/layout/Navbar';
+import Navbar from '../../components/layout/Navbar/Navbar';
+import { BackgroundEffects } from '../../../shared/components';
+import { DESIGN_SYSTEM } from '../../../shared/styles/design-system';
 
 // Página Contact con diseño moderno
 // Ubicación: src/ui/pages/contact/Contact.tsx
@@ -13,12 +15,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Efectos de fondo modernos */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] rounded-full blur-[150px]" style={{ backgroundColor: '#4A5CFF15' }}></div>
-        <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] rounded-full blur-[150px]" style={{ backgroundColor: '#7A8FFF15' }}></div>
-        <div className="absolute bottom-0 left-1/2 w-[500px] h-[500px] rounded-full blur-[120px]" style={{ backgroundColor: '#5B6FFF15' }}></div>
-      </div>
+      <BackgroundEffects />
       
       <Navbar />
       
@@ -70,7 +67,7 @@ export default function Contact() {
             <div className="relative rounded-2xl p-8 text-center group hover:scale-105 transition-all duration-300" style={{ background: 'linear-gradient(135deg, rgba(74, 92, 255, 0.08), rgba(122, 143, 255, 0.04))' }}>
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" style={{ background: 'linear-gradient(135deg, rgba(74, 92, 255, 0.15), rgba(122, 143, 255, 0.08))' }}></div>
               <div className="relative z-10">
-                <div className="w-16 h-16 mx-auto rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform" style={{ background: 'linear-gradient(135deg, #4A5CFF, #7A8FFF)', boxShadow: '0 8px 24px rgba(74, 92, 255, 0.3)' }}>
+                <div className="w-16 h-16 mx-auto rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform" style={{ background: DESIGN_SYSTEM.gradients.primary, boxShadow: DESIGN_SYSTEM.shadows.large }}>
                   <Mail size={28} className="text-white" strokeWidth={2.5} />
                 </div>
                 <h3 className="text-xl font-black mb-2 text-white">Email</h3>
@@ -83,7 +80,7 @@ export default function Contact() {
             <div className="relative rounded-2xl p-8 text-center group hover:scale-105 transition-all duration-300" style={{ background: 'linear-gradient(135deg, rgba(74, 92, 255, 0.08), rgba(122, 143, 255, 0.04))' }}>
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" style={{ background: 'linear-gradient(135deg, rgba(74, 92, 255, 0.15), rgba(122, 143, 255, 0.08))' }}></div>
               <div className="relative z-10">
-                <div className="w-16 h-16 mx-auto rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform" style={{ background: 'linear-gradient(135deg, #5B6FFF, #7A8FFF)', boxShadow: '0 8px 24px rgba(91, 111, 255, 0.3)' }}>
+                <div className="w-16 h-16 mx-auto rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform" style={{ background: DESIGN_SYSTEM.gradients.primary, boxShadow: DESIGN_SYSTEM.shadows.large }}>
                   <Phone size={28} className="text-white" strokeWidth={2.5} />
                 </div>
                 <h3 className="text-xl font-black mb-2 text-white">Teléfono</h3>
@@ -96,7 +93,7 @@ export default function Contact() {
             <div className="relative rounded-2xl p-8 text-center group hover:scale-105 transition-all duration-300" style={{ background: 'linear-gradient(135deg, rgba(74, 92, 255, 0.08), rgba(122, 143, 255, 0.04))' }}>
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" style={{ background: 'linear-gradient(135deg, rgba(74, 92, 255, 0.15), rgba(122, 143, 255, 0.08))' }}></div>
               <div className="relative z-10">
-                <div className="w-16 h-16 mx-auto rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform" style={{ background: 'linear-gradient(135deg, #7A8FFF, #4A5CFF)', boxShadow: '0 8px 24px rgba(122, 143, 255, 0.3)' }}>
+                <div className="w-16 h-16 mx-auto rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform" style={{ background: DESIGN_SYSTEM.gradients.primary, boxShadow: DESIGN_SYSTEM.shadows.large }}>
                   <MapPin size={28} className="text-white" strokeWidth={2.5} />
                 </div>
                 <h3 className="text-xl font-black mb-2 text-white">Ubicación</h3>

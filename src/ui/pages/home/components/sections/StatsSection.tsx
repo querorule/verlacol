@@ -1,7 +1,7 @@
 // Stats section with VERLA background and metrics
 // Ubicación: src/ui/pages/home/components/StatsSection.tsx
 
-import { useTheme } from "../../../../../contexts/useTheme";
+import { useTheme } from "../../../../../contexts";
 
 export default function StatsSection() {
   const { theme } = useTheme();

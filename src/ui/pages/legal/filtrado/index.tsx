@@ -1,16 +1,12 @@
 import { Filter, Settings, Shield, CheckCircle2 } from 'lucide-react';
-import Navbar from '../../../components/layout/Navbar/Navbar';
-import FooterSection from '../../home/components/sections/FooterSection';
+import { PageLayout } from '../../../../shared/components';
 
 // Página de Mecanismos de Filtrado
 // Ubicación: src/ui/pages/legal/filtrado/index.tsx
 
 export default function FiltradoPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <Navbar />
-      
-      <main className="pt-24 pb-16">
+    <PageLayout>
         <div className="container mx-auto px-6 max-w-5xl">
           {/* Header */}
           <div className="mb-16 text-center">
@@ -187,9 +183,6 @@ export default function FiltradoPage() {
             </section>
           </div>
         </div>
-      </main>
-
-      <FooterSection />
-    </div>
+    </PageLayout>
   );
 }

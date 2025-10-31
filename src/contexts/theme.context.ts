@@ -1,5 +1,9 @@
-import { createContext } from 'react';
-import type { ThemeContextType } from './theme.types';
+import { createContext } from "react";
+import type { ThemeContextType } from "./theme.types";
 
-// Create theme context
-export const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+// Contexto de tema
+// Ubicación: src/contexts/theme.context.ts
+
+export const ThemeContext = createContext<ThemeContextType | undefined>(
+  undefined
+);

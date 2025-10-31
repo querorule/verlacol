@@ -1,32 +1,28 @@
 import { Shield, Heart, Lock, AlertTriangle } from 'lucide-react';
-import Navbar from '../../../components/layout/Navbar/Navbar';
-import FooterSection from '../../home/components/sections/FooterSection';
+import { PageLayout } from '../../../../shared/components';
 
 // Página de Protección Infantil
 // Ubicación: src/ui/pages/legal/proteccion-infantil/index.tsx
 
 export default function ProteccionInfantilPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <Navbar />
-      
-      <main className="pt-24 pb-16">
-        <div className="container mx-auto px-6 max-w-5xl">
-          {/* Header */}
-          <div className="mb-16 text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-500/10 rounded-2xl mb-6">
-              <Shield className="w-8 h-8 text-purple-400" />
+    <PageLayout>
+          <div className="container mx-auto px-6 max-w-5xl">
+            {/* Header */}
+            <div className="mb-16 text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-500/10 rounded-2xl mb-6">
+                <Shield className="w-8 h-8 text-purple-400" />
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                Protección{' '}
+                <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-pink-400">
+                  Infantil
+                </span>
+              </h1>
+              <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+                Medidas y protocolos para garantizar un entorno digital seguro para menores de edad
+              </p>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Protección{' '}
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-purple-400 to-pink-400">
-                Infantil
-              </span>
-            </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Medidas y protocolos para garantizar un entorno digital seguro para menores de edad
-            </p>
-          </div>
 
           {/* Content */}
           <div className="space-y-12">
@@ -126,9 +122,6 @@ export default function ProteccionInfantilPage() {
             </section>
           </div>
         </div>
-      </main>
-
-      <FooterSection />
-    </div>
+    </PageLayout>
   );
 }

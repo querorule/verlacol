@@ -22,8 +22,6 @@ const Seguridad = lazy(() => import('../ui/pages/legal/seguridad'));
 const ComparadorTarifas = lazy(() => import('../ui/pages/legal/comparador-tarifas'));
 
 // Services Pages
-const Fiber = lazy(() => import('../ui/pages/services/fiber'));
-const TV = lazy(() => import('../ui/pages/services/tv'));
 const FibraResidencial = lazy(() => import('../ui/pages/services/fibra-residencial'));
 const PlanesEmpresariales = lazy(() => import('../ui/pages/services/planes-empresariales'));
 const TVDigital = lazy(() => import('../ui/pages/services/tv-digital'));
@@ -86,14 +84,6 @@ export const router = createBrowserRouter([
     element: withSuspense(ComparadorTarifas),
   },
   // Services Routes
-  {
-    path: ROUTES.SERVICES.FIBER,
-    element: withSuspense(Fiber),
-  },
-  {
-    path: ROUTES.SERVICES.TV,
-    element: withSuspense(TV),
-  },
   {
     path: ROUTES.SERVICES.FIBRA_RESIDENCIAL,
     element: withSuspense(FibraResidencial),

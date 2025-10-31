@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, Shield, Globe, Lock, AlertCircle, FileText, Filter, DollarSign, Sun, Moon } from 'lucide-react';
 import { useState } from 'react';
 import { ROUTES } from '../../../../router/routes.config';
-import { useTheme } from '../../../../contexts/useTheme';
+import { useTheme } from '../../../../contexts';
 
 // Navbar moderno con diseño tipo Superhuman
 // Ubicación: src/ui/components/layout/Navbar/Navbar.tsx

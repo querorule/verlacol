@@ -1,32 +1,28 @@
 import { Lock, Database, Eye, UserCheck, FileCheck } from 'lucide-react';
-import Navbar from '../../../components/layout/Navbar/Navbar';
-import FooterSection from '../../home/components/sections/FooterSection';
+import { PageLayout } from '../../../../shared/components';
 
 // Página de Política de Tratamiento de Datos Personales
 // Ubicación: src/ui/pages/legal/proteccion-datos/index.tsx
 
 export default function ProteccionDatosPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <Navbar />
-      
-      <main className="pt-24 pb-16">
-        <div className="container mx-auto px-6 max-w-5xl">
-          {/* Header */}
-          <div className="mb-16 text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-green-500/10 rounded-2xl mb-6">
-              <Lock className="w-8 h-8 text-green-400" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Política de Tratamiento de{' '}
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-green-400 to-emerald-400">
-                Datos Personales
-              </span>
-            </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Transparencia total sobre cómo recopilamos, usamos y protegemos tu información
-            </p>
+    <PageLayout>
+      <div className="container mx-auto px-6 max-w-5xl">
+        {/* Header */}
+        <div className="mb-16 text-center">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-green-500/10 rounded-2xl mb-6">
+            <Lock className="w-8 h-8 text-green-400" />
           </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            Política de Tratamiento de{' '}
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-green-400 to-emerald-400">
+              Datos Personales
+            </span>
+          </h1>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            Transparencia total sobre cómo recopilamos, usamos y protegemos tu información
+          </p>
+        </div>
 
           {/* Content */}
           <div className="space-y-12">
@@ -171,9 +167,6 @@ export default function ProteccionDatosPage() {
             </section>
           </div>
         </div>
-      </main>
-
-      <FooterSection />
-    </div>
+    </PageLayout>
   );
 }

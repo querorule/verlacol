@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Wifi, Tv, Zap } from "lucide-react";
-import { useTheme } from "../../../../../contexts/useTheme";
+import { useTheme } from "../../../../../contexts";
 
 // Hero section with modern custom slider
 // Ubicación: src/ui/pages/home/components/HeroSection.tsx

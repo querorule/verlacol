@@ -1,5 +1,6 @@
 import { Check, Home, Users, Zap, ArrowRight, Wifi, ArrowLeft } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
+import { BackgroundEffects } from '../../../shared/components';
 
 // Página de Precios de Verla
 // Ubicación: src/ui/pages/pricing/index.tsx
@@ -120,12 +121,7 @@ export default function PricingPage() {
   
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Efectos de fondo */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] rounded-full blur-[150px] animate-pulse-slow" style={{ backgroundColor: '#5B6FFF22' }}></div>
-        <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] rounded-full blur-[150px] animate-pulse-slow" style={{ backgroundColor: '#7A8FFF22', animationDelay: '2s' }}></div>
-        <div className="absolute bottom-0 left-1/2 w-[500px] h-[500px] rounded-full blur-[120px] animate-pulse-slow" style={{ backgroundColor: '#4A5CFF22', animationDelay: '4s' }}></div>
-      </div>
+      <BackgroundEffects variant="animated" opacity={20} />
 
       {/* Contenido principal */}
       <div className="relative z-10 pt-32 pb-24 px-6">

@@ -1,4 +1,4 @@
-import { useTheme } from "../../../../../contexts/useTheme";
+import { useTheme } from "../../../../../contexts";
 import { useNavigate } from "react-router-dom";
 
 // Services section - Internet and connectivity services showcase

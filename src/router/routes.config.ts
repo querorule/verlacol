@@ -21,8 +21,6 @@ export const ROUTES = {
 
   // Services Routes
   SERVICES: {
-    FIBER: '/services/fiber',
-    TV: '/services/tv',
     FIBRA_RESIDENCIAL: '/services/fibra-residencial',
     PLANES_EMPRESARIALES: '/services/planes-empresariales',
     TV_DIGITAL: '/services/tv-digital',

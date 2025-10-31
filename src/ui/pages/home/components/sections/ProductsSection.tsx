@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { useTheme } from "../../../../../contexts/useTheme";
+import { useTheme } from "../../../../../contexts";
 
 const products = [
   {

@@ -1,16 +1,12 @@
 import { Shield, Lock, Eye, Server, AlertTriangle, CheckCircle } from 'lucide-react';
-import Navbar from '../../../components/layout/Navbar/Navbar';
-import FooterSection from '../../home/components/sections/FooterSection';
+import { PageLayout } from '../../../../shared/components';
 
 // Página de Seguridad en la Red
 // Ubicación: src/ui/pages/legal/seguridad/index.tsx
 
 export default function SeguridadPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <Navbar />
-      
-      <main className="pt-24 pb-16">
+    <PageLayout>
         <div className="container mx-auto px-6 max-w-5xl">
           {/* Header */}
           <div className="mb-16 text-center">
@@ -205,9 +201,6 @@ export default function SeguridadPage() {
             </section>
           </div>
         </div>
-      </main>
-
-      <FooterSection />
-    </div>
+    </PageLayout>
   );
 }

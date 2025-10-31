@@ -9,18 +9,14 @@ import {
   Wifi,
   Zap,
 } from "lucide-react";
-import Navbar from "../../../components/layout/Navbar/Navbar";
-import FooterSection from "../../home/components/sections/FooterSection";
+import { PageLayout } from "../../../../shared/components";
 
 // Página de Comparador de Tarifas
 // Ubicación: src/ui/pages/legal/comparador-tarifas/index.tsx
 
 export default function ComparadorTarifasPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <Navbar />
-
-      <main className="pt-24 pb-16">
+    <PageLayout>
         <div className="container mx-auto px-6 max-w-6xl">
           {/* Header con efectos modernos */}
           <div className="mb-16 text-center relative">
@@ -846,9 +842,6 @@ export default function ComparadorTarifasPage() {
             </section>
           </div>
         </div>
-      </main>
-
-      <FooterSection />
-    </div>
+    </PageLayout>
   );
 }

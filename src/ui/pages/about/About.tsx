@@ -1,18 +1,15 @@
 import { Target, Heart, ArrowLeft, Sparkles, Tv, Globe, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Navbar from '../../components/layout/Navbar';
+import Navbar from '../../components/layout/Navbar/Navbar';
+import { BackgroundEffects } from '../../../shared/components';
+import { DESIGN_SYSTEM } from '../../../shared/styles/design-system';
 
 // Página About con diseño moderno
 // Ubicación: src/ui/pages/about/About.tsx
 export default function About() {
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Efectos de fondo modernos */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] rounded-full blur-[150px]" style={{ backgroundColor: '#4A5CFF15' }}></div>
-        <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] rounded-full blur-[150px]" style={{ backgroundColor: '#7A8FFF15' }}></div>
-        <div className="absolute bottom-0 left-1/2 w-[500px] h-[500px] rounded-full blur-[120px]" style={{ backgroundColor: '#5B6FFF15' }}></div>
-      </div>
+      <BackgroundEffects />
       
       <Navbar />
       
@@ -104,7 +101,7 @@ export default function About() {
             <div className="relative rounded-2xl p-8 group hover:scale-105 transition-all duration-300" style={{ background: 'linear-gradient(135deg, rgba(74, 92, 255, 0.08), rgba(122, 143, 255, 0.04))' }}>
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" style={{ background: 'linear-gradient(135deg, rgba(74, 92, 255, 0.15), rgba(122, 143, 255, 0.08))' }}></div>
               <div className="relative z-10">
-                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" style={{ background: 'linear-gradient(135deg, #5B6FFF, #7A8FFF)' }}>
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" style={{ background: DESIGN_SYSTEM.gradients.primary }}>
                   <Heart size={28} className="text-white" strokeWidth={2.5} />
                 </div>
                 <h3 className="text-2xl font-black mb-4 text-white">Valores</h3>

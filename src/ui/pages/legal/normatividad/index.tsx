@@ -1,32 +1,28 @@
 import { FileText, Scale, BookOpen, ExternalLink } from 'lucide-react';
-import Navbar from '../../../components/layout/Navbar/Navbar';
-import FooterSection from '../../home/components/sections/FooterSection';
+import { PageLayout } from '../../../../shared/components';
 
 // Página de Normatividad
 // Ubicación: src/ui/pages/legal/normatividad/index.tsx
 
 export default function NormatividadPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <Navbar />
-      
-      <main className="pt-24 pb-16">
-        <div className="container mx-auto px-6 max-w-5xl">
-          {/* Header */}
-          <div className="mb-16 text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-500/10 rounded-2xl mb-6">
-              <FileText className="w-8 h-8 text-blue-400" />
+    <PageLayout>
+          <div className="container mx-auto px-6 max-w-5xl">
+            {/* Header */}
+            <div className="mb-16 text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-500/10 rounded-2xl mb-6">
+                <FileText className="w-8 h-8 text-blue-400" />
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                Marco{' '}
+                <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-cyan-400">
+                  Normativo
+                </span>
+              </h1>
+              <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+                Legislación y regulaciones que rigen nuestras operaciones en Colombia
+              </p>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Marco{' '}
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-cyan-400">
-                Normativo
-              </span>
-            </h1>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Legislación y regulaciones que rigen nuestras operaciones en Colombia
-            </p>
-          </div>
 
           {/* Content */}
           <div className="space-y-12">
@@ -154,9 +150,6 @@ export default function NormatividadPage() {
             </section>
           </div>
         </div>
-      </main>
-
-      <FooterSection />
-    </div>
+    </PageLayout>
   );
 }
