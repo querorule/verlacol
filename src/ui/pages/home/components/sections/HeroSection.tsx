@@ -21,6 +21,7 @@ const slides = [
     icon: Wifi,
     ctaPrimary: "Ver Planes",
     ctaSecondary: "Consultar Cobertura",
+    ctaRoute: "/precios",
     gradient: "linear-gradient(135deg, #5B6FFF, #7A8FFF, #4A5CFF)",
   },
   {
@@ -36,6 +37,7 @@ const slides = [
     icon: Tv,
     ctaPrimary: "Ver Canales",
     ctaSecondary: "Planes TV",
+    ctaRoute: "/legal/comparador-tarifas",
     gradient: "linear-gradient(135deg, #7A8FFF, #4A5CFF, #5B6FFF)",
   },
   {
@@ -51,6 +53,7 @@ const slides = [
     icon: Zap,
     ctaPrimary: "Contratar Ahora",
     ctaSecondary: "Ver Beneficios",
+    ctaRoute: "/contact",
     gradient: "linear-gradient(135deg, #4A5CFF, #FFFFFF, #7A8FFF)",
   },
 ];
@@ -177,7 +180,7 @@ export default function HeroSection() {
               }}
             >
               <Link
-                to="/pricing"
+                to={activeSlide.ctaRoute}
                 className="flex items-center justify-center gap-4 bg-white/95 dark:bg-black/95 text-black dark:text-white px-40 py-4 rounded-2xl shadow-xl"
               >
                 <span className="text-sm md:text-base font-bold uppercase tracking-[0.15em]">

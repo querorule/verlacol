@@ -24,6 +24,9 @@ const ComparadorTarifas = lazy(() => import('../ui/pages/legal/comparador-tarifa
 // Services Pages
 const Fiber = lazy(() => import('../ui/pages/services/fiber'));
 const TV = lazy(() => import('../ui/pages/services/tv'));
+const FibraResidencial = lazy(() => import('../ui/pages/services/fibra-residencial'));
+const PlanesEmpresariales = lazy(() => import('../ui/pages/services/planes-empresariales'));
+const TVDigital = lazy(() => import('../ui/pages/services/tv-digital'));
 
 // Wrapper para aplicar Suspense a las rutas lazy
 const withSuspense = (Component: ComponentType) => (
@@ -90,5 +93,17 @@ export const router = createBrowserRouter([
   {
     path: ROUTES.SERVICES.TV,
     element: withSuspense(TV),
+  },
+  {
+    path: ROUTES.SERVICES.FIBRA_RESIDENCIAL,
+    element: withSuspense(FibraResidencial),
+  },
+  {
+    path: ROUTES.SERVICES.PLANES_EMPRESARIALES,
+    element: withSuspense(PlanesEmpresariales),
+  },
+  {
+    path: ROUTES.SERVICES.TV_DIGITAL,
+    element: withSuspense(TVDigital),
   },
 ]);
