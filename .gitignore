@@ -128,3 +128,8 @@ storybook-static
 
 # Serverless
 .serverless
+
+# Archive files
+*.zip
+*.rar
+*.tar.gz
