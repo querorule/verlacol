@@ -1,13 +1,8 @@
-// Configuración centralizada de rutas siguiendo mejores prácticas
-// Ubicación: src/router/routes.config.js
-
 export const ROUTES = {
   HOME: "/",
   ABOUT: "/about",
   CONTACT: "/contact",
   PRICING: "/precios",
-
-  // Legal Routes
   LEGAL: {
     PROTECCION_USUARIOS: "/legal/proteccion-usuarios",
     PROTECCION_INFANTIL: "/legal/proteccion-infantil",
@@ -18,13 +13,11 @@ export const ROUTES = {
     SEGURIDAD: "/legal/seguridad",
     COMPARADOR_TARIFAS: "/legal/comparador-tarifas",
   },
-
-  // Services Routes
   SERVICES: {
     FIBRA_RESIDENCIAL: "/services/fibra-residencial",
     PLANES_EMPRESARIALES: "/services/planes-empresariales",
     TV_DIGITAL: "/services/tv-digital",
   },
-}
+} as const
 
 export default ROUTES
