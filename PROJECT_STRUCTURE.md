@@ -4,7 +4,7 @@ Este proyecto sigue **Arquitectura Hexagonal** y **Domain-Driven Design (DDD)** 
 
 ## 📁 Estructura de Carpetas
 
-```
+\`\`\`
 src/
 ├── application/          # Capa de aplicación (lógica de negocio)
 │   ├── hooks/           # Custom hooks de React
@@ -41,7 +41,7 @@ src/
 │   └── types/          # Tipos TypeScript compartidos
 │
 └── main.tsx            # Punto de entrada de la aplicación
-```
+\`\`\`
 
 ## 🎯 Principios Aplicados
 

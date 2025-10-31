@@ -77,7 +77,7 @@
 
 ### Instalación
 
-```bash
+\`\`\`bash
 # Clonar el repositorio
 git clone https://github.com/tu-usuario/verlapage.git
 cd verlapage
@@ -87,13 +87,13 @@ npm install
 
 # Iniciar servidor de desarrollo
 npm run dev
-```
+\`\`\`
 
 El proyecto estará disponible en [http://localhost:5173](http://localhost:5173)
 
 ## 📜 Scripts Disponibles
 
-```bash
+\`\`\`bash
 npm run dev          # Servidor de desarrollo
 npm run build        # Build de producción
 npm run preview      # Preview del build
@@ -101,7 +101,7 @@ npm run lint         # Ejecutar ESLint
 npm run type-check   # Verificar tipos TypeScript
 npm test             # Ejecutar tests
 npm run all          # Ejecutar type-check + lint + build
-```
+\`\`\`
 
 ## 🧪 CI/CD y Protección de Ramas
 
@@ -126,7 +126,7 @@ La rama `developer` funciona como entorno de pre-producción. Se valida que toda
 <details open>
 <summary><b>🏗️ Arquitectura Hexagonal</b></summary>
 
-```
+\`\`\`
 verlapage/
 ├── 📂 src/
 │   │
@@ -248,7 +248,7 @@ verlapage/
 ├── 📄 .gitignore                    # Git ignore rules
 ├── 📄 README.md                     # Este archivo
 └── 📄 PROJECT_STRUCTURE.md          # Documentación detallada
-```
+\`\`\`
 
 </details>
 
@@ -351,16 +351,16 @@ verlapage/
 
 ### 1️⃣ Fork y Clone
 
-```bash
+\`\`\`bash
 # Fork el repositorio en GitHub
 # Luego clona tu fork
 git clone https://github.com/TU-USUARIO/VerlaCol-Landing-Page.git
 cd VerlaCol-Landing-Page
-```
+\`\`\`
 
 ### 2️⃣ Crea una Branch
 
-```bash
+\`\`\`bash
 # Crea y cambia a una nueva branch
 git checkout -b feature/nueva-funcionalidad
 
@@ -370,7 +370,7 @@ git checkout -b feature/nueva-funcionalidad
 # docs/     - Documentación
 # refactor/ - Refactorización
 # test/     - Tests
-```
+\`\`\`
 
 ### 3️⃣ Haz tus Cambios
 
@@ -381,12 +381,12 @@ git checkout -b feature/nueva-funcionalidad
 
 ### 4️⃣ Commit
 
-```bash
+\`\`\`bash
 # Usa conventional commits
 git commit -m "feat: agregar nueva página de servicios"
 git commit -m "fix: corregir bug en navegación móvil"
 git commit -m "docs: actualizar README con ejemplos"
-```
+\`\`\`
 
 **Tipos de commit**:
 - `feat`: Nueva funcionalidad
@@ -399,12 +399,12 @@ git commit -m "docs: actualizar README con ejemplos"
 
 ### 5️⃣ Push y Pull Request
 
-```bash
+\`\`\`bash
 # Push a tu fork
 git push origin feature/nueva-funcionalidad
 
 # Luego crea un PR en GitHub
-```
+\`\`\`
 
 ### ✅ Checklist antes del PR
 

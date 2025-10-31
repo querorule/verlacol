@@ -4,12 +4,12 @@
 
 Esta carpeta debe contener las 3 imágenes del slider principal:
 
-```
+\`\`\`
 /public/images/hero/
 ├── hero-slide-1-internet-fibra.jpg    (Imagen slide 1)
 ├── hero-slide-2-tv-premium.jpg        (Imagen slide 2)
 └── hero-slide-3-ftth-technology.jpg   (Imagen slide 3)
-```
+\`\`\`
 
 ## 🎯 Especificaciones
 
